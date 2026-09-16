@@ -4,14 +4,16 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        Hi, I'm Novi 👋
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`I'm a developer and email marketer building NOVI brand. I help businesses grow with high-converting email campaigns and clean landing pages.`}
+      </p>
+      <p className="mb-4">
+        {`I'm currently learning Next.js and building tools to automate email marketing. My focus is on e-commerce growth, welcome flows, and cart recovery.`}
+      </p>
+      <p className="mb-4">
+        {`This site is my portfolio where I share my projects and what I learn about coding and marketing.`}
       </p>
       <div className="my-8">
         <BlogPosts />
