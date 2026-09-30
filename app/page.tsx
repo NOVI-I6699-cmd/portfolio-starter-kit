@@ -3,17 +3,22 @@ import { BlogPosts } from 'app/components/posts'
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Hi, I'm Novi 👋
+      <h1 className="mb-4 text-2xl font-semibold tracking-tighter">
+        I help US Shopify brands doing $10k+/mo recover 20% revenue with email.
       </h1>
       <p className="mb-4">
-        {`I'm a developer and email marketer building NOVI brand. I help businesses grow with high-converting email campaigns and clean landing pages.`}
+        {`I'm Novi — email retention specialist for Shopify. I audit Klaviyo / Omnisend and fix 3 leaks: no post-purchase flow, generic cart recovery, no VIP / lapsed customers.`}
       </p>
       <p className="mb-4">
-        {`I'm currently learning Next.js and building tools to automate email marketing. My focus is on e-commerce growth, welcome flows, and cart recovery.`}
+        {`I work async from Ghana, so you get a 10-min Loom teardown in 24h while you sleep. No meetings needed. Focused on one thing: email that converts.`}
       </p>
-      <p className="mb-4">
-        {`This site is my portfolio where I share my projects and what I learn about coding and marketing.`}
+      <p className="mb-8">
+        <a
+          href="/blog/think-outside-the-inbox-novi"
+          className="font-semibold underline"
+        >
+          {`👉 Get My Free $150 Audit (3 spots this week) →`}
+        </a>
       </p>
       <div className="my-8">
         <BlogPosts />
