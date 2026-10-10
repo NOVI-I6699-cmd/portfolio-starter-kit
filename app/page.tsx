@@ -4,7 +4,6 @@ import WhatsAppButton from './components/WhatsAppButton'
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      {/* HEADER - FIXED WITH TAGLINE */}
       <header className="bg-[#0A2A7A] text-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
           <div className="flex flex-col leading-none">
@@ -29,7 +28,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO - FITS PHONE + LAPTOP */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-20 grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         <div>
           <h1 className="font-[var(--font-playfair)] text-[34px] leading-[0.95] md:text-[56px] tracking-[-0.02em] text-[#0A2A7A]">We Turn Shopify Stores Into Growth Engines.</h1>
@@ -67,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER WITH ACCRA GHANA ADDRESS */}
+      {/* FOOTER - FINAL WITH 5 LINKS - OPTION A */}
       <footer className="bg-[#0A2A7A] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between gap-8">
           <div>
@@ -77,17 +75,18 @@ export default function Home() {
               <p>📍 Accra, Ghana - Remote Worldwide</p>
               <p>🕒 EST Hours | 9am - 5pm</p>
               <p className="mt-3"><a href="mailto:hello@novi-llc.com" className="underline">hello@novi-llc.com</a></p>
-              <p><a href="https://wa.me/233243876362" className="underline">+233 24 387 6362</a></p>
             </div>
           </div>
-          <div className="flex gap-6 text-sm text-white/80">
-            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a>
-            <a href="https://x.com/novi_llc" target="_blank" className="underline">X</a>
-            <a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a>
+          <div className="flex flex-wrap gap-5 md:gap-6 text-sm text-white/80 items-start">
+            <a href="mailto:hello@novi-llc.com" className="underline hover:text-white font-medium">Contact us</a>
+            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline hover:text-white">LinkedIn</a>
+            <a href="https://x.com/novi_llc" target="_blank" className="underline hover:text-white">X</a>
+            <a href="https://wa.me/233243876362" target="_blank" className="underline hover:text-white">WhatsApp</a>
+            <a href="mailto:hello@novi-llc.com" className="underline hover:text-white">Email</a>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 md:px-6 mt-8 pt-8 border-t border-white/10 text-xs text-white/50">
-          © 2026 Novi LLC. All rights reserved. | Accra, Ghana
+          © 2026 Novi LLC | Accra, Ghana
         </div>
       </footer>
       <WhatsAppButton />
