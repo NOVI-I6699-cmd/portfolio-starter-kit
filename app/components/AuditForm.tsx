@@ -57,10 +57,10 @@ export default function AuditForm() {
         onChange={(e) => setRevenue(e.target.value)}
         className="border border-blue-900 rounded-xl px-4 py-3 bg-white"
       >
-        <option value="">Monthly Revenue — Select Growth Stage</option>
-        <option value="$10/mo - $1k/mo - Starter">Starter — $10/mo to $1k/mo ($230/mo lost)</option>
-        <option value="$1k - $10k/mo - Growing">Growing — $1k to $10k/mo ($1,150/mo lost)</option>
-        <option value="$10k - $100k/mo - Scaling">Scaling — $10k to $100k/mo ($4,600/mo lost)</option>
+        <option value="">Monthly Revenue</option>
+        <option value="$5k - $10k/mo - Early Start">$5k - $10k/mo — Early Start</option>
+        <option value="$10k - $20k/mo - Growing">$10k - $20k/mo — Growing</option>
+        <option value="$20k - $100k+/mo - Established">$20k - $100k+/mo — Established</option>
       </select>
 
       <button
