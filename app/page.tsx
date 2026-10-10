@@ -1,5 +1,5 @@
-import AuditForm from '@/components/AuditForm'
-import WhatsAppButton from '@/components/WhatsAppButton'
+import AuditForm from './components/AuditForm'
+import WhatsAppButton from './components/WhatsAppButton'
 
 export default function Home() {
   return (
@@ -70,17 +70,4 @@ export default function Home() {
             <p className="mt-4 text-sm"><a href="mailto:hello@novi-llc.com" className="underline">hello@novi-llc.com</a></p>
           </div>
           <div className="flex gap-6 text-sm text-white/80">
-            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="hover:text-white underline">LinkedIn</a>
-            <a href="https://x.com/novi_llc" target="_blank" className="hover:text-white underline">X / Twitter</a>
-            <a href="https://wa.me/233243876362" target="_blank" className="hover:text-white underline">WhatsApp</a>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 mt-8 pt-8 border-t border-white/10 text-xs text-white/50">
-          © 2026 Novi LLC. All rights reserved.
-        </div>
-      </footer>
-
-      <WhatsAppButton />
-    </main>
-  )
-}
+            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="hover:text-white underline">Linked
