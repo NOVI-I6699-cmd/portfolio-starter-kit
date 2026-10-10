@@ -41,4 +41,32 @@ export default function Home() {
             <div>✓ Inbox in 72h</div>
           </div>
 
-          <div className="mt-3 text-xs font-semibold px-3
+          <div className="mt-3 text-xs font-semibold" style={{color:'#0A2A7A'}}>
+            ✓ We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.
+          </div>
+        </div>
+
+        <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
+      </section>
+
+      <footer className="text-white py-10" style={{backgroundColor:'#0A2A7A'}}>
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+          <div>
+            <div className="font-bold">Novi LLC</div>
+            <div className="mt-1 text-xs text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div>
+            <div className="mt-2 text-xs text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div>
+            <div className="mt-2 text-xs text-white/70">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
+            <div className="mt-3 text-sm"><a href="mailto:hello@novi-llc.com" className="underline text-white/80">hello@novi-llc.com</a></div>
+          </div>
+          <div className="flex flex-wrap gap-5 text-sm text-white/80">
+            <a href="mailto:hello@novi-llc.com" className="underline font-semibold">Contact us</a>
+            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a>
+            <a href="https://x.com/novi_llc" target="_blank" className="underline">X</a>
+            <a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a>
+          </div>
+        </div>
+      </footer>
+      <WhatsAppButton />
+    </main>
+  )
+}
