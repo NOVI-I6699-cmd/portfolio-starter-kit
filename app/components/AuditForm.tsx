@@ -1,60 +1,69 @@
-"use client"
-import { useState } from 'react'
+'use client';
+import { useState } from 'react';
 
 export default function AuditForm() {
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const [email, setEmail] = useState('');
+  const [store, setStore] = useState('');
+  const [revenue, setRevenue] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setLoading(true)
-    const form = e.currentTarget
-    const formData = new FormData(form)
-    const email = formData.get('email')
-    const store = formData.get('store') || (formData.get('store_url') as string) || 'unknown'
-
-    // Try common field names
-    const storeValue = (formData.get('shopify') as string) || (formData.get('store') as string) || (form.querySelector('input[placeholder*="Shopify"]') as HTMLInputElement)?.value || 'not provided'
-
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
     try {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email || storeValue, store: storeValue }),
-      })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error)
-      setSubmitted(true)
-    } catch (err) {
-      alert('Failed: ' + (err as Error).message + ' - please WhatsApp us')
-    } finally {
-      setLoading(false)
+        body: JSON.stringify({ email, store, revenue }),
+      });
+      if (res.ok) setDone(true);
+      else alert('Failed - try again');
+    } catch {
+      alert('Failed - try again');
     }
-  }
+    setLoading(false);
+  };
 
-  if (submitted) {
-    return (
-      <div className="bg-white rounded-2xl border shadow-sm p-7">
-        <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 font-bold">✓</div>
-        <div className="mt-2 text-sm opacity-70">We serve all stores from $10k/mo to $100k/mo. Loom in 24h. Accra, Ghana - EST Hours.</div>
-        <div className="mt-2 text-sm font-bold">Diagnostic requested. ✓</div>
-      </div>
-    )
+  if (done) {
+    return <div className="p-6 text-center font-bold">✅ Sent! Check inbox in 24h - Loom + 3 leaks.</div>;
   }
 
   return (
-    <div className="bg-white rounded-2xl border shadow-sm p-8 md:p-7">
-      <div className="flex items-center justify-between">
-        <span className="text-xs uppercase tracking-widest font-semibold px-2.5 py-1 rounded-full bg-blue-50">INBOX RADAR DIAGNOSTIC</span>
-      </div>
-      <div className="mt-4 text-xl font-bold leading-tight">Find Your 23% Revenue Leak. For ALL Shopify stores - $10/mo to $100k/mo. Loom + 3 leaks + fix plan in 24h.</div>
-      <form onSubmit={handleSubmit} className="mt-5 space-y-3">
-        <input required name="email" type="email" placeholder="Work email" className="w-full border rounded-lg px-4 py-3 text-sm" />
-        <input required name="store" type="text" placeholder="Shopify URL. (store.myshopify.com)" className="w-full border rounded-lg px-4 py-3 text-sm" />
-        <button disabled={loading} type="submit" className="w-full bg-black text-white rounded-lg py-3 text-sm font-semibold">
-          {loading ? 'Sending...' : 'Get My Free Diagnostic'}
-        </button>
-      </form>
-    </div>
-  )
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <input
+        type="email"
+        required
+        placeholder="Work email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="border border-blue-900 rounded-xl px-4 py-3"
+      />
+      <input
+        type="text"
+        placeholder="Shopify URL. (store.myshopify.com)"
+        value={store}
+        onChange={(e) => setStore(e.target.value)}
+        className="border border-blue-900 rounded-xl px-4 py-3"
+      />
+      <select
+        required
+        value={revenue}
+        onChange={(e) => setRevenue(e.target.value)}
+        className="border border-blue-900 rounded-xl px-4 py-3 bg-white"
+      >
+        <option value="">Monthly Revenue</option>
+        <option value="$10-$1k/mo">$10/mo - $1k/mo ($230/mo lost)</option>
+        <option value="$1k-$10k/mo">$1k - $10k/mo ($1,150/mo lost)</option>
+        <option value="$10k-$100k/mo">$10k - $100k/mo ($4,600/mo lost)</option>
+      </select>
+      <button
+        type="submit"
+        disabled={loading}
+        className="bg-black text-white rounded-xl py-4 font-semibold"
+      >
+        {loading ? 'Sending...' : 'Get My Free Diagnostic'}
+      </button>
+    </form>
+  );
 }
