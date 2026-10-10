@@ -12,7 +12,7 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-6 text-[14px]">
             <a href="#inbox-radar" className="hover:opacity-80">Inbox Radar</a>
-            <a href="#blog" className="hover:opacity-80">Blog</a>
+            <a href="#insights" className="hover:opacity-80">Blog</a>
             <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank">LinkedIn</a>
             <a href="https://x.com/novi_llc" target="_blank">X</a>
             <a href="mailto:hello@novi-llc.com" className="bg-white text-[#0A2A7A] px-5 py-2.5 font-semibold rounded-[8px]">Book a Call</a>
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div className="md:hidden border-t border-white/10 px-4 py-2.5 flex gap-4 text-[12px] text-white/80 overflow-x-auto">
           <a href="#inbox-radar" className="whitespace-nowrap">Inbox Radar</a>
-          <a href="#blog" className="whitespace-nowrap">Blog</a>
+          <a href="#insights" className="whitespace-nowrap">Blog</a>
           <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="whitespace-nowrap">LinkedIn</a>
           <a href="https://x.com/novi_llc" target="_blank" className="whitespace-nowrap">X</a>
           <a href="https://wa.me/233243876362" target="_blank" className="whitespace-nowrap">WhatsApp</a>
@@ -53,23 +53,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="blog" className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
+      {/* INSIGHTS - NOW CLICKABLE */}
+      <section id="insights" className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
         <div className="flex justify-between items-end">
           <h2 className="font-[var(--font-playfair)] text-[28px] md:text-[36px] text-[#0A2A7A]">Insights</h2>
           <a href="https://x.com/novi_llc" target="_blank" className="text-sm underline text-[#0A2A7A]">Follow on X →</a>
         </div>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">INBOX RADAR</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23% Revenue</h3></article>
-          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">CASE STUDY</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">From Spam to Inbox in 72h (Full Recovery in 14 Days)</h3><p className="mt-2 text-[13px] text-[#0A2A7A]/60">Inbox in 3 days, 0% spam — 14 days for full revenue recovery. Industry takes 30+ days.</p></article>
-          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">STRATEGY</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Shopify SEO in 2026</h3></article>
+          <a href="#klaviyo-23" className="border border-[#0A2A7A]/10 p-5 rounded-[8px] hover:border-[#0A2A7A]/30 hover:shadow-md transition block">
+            <p className="text-[11px] uppercase opacity-60">INBOX RADAR</p>
+            <h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23% Revenue</h3>
+            <p className="mt-3 text-[13px] text-[#0A2A7A]/60">Read breakdown →</p>
+          </a>
+          <a href="#deliverability-72h" className="border border-[#0A2A7A]/10 p-5 rounded-[8px] hover:border-[#0A2A7A]/30 hover:shadow-md transition block">
+            <p className="text-[11px] uppercase opacity-60">CASE STUDY</p>
+            <h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">From Spam to Inbox in 72h (Full Recovery in 14 Days)</h3>
+            <p className="mt-3 text-[13px] text-[#0A2A7A]/60">How we fixed it →</p>
+          </a>
+          <a href="#shopify-seo" className="border border-[#0A2A7A]/10 p-5 rounded-[8px] hover:border-[#0A2A7A]/30 hover:shadow-md transition block">
+            <p className="text-[11px] uppercase opacity-60">STRATEGY</p>
+            <h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Shopify SEO in 2026</h3>
+            <p className="mt-3 text-[13px] text-[#0A2A7A]/60">Read strategy →</p>
+          </a>
         </div>
-      </section>
 
-      <footer className="bg-[#0A2A7A] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between gap-8">
-          <div>
-            <p className="font-[var(--font-playfair)] text-xl font-bold">Novi LLC</p>
-            <p className="mt-1 text-[13px] text-white/70">Shopify Agency | E-commerce Growth & Brand Strategy</p>
-            <div className="mt-4 text-sm text-white/80 space-y-1">
-              <p>📍 Accra, Ghana - Remote Worldwide</p>
-              <p>🕒 EST Hours |
+        {/* DETAILED EXPLANATIONS - SHOW WHEN CLICKED */}
+        <div className="mt-16 space-y-12">
+          <div id="klaviyo-23" className="bg-[#F7F8FA] p-6 md:p-8 rounded-[12px] border border-[#0A2A7A]/10 scroll-mt-24">
+            <p className="text-[11px] uppercase tracking-widest text-[#0A2A7A]/60">INBOX RADAR</p>
+            <h3 className="mt-2 font-[var(--font-playfair)] text-[24px] text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23% Revenue</h3>
+            <div className="mt-4 text-[15px] leading-7 text-[#0A2A7A]/80 space-y-3">
+              <p><strong>1. Trigger Delay:</strong> Default 1-hour delay → we cut to 5 mins = +11% recovery.</p>
+              <p><strong>2. No SMS fallback:</strong> Email in spam? We fire SMS after 30 mins.</p>
+              <p><strong>3. Wrong filter:</strong> Most brands exclude engaged users by mistake. We fix it.</p>
+              <p className="pt
