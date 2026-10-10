@@ -16,16 +16,16 @@ setSubmitted(true)
 
 if(submitted){
 if(!isSerious){
-return <div className="bg-white rounded-2xl border shadow-sm p-7"><div className="text-xl font-bold text-[#0A2A7A]">Application received.</div><div className="mt-2 text-sm opacity-70 leading-6">We prioritize stores ready to invest $750+ to fix in next 14 days. We'll keep you on file. Re-apply when ready.<br/><br/>Accra, Ghana - EST Hours.</div></div>
+return <div className="bg-white rounded-2xl border shadow-sm p-7"><div className="text-xl font-bold text-[#0A2A7A]">Application received.</div><div className="mt-2 text-sm opacity-70 leading-6">We prioritize stores ready to invest $750+ to fix in next 14 days. We'll keep you on file. Re-apply when ready.<br/><br/>Pay via US Bank (Grey) — Easy for US stores.<br/>Accra, Ghana - EST Hours.</div></div>
 }
-return <div className="bg-white rounded-2xl border shadow-sm p-7"><div className="h-12 w-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 font-bold">✓</div><div className="mt-4 text-xl font-bold text-[#0A2A7A]">You qualify. Loom in 24h.</div><div className="mt-2 text-sm opacity-70">Serious lead — Loom + 3 leaks + fix plan + price. Check email. Accra, Ghana - EST.</div></div>
+return <div className="bg-white rounded-2xl border shadow-sm p-7"><div className="h-12 w-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 font-bold">✓</div><div className="mt-4 text-xl font-bold text-[#0A2A7A]">You qualify. Loom in 24h.</div><div className="mt-2 text-sm opacity-70">Serious lead — Loom + 3 leaks + fix plan + price. Invoice via US Bank (Grey) ACH/Wire — easy pay. Check email. Accra, Ghana - EST.</div></div>
 }
 
 return(
 <div className="bg-white rounded-2xl border shadow-sm p-6">
-<div className="flex justify-between"><span className="text-xs font-semibold tracking-widest bg-blue-50 text-[#0A2A7A] px-2.5 py-1 rounded-full">INBOX RADAR — QUALIFIED ONLY</span><span className="text-xs opacity-50">$500 value • Free this week</span></div>
+<div className="flex justify-between"><span className="text-xs font-semibold tracking-widest bg-blue-50 text-[#0A2A7A] px-2.5 py-1 rounded-full">INBOX RADAR — QUALIFIED ONLY</span><span className="text-xs opacity-50">$500 value</span></div>
 <div className="mt-4 text-xl font-bold text-[#0A2A7A]">Find Your 23% Revenue Leak.</div>
-<div className="mt-2 text-sm opacity-70">For $1k-$100k+/mo ready to fix. Fix from $750, retainer $1,500/mo.</div>
+<div className="mt-2 text-sm opacity-70">For $1k-$100k+/mo ready to fix in 14 days. Fix from $750, retainer $1,500/mo.</div>
 
 <form onSubmit={handleSubmit} className="mt-5 space-y-3">
 <input required placeholder="Shopify URL (store.myshopify.com)" className="w-full border rounded-lg px-4 py-3 text-sm"/>
@@ -45,7 +45,11 @@ return(
 <option value="just-looking">Just browsing</option>
 </select>
 <button className="w-full text-white font-bold py-3.5 rounded-lg text-sm bg-[#0A2A7A]">Apply for Inbox Radar Diagnostic</button>
-<div className="text-xs text-center opacity-50">We only record Loom for qualified stores ready to invest.<br/>Fix from $750. Accra, Ghana - EST Hours.</div>
+<div className="text-xs text-center opacity-60 leading-4">
+We only record Loom for qualified stores ready to invest.<br/>
+💳 Pay easily: US Bank ACH/Wire via Grey + Wise + Payoneer + Stripe Invoice<br/>
+No Ghana wire needed — you pay like a US vendor. Accra, Ghana - EST Hours.
+</div>
 </form>
 </div>
 )
