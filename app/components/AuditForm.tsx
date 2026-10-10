@@ -1,53 +1,86 @@
-'use client'
+"use client"
 import { useState } from 'react'
 
 export default function AuditForm() {
-  const [email, setEmail] = useState('')
-  const [store, setStore] = useState('')
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle')
-  const [error, setError] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus('loading')
-    setError('')
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, store }),
-      })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'API error')
-      setStatus('success')
-      setEmail(''); setStore('')
-    } catch (err: any) {
-      setError(err.message); setStatus('error')
-    }
+    setSubmitted(true)
+    // Replace with your actual form handling - Formspree, API, etc
+  }
+
+  if (submitted) {
+    return (
+      <div className="bg-white rounded-2xl border shadow-sm p-7">
+        <div className="h-12 w-12 rounded-full bg-green-50 flex items-center justify-center">✓</div>
+        <div className="mt-4 text-xl font-bold" style={{color:'#0A2A7A'}}>Diagnostic requested.</div>
+        <div className="mt-2 text-sm opacity-70 leading-6" style={{color:'#0A2A7A'}}>
+          We review stores doing $5k+/mo only. If you qualify, you will get your Inbox Radar Loom in 24h with 3 leaks and fix plan.
+        </div>
+        <div className="mt-4 text-xs opacity-50">Check hello@novi-llc.com in spam too.</div>
+      </div>
+    )
   }
 
   return (
-    <div className="w-full max-w-[440px] border border-[#0A2A7A] rounded-2xl p-6 bg-white shadow-[0_20px_60px_rgba(10,42,122,0.12)]">
-      <div className="flex justify-between items-center mb-4">
-        <span className="font-[var(--font-playfair)] text-[#0A2A7A] font-medium">Novi LLC</span>
-        <span className="text-[10px] bg-[#0A2A7A] text-white px-2.5 py-1 rounded-full font-medium">FREE $150 AUDIT</span>
+    <div className="bg-white rounded-2xl border shadow-sm p-6 md:p-7">
+      <div className="flex items-center justify-between">
+        <span className="text-xs uppercase tracking-widest font-semibold px-2.5 py-1 rounded-full bg-blue-50" style={{color:'#0A2A7A'}}>INBOX RADAR DIAGNOSTIC</span>
+        <span className="text-xs opacity-50">$500 value • Free this week</span>
       </div>
 
-      <h3 className="font-[var(--font-playfair)] text-[#0A2A7A] text-[22px] leading-[1.1] font-semibold">Shopify Stores Leaking Money? Get Your $150 Audit FREE</h3>
-      <p className="text-[14px] text-[#0A2A7A]/70 mt-2.5 mb-5 leading-5">We find 3 leaks costing you sales. Free Loom video audit for stores doing $10k+/mo.</p>
+      <div className="mt-4 text-xl font-bold leading-tight" style={{color:'#0A2A7A'}}>We Find The 23% Revenue You Are Leaking.</div>
+      
+      <div className="mt-3 text-sm leading-6 opacity-70" style={{color:'#0A2A7A'}}>
+        For Shopify stores doing $5k+/mo:
+        <div className="mt-2 grid grid-cols-3 gap-2 text-xs">
+          <div className="bg-slate-50 border rounded-lg p-2 text-center"><div className="font-bold">$5k/mo</div><div className="opacity-60">$1,150 lost</div></div>
+          <div className="bg-slate-50 border rounded-lg p-2 text-center"><div className="font-bold">$20k/mo</div><div className="opacity-60">$4,600 lost</div></div>
+          <div className="bg-slate-50 border rounded-lg p-2 text-center"><div className="font-bold">$50k/mo</div><div className="opacity-60">$11.5k lost</div></div>
+        </div>
+      </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <input required type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="founder@brand.com" className="w-full border border-[#0A2A7A]/20 focus:border-[#0A2A7A] p-3.5 rounded-xl outline-none text-[#0A2A7A] placeholder:text-[#0A2A7A]/40 text-[15px]" />
-        <input required type="text" value={store} onChange={e=>setStore(e.target.value)} placeholder="yourstore.com" className="w-full border border-[#0A2A7A]/20 focus:border-[#0A2A7A] p-3.5 rounded-xl outline-none text-[#0A2A7A] placeholder:text-[#0A2A7A]/40 text-[15px]" />
-        <button disabled={status==='loading'} type="submit" className="w-full bg-[#0A2A7A] text-white font-medium py-3.5 rounded-xl hover:bg-[#0A2A7A]/90 transition disabled:opacity-50 text-[15px]">
-          {status==='loading'?'Sending...':'Get My Free $150 Audit →'}
+      <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+        <input 
+          required
+          type="text" 
+          placeholder="Shopify store URL (novi.myshopify.com)" 
+          className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-900/20"
+        />
+        <input 
+          required
+          type="email" 
+          placeholder="Work email" 
+          className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-900/20"
+        />
+        <select required className="w-full border rounded-lg px-4 py-3 text-sm bg-white">
+          <option value="">Monthly revenue</option>
+          <option value="5k-10k">$5k - $10k / mo</option>
+          <option value="10k-25k">$10k - $25k / mo</option>
+          <option value="25k-50k">$25k - $50k / mo</option>
+          <option value="50k+">$50k+ / mo</option>
+        </select>
+        <select className="w-full border rounded-lg px-4 py-3 text-sm bg-white">
+          <option value="">Biggest leak? (optional)</option>
+          <option value="deliverability">Emails going to spam</option>
+          <option value="klaviyo">Klaviyo flows not converting</option>
+          <option value="seo">Shopify SEO / traffic</option>
+          <option value="conversion">Store not converting</option>
+        </select>
+
+        <button 
+          type="submit" 
+          className="w-full text-white font-bold py-3.5 rounded-lg text-sm shadow hover:opacity-90 transition"
+          style={{backgroundColor:'#0A2A7A'}}
+        >
+          Request Inbox Radar Diagnostic
         </button>
+
+        <div className="text-xs text-center opacity-50 leading-4">
+          Limited to 3 diagnostics per week. For stores doing $5k+/mo only.<br/>Loom + 3 leaks + fix plan in 24h.
+        </div>
       </form>
-
-      <p className="text-[11px] text-[#0A2A7A]/50 text-center mt-3">📍 Accra, Ghana • 24h delivery • No spam</p>
-
-      {status==='success' && <div className="mt-3 bg-[#0A2A7A]/5 border border-[#0A2A7A]/10 text-[#0A2A7A] text-sm p-3 rounded-xl text-center">Sent ✓ Check email! Loom in 24h</div>}
-      {status==='error' && <div className="mt-3 bg-red-50 border border-red-200 text-red-600 text-sm p-3 rounded-xl text-center">{error}</div>}
     </div>
   )
 }
