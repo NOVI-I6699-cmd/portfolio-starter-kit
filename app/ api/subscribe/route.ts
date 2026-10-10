@@ -13,7 +13,7 @@ export async function POST(req: Request) {
       headers: { 'api-key': apiKey, 'Content-Type': 'application/json', 'accept': 'application/json' },
       body: JSON.stringify({
         email,
-        attributes: { STORE: store || 'unknown' },
+        attributes: { SHOPIFY_URL: store || 'unknown' },
         updateEnabled: true
       })
     })
