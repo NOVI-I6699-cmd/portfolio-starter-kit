@@ -59,13 +59,12 @@ export default function Home() {
           <a href="https://x.com/novi_llc" target="_blank" className="text-sm underline text-[#0A2A7A]">Follow on X →</a>
         </div>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">Inbox Radar</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23% Revenue</h3></article>
-          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">Case Study</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">How We Fixed Deliverability in 14 Days</h3></article>
-          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">Strategy</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Shopify SEO in 2026</h3></article>
+          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">INBOX RADAR</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23% Revenue</h3></article>
+          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">CASE STUDY</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">From Spam to Inbox in 72h (Full Recovery in 14 Days)</h3><p className="mt-2 text-[13px] text-[#0A2A7A]/60">Inbox in 3 days, 0% spam — 14 days for full revenue recovery. Industry takes 30+ days.</p></article>
+          <article className="border border-[#0A2A7A]/10 p-5 rounded-[8px]"><p className="text-[11px] uppercase opacity-60">STRATEGY</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Shopify SEO in 2026</h3></article>
         </div>
       </section>
 
-      {/* FOOTER - FINAL WITH 5 LINKS - OPTION A */}
       <footer className="bg-[#0A2A7A] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between gap-8">
           <div>
@@ -73,23 +72,4 @@ export default function Home() {
             <p className="mt-1 text-[13px] text-white/70">Shopify Agency | E-commerce Growth & Brand Strategy</p>
             <div className="mt-4 text-sm text-white/80 space-y-1">
               <p>📍 Accra, Ghana - Remote Worldwide</p>
-              <p>🕒 EST Hours | 9am - 5pm</p>
-              <p className="mt-3"><a href="mailto:hello@novi-llc.com" className="underline">hello@novi-llc.com</a></p>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-5 md:gap-6 text-sm text-white/80 items-start">
-            <a href="mailto:hello@novi-llc.com" className="underline hover:text-white font-medium">Contact us</a>
-            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline hover:text-white">LinkedIn</a>
-            <a href="https://x.com/novi_llc" target="_blank" className="underline hover:text-white">X</a>
-            <a href="https://wa.me/233243876362" target="_blank" className="underline hover:text-white">WhatsApp</a>
-            <a href="mailto:hello@novi-llc.com" className="underline hover:text-white">Email</a>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 md:px-6 mt-8 pt-8 border-t border-white/10 text-xs text-white/50">
-          © 2026 Novi LLC | Accra, Ghana
-        </div>
-      </footer>
-      <WhatsAppButton />
-    </main>
-  )
-}
+              <p>🕒 EST Hours |
