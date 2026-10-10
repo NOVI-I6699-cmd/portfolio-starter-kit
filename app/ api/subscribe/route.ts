@@ -1,12 +1,15 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
-export async function POST(req: NextRequest) {
+export async function POST(request: Request) {
   try {
-    const { email, store } = await req.json();
-    if (!email) return NextResponse.json({ error: 'Email required' }, { status: 400 });
+    const body = await request.json();
+    const email = body.email as string;
+    const store = body.store as string | undefined;
 
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const nodemailer = require('nodemailer');
+    if (!email) {
+      return NextResponse.json({ error: 'Email required' }, { status: 400 });
+    }
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -20,12 +23,12 @@ export async function POST(req: NextRequest) {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: `New Shopify Audit Lead: ${email}`,
-      text: `Email: ${email}\nStore: ${store || 'N/A'}\nTime: ${new Date().toISOString()}`,
+      text: `New lead:\nEmail: ${email}\nStore: ${store || 'N/A'}\nTime: ${new Date().toISOString()}`,
     });
 
     return NextResponse.json({ success: true });
-  } catch (error: any) {
-    console.error('EMAIL ERROR:', error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (err: any) {
+    console.error('EMAIL ERROR', err);
+    return NextResponse.json({ error: err?.message || 'Failed' }, { status: 500 });
   }
 }
