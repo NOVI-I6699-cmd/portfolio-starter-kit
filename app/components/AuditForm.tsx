@@ -4,39 +4,40 @@ import { useState } from 'react'
 export default function AuditForm() {
   const [email, setEmail] = useState('')
   const [store, setStore] = useState('')
-  const [status, setStatus] = useState('')
+  const [status, setStatus] = useState('idle')
+  const [error, setError] = useState('')
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus('Sending...')
+    setStatus('loading')
+    setError('')
     try {
+      console.log('Submitting', email, store)
       const res = await fetch('/api/subscribe', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ email, store })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, store }),
       })
       const data = await res.json()
-      if (res.ok) {
-        setStatus('Sent ✓ Check email! Loom in 24h')
-        setEmail('')
-        setStore('')
-      } else {
-        setStatus('Error: ' + data.error)
-      }
-    } catch {
-      setStatus('Error, try again')
+      console.log('API returned', res.status, data)
+      if (!res.ok) throw new Error(data.error || 'API error')
+      setStatus('success')
+    } catch (err: any) {
+      console.error(err)
+      setError(err.message || 'Error, try again')
+      setStatus('error')
     }
   }
 
   return (
-    <div className="p-6 border rounded-xl bg-neutral-50 dark:bg-neutral-900">
-      <h3 className="font-semibold mb-4">Get My Free Email Health Check — 3 spots this week. 10-min Loom in 24h.</h3>
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Your work email" required className="w-full p-3 border rounded-lg bg-white text-black" />
-        <input type="text" value={store} onChange={(e) => setStore(e.target.value)} placeholder="Shopify URL (e.g. nike.com)" required className="w-full p-3 border rounded-lg bg-white text-black" />
-        <button type="submit" className="w-full bg-black text-white p-3 rounded-lg font-bold">Get My Free $150 Audit →</button>
-        <p className="text-sm text-green-600">{status}</p>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+      <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="eveilsaint6699@gmail.com" className="p-3 rounded text-black" />
+      <input type="text" value={store} onChange={e=>setStore(e.target.value)} placeholder="Nike.com" className="p-3 rounded text-black" />
+      <button type="submit" disabled={status==='loading'} className="bg-black text-white p-3 rounded">
+        {status==='loading' ? 'Sending...' : 'Get My Free $150 Audit →'}
+      </button>
+      {status==='success' && <p className="text-green-400">Sent ✓ Check email! Loom in 24h</p>}
+      {status==='error' && <p className="text-red-400">{error}</p>}
+    </form>
   )
 }
