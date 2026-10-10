@@ -1,37 +1,99 @@
-import AuditForm from "./components/AuditForm";
+"use client"
+import AuditForm from './components/AuditForm'
+import WhatsAppButton from './components/WhatsAppButton'
 
-export default function Page(){
-return (
-<main className="min-h-screen bg-white text-slate-900">
-<header className="border-b">
-<div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center text-sm">
-<div className="font-bold">NOVI LLC — Shopify Email & SEO Agency</div>
-<div className="opacity-60">Accra, Ghana - Remote Worldwide - EST Hours</div>
-</div>
-</header>
+export default function Home() {
+  return (
+    <main className="bg-white">
+      <header className="text-white sticky top-0 z-50 shadow-sm" style={{backgroundColor:'#0A2A7A'}}>
+        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+          <div className="flex flex-col leading-none">
+            <div className="font-bold text-lg tracking-tight">Novi LLC</div>
+            <div className="text-xs mt-1 text-white/70 tracking-wide">Shopify Agency | E-commerce Growth and Brand Strategy</div>
+            <div className="text-xs mt-0.5 text-white/50">Accra, Ghana - Remote Worldwide - EST Hours</div>
+          </div>
+          <a href="mailto:hello@novi-llc.com" className="bg-white px-5 py-2.5 rounded-lg text-sm font-bold shadow" style={{color:'#0A2A7A'}}>Book a Call</a>
+        </div>
+      </header>
 
-<section className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8 items-start">
-<div>
-<div className="inline-block text-xs font-semibold tracking-widest bg-blue-50 text-[#0A2A7A] px-3 py-1 rounded-full">INBOX RADAR • FOR ALL SHOPIFY STORES</div>
-<h1 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight text-[#0A2A7A]">Shopify Stores Leak 23% of Revenue in the Inbox. We Find It In 24h.</h1>
-<p className="mt-4 opacity-70">For $1k/mo to $100k+/mo. Deliverability + Klaviyo + SEO. $500 diagnostic free this week.</p>
+      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <div className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 border" style={{color:'#0A2A7A'}}>
+            <span className="h-2 w-2 rounded-full bg-green-500"></span>
+            Serving Shopify stores from $1k+/mo to $100k+/mo • 3 spots left
+          </div>
+          <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-none tracking-tight" style={{color:'#0A2A7A'}}>
+            Shopify Stores Leak 23% Revenue. We Find It.
+          </h1>
+          <div className="mt-4 text-base leading-7 opacity-70 max-w-xl" style={{color:'#0A2A7A'}}>
+            Whether you do $1k/mo or $50k/mo — Inbox Radar finds deliverability, Klaviyo, and SEO leaks in 24h. Fixed in 14 days.
+          </div>
 
-<div className="mt-6 grid grid-cols-3 gap-2 text-xs">
-<div className="border rounded-lg p-3 text-center"><div className="font-bold text-[#0A2A7A]">$1k/mo</div><div className="opacity-60">$230 lost</div></div>
-<div className="border rounded-lg p-3 text-center"><div className="font-bold text-[#0A2A7A]">$5k/mo</div><div className="opacity-60">$1,150 lost</div></div>
-<div className="border rounded-lg p-3 text-center"><div className="font-bold text-[#0A2A7A]">$20k/mo</div><div className="opacity-60">$4,600 lost</div></div>
-</div>
+          <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
+            <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color:'#0A2A7A'}}>$1k/mo</div><div className="text-xs opacity-60 mt-1">$230/mo lost</div></div>
+            <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color:'#0A2A7A'}}>$5k/mo</div><div className="text-xs opacity-60 mt-1">$1,150/mo lost</div></div>
+            <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color:'#0A2A7A'}}>$20k/mo</div><div className="text-xs opacity-60 mt-1">$4,600/mo lost</div></div>
+          </div>
 
-<div className="mt-6 text-sm opacity-70 leading-6">
-📍 Accra, Ghana → US Brands | Fix from $750 | Retainer $1,500/mo | EST Hours<br/>
-💳 US ACH/Wire via Grey US account + Wise — Easy payment, no intl wire hassle.
-</div>
-</div>
+          <div className="mt-6 flex items-center gap-4 text-xs opacity-60" style={{color:'#0A2A7A'}}>
+            <div>✓ Accra, Ghana → US Brands</div>
+            <div>✓ EST Hours</div>
+            <div>✓ Inbox in 72h</div>
+          </div>
+        </div>
 
-<AuditForm />
-</section>
+        <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
+      </section>
 
-<footer className="border-t py-6 text-center text-xs opacity-50">© Novi LLC — Accra, Ghana - Remote Worldwide - EST Hours — Pay via US Bank (Grey) + Wise — novi-llc.com</footer>
-</main>
-)
+      <section id="insights" className="bg-slate-50 border-y py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold" style={{color:'#0A2A7A'}}>Insights — Real leaks we fix for all stores</h2>
+          <div className="mt-8 grid gap-5">
+            <div className="bg-white rounded-2xl border p-6">
+              <div className="text-xs uppercase tracking-widest font-semibold" style={{color:'#0A2A7A'}}>INBOX RADAR • 01</div>
+              <div className="mt-2 text-xl font-bold" style={{color:'#0A2A7A'}}>Why Your Klaviyo Flows Lose 23 Percent</div>
+              <div className="mt-3 grid md:grid-cols-3 gap-3 text-sm">
+                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Trigger Delay</div><div className="mt-1 opacity-70 text-xs">1h to 5 mins = +11% recovery</div></div>
+                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">No SMS Fallback</div><div className="mt-1 opacity-70 text-xs">Fire SMS after 30 mins if spam</div></div>
+                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Bad Exclusion</div><div className="mt-1 opacity-70 text-xs">You block engaged users by mistake</div></div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl border p-6">
+              <div className="text-xs uppercase tracking-widest font-semibold text-amber-800">CASE STUDY • 02</div>
+              <div className="mt-2 text-xl font-bold" style={{color:'#0A2A7A'}}>From Spam to Inbox in 72h - Full in 14 Days</div>
+              <div className="mt-3 text-sm leading-7 opacity-70" style={{color:'#0A2A7A'}}>
+                <div>Day 1-2: SPF DKIM DMARC broken + 38% dead list. Fixed DNS, cleaned list.</div>
+                <div>Day 3: 92% inbox - first sales from spam folder.</div>
+                <div>Day 4-14: Warm 100 to 5000/day. 23% revenue recovered. Gmail needs 7-10 days trust.</div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl border p-6">
+              <div className="text-xs uppercase tracking-widest font-semibold">STRATEGY • 03</div>
+              <div className="mt-2 text-xl font-bold" style={{color:'#0A2A7A'}}>Shopify SEO in 2026</div>
+              <div className="mt-3 text-sm opacity-70" style={{color:'#0A2A7A'}}>EEAT + Core Web Vitals. We fix collection schema, speed, UGC reviews. Works for $1k to $100k stores.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="text-white py-10" style={{backgroundColor:'#0A2A7A'}}>
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
+          <div>
+            <div className="font-bold">Novi LLC</div>
+            <div className="mt-1 text-xs text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div>
+            <div className="mt-2 text-xs text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div>
+            <div className="mt-3 text-sm"><a href="mailto:hello@novi-llc.com" className="underline text-white/80">hello@novi-llc.com</a></div>
+          </div>
+          <div className="flex flex-wrap gap-5 text-sm text-white/80">
+            <a href="mailto:hello@novi-llc.com" className="underline font-semibold">Contact us</a>
+            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a>
+            <a href="https://x.com/novi_llc" target="_blank" className="underline">X</a>
+            <a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a>
+            <a href="mailto:hello@novi-llc.com" className="underline">Email</a>
+          </div>
+        </div>
+      </footer>
+      <WhatsAppButton />
+    </main>
+  )
 }
