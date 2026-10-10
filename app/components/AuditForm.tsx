@@ -36,14 +36,6 @@ export default function AuditForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <input
-        type="email"
-        required
-        placeholder="Work email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="border border-blue-900 rounded-xl px-4 py-3"
-      />
-      <input
         type="text"
         placeholder="Shopify URL. (store.myshopify.com)"
         value={store}
@@ -62,6 +54,15 @@ export default function AuditForm() {
         <option value="$10k - $20k/mo - Growing">$10k - $20k/mo — Growing</option>
         <option value="$20k - $100k+/mo - Established">$20k - $100k+/mo — Established</option>
       </select>
+
+      <input
+        type="email"
+        required
+        placeholder="Work email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="border border-blue-900 rounded-xl px-4 py-3"
+      />
 
       <button
         type="submit"
