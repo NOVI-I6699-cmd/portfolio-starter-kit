@@ -22,13 +22,16 @@ return (
 <div className="border rounded-lg p-3 text-center"><div className="font-bold text-[#0A2A7A]">$20k/mo</div><div className="opacity-60">$4,600 lost</div></div>
 </div>
 
-<div className="mt-6 text-sm opacity-70">📍 Accra, Ghana → US Brands | Fix from $750 | Retainer $1,500/mo | EST Hours</div>
+<div className="mt-6 text-sm opacity-70 leading-6">
+📍 Accra, Ghana → US Brands | Fix from $750 | Retainer $1,500/mo | EST Hours<br/>
+💳 US ACH/Wire via Grey US account + Wise — Easy payment, no intl wire hassle.
+</div>
 </div>
 
 <AuditForm />
 </section>
 
-<footer className="border-t py-6 text-center text-xs opacity-50">© Novi LLC — Accra, Ghana - Remote Worldwide - EST Hours — novi-llc.com</footer>
+<footer className="border-t py-6 text-center text-xs opacity-50">© Novi LLC — Accra, Ghana - Remote Worldwide - EST Hours — Pay via US Bank (Grey) + Wise — novi-llc.com</footer>
 </main>
 )
 }
