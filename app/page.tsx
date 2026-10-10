@@ -40,6 +40,11 @@ export default function Home() {
             <div>✓ EST Hours</div>
             <div>✓ Inbox in 72h</div>
           </div>
+
+          <div className="mt-3 text-xs font-semibold" style={{color:'#0A2A7A'}}>
+            ✓ We accept US ACH / Wire via Grey US account - easy payment for US brands.
+          </div>
+
         </div>
 
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
@@ -86,14 +91,4 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-5 text-sm text-white/80">
             <a href="mailto:hello@novi-llc.com" className="underline font-semibold">Contact us</a>
-            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a>
-            <a href="https://x.com/novi_llc" target="_blank" className="underline">X</a>
-            <a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a>
-            <a href="mailto:hello@novi-llc.com" className="underline">Email</a>
-          </div>
-        </div>
-      </footer>
-      <WhatsAppButton />
-    </main>
-  )
-}
+           
