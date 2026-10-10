@@ -3,71 +3,66 @@ import WhatsAppButton from './components/WhatsAppButton'
 
 export default function Home() {
   return (
-    <main>
-      {/* HEADER - #0A2A7A */}
+    <main className="overflow-x-hidden">
       <header className="bg-[#0A2A7A] text-white sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="font-[var(--font-playfair)] text-[22px] tracking-[-0.02em] font-medium">Novi LLC</span>
-          <nav className="flex items-center gap-6 text-[14px] font-[var(--font-inter)]">
-            <a href="#inbox-radar" className="hover:opacity-80">Inbox Radar</a>
-            <a href="#blog" className="hover:opacity-80">Blog</a>
-            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="hover:opacity-80">LinkedIn</a>
-            <a href="https://x.com/novi_llc" target="_blank" className="hover:opacity-80">X</a>
-            <a href="mailto:hello@novi-llc.com" className="bg-white text-[#0A2A7A] px-5 py-2.5 font-medium hover:bg-[#f0f0f0] transition">Book a Call</a>
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
+          <span className="font-[var(--font-playfair)] text-[20px] md:text-[22px] font-medium">Novi LLC</span>
+          <nav className="hidden md:flex items-center gap-6 text-[14px]">
+            <a href="#inbox-radar">Inbox Radar</a><a href="#blog">Blog</a>
+            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank">LinkedIn</a>
+            <a href="https://x.com/novi_llc" target="_blank">X</a>
+            <a href="mailto:hello@novi-llc.com" className="bg-white text-[#0A2A7A] px-5 py-2.5 font-medium">Book a Call</a>
           </nav>
+          <a href="mailto:hello@novi-llc.com" className="md:hidden bg-white text-[#0A2A7A] px-4 py-2 text-[13px] font-medium">Book a Call</a>
+        </div>
+        <div className="md:hidden border-t border-white/10 px-4 py-2.5 flex gap-4 text-[12px] text-white/80 overflow-x-auto">
+          <a href="#inbox-radar" className="whitespace-nowrap">Inbox Radar</a><a href="#blog" className="whitespace-nowrap">Blog</a>
+          <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="whitespace-nowrap">LinkedIn</a>
+          <a href="https://x.com/novi_llc" target="_blank" className="whitespace-nowrap">X</a>
+          <a href="https://wa.me/233243876362" target="_blank" className="whitespace-nowrap">WhatsApp</a>
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12">
+      <section className="max-w-7xl mx-auto px-4 md:px-6 py-10 md:py-24 grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         <div>
-          <h1 className="font-[var(--font-playfair)] text-[56px] leading-[0.95] tracking-[-0.02em] text-[#0A2A7A]">
-            We Turn Shopify Stores Into Growth Engines.
-          </h1>
-          <p className="mt-6 text-[18px] leading-7 text-[#0A2A7A]/80 font-[var(--font-inter)]">
-            Shopify Agency focused on e-commerce growth & brand strategy. We audit, optimize, and scale your store.
-          </p>
-          <div className="mt-8 flex gap-4 font-[var(--font-inter)]">
-            <a href="mailto:hello@novi-llc.com" className="bg-[#0A2A7A] text-white px-6 py-3 text-sm font-medium">hello@novi-llc.com</a>
-            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="border border-[#0A2A7A] text-[#0A2A7A] px-6 py-3 text-sm font-medium">LinkedIn</a>
+          <h1 className="font-[var(--font-playfair)] text-[34px] leading-[1] md:text-[56px] md:leading-[0.95] tracking-[-0.02em] text-[#0A2A7A]">We Turn Shopify Stores Into Growth Engines.</h1>
+          <p className="mt-4 md:mt-6 text-[16px] md:text-[18px] leading-7 text-[#0A2A7A]/80">Shopify Agency focused on e-commerce growth & brand strategy.</p>
+          <div className="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="mailto:hello@novi-llc.com" className="bg-[#0A2A7A] text-white px-6 py-3.5 text-sm font-medium text-center">hello@novi-llc.com</a>
+            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="border border-[#0A2A7A] text-[#0A2A7A] px-6 py-3.5 text-sm font-medium text-center">LinkedIn</a>
           </div>
         </div>
-        <AuditForm />
+        <div className="w-full"><AuditForm /></div>
       </section>
 
-      {/* INBOX RADAR */}
-      <section id="inbox-radar" className="bg-[#0A2A7A] text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-[var(--font-playfair)] text-[40px] tracking-[-0.02em]">Inbox Radar</h2>
-          <p className="mt-3 text-white/80 max-w-2xl font-[var(--font-inter)]">Our proprietary email deliverability & revenue recovery system for Shopify brands. See exactly where your Klaviyo money leaks.</p>
-          <div className="mt-10 grid md:grid-cols-3 gap-6 font-[var(--font-inter)]">
-            <div className="border border-white/20 p-6"><h3 className="font-medium">Deliverability Audit</h3><p className="text-sm text-white/70 mt-2">Spam, bounces, suppression analysis.</p></div>
-            <div className="border border-white/20 p-6"><h3 className="font-medium">Revenue Recovery</h3><p className="text-sm text-white/70 mt-2">Flows that actually convert.</p></div>
-            <div className="border border-white/20 p-6"><h3 className="font-medium">Growth Roadmap</h3><p className="text-sm text-white/70 mt-2">90-day plan to scale.</p></div>
+      <section id="inbox-radar" className="bg-[#0A2A7A] text-white py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="font-[var(--font-playfair)] text-[30px] md:text-[40px]">Inbox Radar</h2>
+          <p className="mt-3 text-[15px] text-white/80 max-w-2xl">Our proprietary email deliverability system for Shopify brands.</p>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div className="border border-white/20 p-5"><h3 className="font-medium">Deliverability Audit</h3><p className="text-sm text-white/70 mt-2">Spam, bounces, analysis.</p></div>
+            <div className="border border-white/20 p-5"><h3 className="font-medium">Revenue Recovery</h3><p className="text-sm text-white/70 mt-2">Flows that convert.</p></div>
+            <div className="border border-white/20 p-5"><h3 className="font-medium">Growth Roadmap</h3><p className="text-sm text-white/70 mt-2">90-day plan to scale.</p></div>
           </div>
         </div>
       </section>
 
-      {/* BLOG */}
-      <section id="blog" className="max-w-7xl mx-auto px-6 py-20">
-        <div className="flex justify-between items-end">
-          <h2 className="font-[var(--font-playfair)] text-[36px] text-[#0A2A7A] tracking-[-0.02em]">Insights</h2>
-          <a href="https://x.com/novi_llc" target="_blank" className="text-sm underline text-[#0A2A7A] font-[var(--font-inter)]">Follow on X →</a>
-        </div>
-        <div className="mt-10 grid md:grid-cols-3 gap-8 font-[var(--font-inter)]">
-          <article className="border border-[#0A2A7A]/10 p-6 hover:border-[#0A2A7A]/30 transition"><p className="text-xs uppercase tracking-widest opacity-60">Inbox Radar</p><h3 className="mt-2 font-[var(--font-playfair)] text-xl text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23% Revenue</h3><p className="mt-2 text-sm opacity-70">The fix we use for 7-figure brands...</p></article>
-          <article className="border border-[#0A2A7A]/10 p-6 hover:border-[#0A2A7A]/30 transition"><p className="text-xs uppercase tracking-widest opacity-60">Case Study</p><h3 className="mt-2 font-[var(--font-playfair)] text-xl text-[#0A2A7A]">How We Fixed Deliverability in 14 Days</h3><p className="text-sm opacity-70 mt-2">From 71% to 99% inbox.</p></article>
-          <article className="border border-[#0A2A7A]/10 p-6 hover:border-[#0A2A7A]/30 transition"><p className="text-xs uppercase tracking-widest opacity-60">Strategy</p><h3 className="mt-2 font-[var(--font-playfair)] text-xl text-[#0A2A7A]">Shopify SEO in 2026</h3><p className="text-sm opacity-70 mt-2">What actually ranks now.</p></article>
+      <section id="blog" className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
+        <div className="flex justify-between items-end"><h2 className="font-[var(--font-playfair)] text-[28px] md:text-[36px] text-[#0A2A7A]">Insights</h2><a href="https://x.com/novi_llc" target="_blank" className="text-sm underline text-[#0A2A7A]">Follow on X →</a></div>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <article className="border border-[#0A2A7A]/10 p-5"><p className="text-[11px] uppercase opacity-60">Inbox Radar</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23% Revenue</h3></article>
+          <article className="border border-[#0A2A7A]/10 p-5"><p className="text-[11px] uppercase opacity-60">Case Study</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">How We Fixed Deliverability in 14 Days</h3></article>
+          <article className="border border-[#0A2A7A]/10 p-5"><p className="text-[11px] uppercase opacity-60">Strategy</p><h3 className="mt-2 font-[var(--font-playfair)] text-[18px] text-[#0A2A7A]">Shopify SEO in 2026</h3></article>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-[#0A2A7A] text-white py-12 font-[var(--font-inter)]">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-8">
-          <div>
-            <p className="font-[var(--font-playfair)] text-xl">Novi LLC</p>
-            <p className="mt-2 text-sm text-white/70">Shopify Agency • E-commerce Growth & Brand Strategy</p>
-            <p className="mt-4 text-sm"><a href="mailto:hello@novi-llc.com" className="underline">hello@novi-llc.com</a></p>
-          </div>
-          <div className="flex gap-6 text-sm text-white/80">
-            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="hover:text-white underline">Linked
+      <footer className="bg-[#0A2A7A] text-white py-10">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between gap-6">
+          <div><p className="font-[var(--font-playfair)] text-xl">Novi LLC</p><p className="mt-2 text-sm text-white/70">Shopify Agency • E-commerce Growth</p><p className="mt-3 text-sm"><a href="mailto:hello@novi-llc.com" className="underline">hello@novi-llc.com</a></p></div>
+          <div className="flex gap-5 text-sm text-white/80"><a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a><a href="https://x.com/novi_llc" target="_blank" className="underline">X</a><a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a></div>
+        </div>
+      </footer>
+      <WhatsAppButton />
+    </main>
+  )
+}
