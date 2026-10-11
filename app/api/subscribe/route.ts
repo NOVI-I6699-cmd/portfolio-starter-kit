@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     const { store, revenue, email } = await req.json();
     const resend = new Resend(process.env.RESEND_API_KEY!);
     const r = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "info@novi-llc.com",
       to: process.env.CONTACT_TO!,
       subject: `Lead: ${store} - ${revenue}`,
       html: `<p>Store: ${store}<br>Revenue: ${revenue}<br>Email: ${email}</p>`,
