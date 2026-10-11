@@ -19,15 +19,9 @@ export default function AuditForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ store, revenue, goal, email }),
       });
-      
       const text = await res.text();
       let data: any = {};
-      try { 
-        data = JSON.parse(text); 
-      } catch {
-        throw new Error("API route not found - /api/subscribe returned HTML. Preview: " + text.slice(0,120));
-      }
-      
+      try { data = JSON.parse(text); } catch { throw new Error(text.slice(0,120)); }
       if (!res.ok) throw new Error(data.error || "Failed");
       setSent(true);
       setStore(""); setRevenue(""); setGoal(""); setEmail("");
@@ -39,7 +33,7 @@ export default function AuditForm() {
     }
   };
 
-  const inputBase = "w-full bg-[#F3F4F6] border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900/10";
+  const inputBase = "w-full bg-gray-100 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900/10";
   
   return (
     <div className="flex flex-col">
@@ -50,20 +44,27 @@ export default function AuditForm() {
         </div>
       )}
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <input 
-          value={store} 
-          onChange={e=>setStore(e.target.value)} 
-          placeholder="yourstore.myshopify.com" 
-          required 
-          className={`${inputBase} text-slate-900 placeholder:text-slate-500`} 
-        />
-        <select 
-          value={revenue} 
-          onChange={e=>setRevenue(e.target.value)} 
-          required 
-          className={`${inputBase} ${revenue ? 'text-slate-900' : 'text-slate-500'}`}
-        >
+        <input value={store} onChange={e=>setStore(e.target.value)} placeholder="yourstore.myshopify.com" required className={`${inputBase} text-slate-900 placeholder:text-slate-500`} />
+        <select value={revenue} onChange={e=>setRevenue(e.target.value)} required className={`${inputBase} ${revenue ? 'text-slate-900' : 'text-slate-500'}`}>
           <option value="" disabled>Monthly revenue</option>
-          <option value="$5k/mo - Starting" className="text-slate-900">$5k/mo - Starting</option>
-          <option value="$10k - $20k/mo - Growth" className="text-slate-900">$10k - $20k/mo - Growth</option>
-          <option value="$20k - $100k/mo - Scaling" className="text-slate-900">$20k - $100k
+          <option value="$5k/mo - Starting">$5k/mo - Starting</option>
+          <option value="$10k - $20k/mo - Growth">$10k - $20k/mo - Growth</option>
+          <option value="$20k - $100k/mo - Scaling">$20k - $100k/mo - Scaling</option>
+          <option value="$100k+/mo - Enterprise">$100k+/mo - Enterprise</option>
+        </select>
+        <select value={goal} onChange={e=>setGoal(e.target.value)} required className={`${inputBase} ${goal ? 'text-slate-900' : 'text-slate-500'}`}>
+          <option value="" disabled>What do you need help with?</option>
+          <option value="Scaling to $100k+/mo">Scaling to $100k+/mo</option>
+          <option value="Improving Conversion Rate">Improving Conversion Rate</option>
+          <option value="Paid Ads Audit">Paid Ads Audit</option>
+          <option value="Store Redesign / CRO">Store Redesign / CRO</option>
+          <option value="Other">Other</option>
+        </select>
+        <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" required className={`${inputBase} text-slate-900 placeholder:text-slate-500`} />
+        <button disabled={loading} className="bg-blue-900 text-white rounded-xl py-3.5 text-sm font-bold disabled:opacity-60">
+          {loading ? "Sending..." : "Get My Free Audit"}
+        </button>
+      </form>
+    </div>
+  );
+}
