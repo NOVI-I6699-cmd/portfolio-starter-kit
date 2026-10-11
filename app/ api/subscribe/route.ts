@@ -1,47 +1,43 @@
-"use client";
-import { useState } from "react";
+import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
 
-export default function AuditForm() {
-  const [store, setStore] = useState("");
-  const [revenue, setRevenue] = useState("");
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setSent(false);
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ store, revenue, email }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to send");
-      setSent(true);
-      setStore(""); setRevenue(""); setEmail("");
-      setTimeout(() => setSent(false), 6000);
-    } catch (err: any) {
-      alert("Failed: " + err.message);
-      console.log(err);
+export async function POST(req: NextRequest) {
+  try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json({ error: "Missing RESEND_API_KEY" }, { status: 500 });
     }
-    setLoading(false);
-  };
+    const resend = new Resend(apiKey);
+    const body = await req.json();
+    
+    const email = body.email || body.customerEmail || "no-email";
+    const store = body.store || body.storeUrl || "";
+    const revenue = body.revenue || body.monthlyRevenue || "";
 
-  const base = "w-full bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900/10";
-  const inputClass = base + " text-slate-900 placeholder:text-slate-400";
-  let selectClass = base + " text-slate-400";
-  if (revenue) {
-    selectClass = base + " text-slate-900";
+    const result = await resend.emails.send({
+      from: "Novi LLC <info@novi-llc.com>",
+      to: ["eveilsaint6699@gmail.com"],
+      cc: ["info@novi-llc.com"],
+      subject: `New Lead: ${store} - ${email} - ${revenue}`,
+      replyTo: email,
+      html: `
+        <h2>New Lead from novi-llc.com 🔥</h2>
+        <p><b>Store:</b> ${store}</p>
+        <p><b>Revenue:</b> ${revenue}</p>
+        <p><b>Email:</b> ${email}</p>
+        <hr>
+        <pre>${JSON.stringify(body, null, 2)}</pre>
+      `,
+    });
+
+    if (result.error) {
+      console.error("RESEND ERROR:", result.error);
+      return NextResponse.json({ error: result.error.message }, { status: 400 });
+    }
+
+    return NextResponse.json({ success: true, id: result.data?.id });
+  } catch (e: any) {
+    console.error("SUBSCRIBE ERROR:", e);
+    return NextResponse.json({ error: e.message }, { status: 500 });
   }
-
-  return (
-    <div className="flex flex-col">
-      {sent && (
-        <div className="mb-5 flex items-center gap-3 rounded-xl border border-green-200 bg-green-50 px-4 py-4">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">✓</div>
-          <div>
-            <p className="font-semibold text-green-900 text-sm">Message sent successfully</p>
-            <p className="text-xs text-green-700 mt-0.5
+}
