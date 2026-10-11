@@ -9,25 +9,24 @@ export default function AuditForm() {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
+  const inputStyle = "w-full p-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-blue-900";
+
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ store, revenue, goal, email }),
-      });
-      if (res.ok) setDone(true);
-    } catch (err) {
-      alert("Error");
-    }
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ store, revenue, goal, email }),
+    });
     setLoading(false);
+    if (res.ok) setDone(true);
+    else alert("Error - try again");
   }
 
   if (done) {
     return (
-      <div className="bg-gray-100 p-8 rounded-xl text-center">
+      <div className="bg-gray-100 p-8 rounded-xl text-center border border-gray-200">
         <h3 className="font-bold text-lg">Audit Request Sent!</h3>
         <p className="text-sm text-gray-600 mt-2">We will review {store} and reply within 24h.</p>
       </div>
@@ -35,16 +34,18 @@ export default function AuditForm() {
   }
 
   return (
-    <form onSubmit={submit} className="bg-gray-100 p-6 rounded-xl space-y-4">
-      <input value={store} onChange={(e) => setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className="w-full p-3 rounded-lg border" required />
-      <select value={revenue} onChange={(e) => setRevenue(e.target.value)} className="w-full p-3 rounded-lg border" required>
+    <form onSubmit={submit} className="bg-gray-100 p-6 rounded-xl space-y-4 border border-gray-200">
+      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={inputStyle} required />
+      
+      <select value={revenue} onChange={(e)=>setRevenue(e.target.value)} className={inputStyle} required>
         <option value="">Monthly Revenue</option>
         <option>$5k - $20k/mo - Growth Stage</option>
         <option>$20k - $100k/mo - Scaling Stage</option>
         <option>$100k - $500k/mo - 7-Figure Path</option>
         <option>$500k+/mo - Enterprise / 8-Figures</option>
       </select>
-      <select value={goal} onChange={(e) => setGoal(e.target.value)} className="w-full p-3 rounded-lg border" required>
+      
+      <select value={goal} onChange={(e)=>setGoal(e.target.value)} className={inputStyle} required>
         <option value="">Your Goal / Reason</option>
         <option>Improving Conversion Rate</option>
         <option>Scaling to $100k+/mo</option>
@@ -52,8 +53,12 @@ export default function AuditForm() {
         <option>Store Redesign</option>
         <option>Other</option>
       </select>
-      <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work Email" type="email" className="w-full p-3 rounded-lg border" required />
-      <button disabled={loading} className="w-full bg-blue-900 text-white p-3 rounded-lg font-bold">{loading ? "Sending..." : "Get My Free Audit"}</button>
+      
+      <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Work Email" type="email" className={inputStyle} required />
+      
+      <button disabled={loading} className="w-full bg-blue-900 text-white p-3 rounded-lg font-bold hover:bg-blue-800 transition">
+        {loading ? "Sending..." : "Get My Free Audit"}
+      </button>
     </form>
   );
 }
