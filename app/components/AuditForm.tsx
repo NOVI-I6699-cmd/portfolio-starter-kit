@@ -30,6 +30,8 @@ export default function AuditForm() {
     }
   };
 
+  const inputBase = "w-full bg-[#F3F4F6] border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900/10";
+  
   return (
     <div className="flex flex-col">
       {sent && (
@@ -39,18 +41,39 @@ export default function AuditForm() {
         </div>
       )}
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <input value={store} onChange={e=>setStore(e.target.value)} placeholder="yourstore.myshopify.com" required className="w-full bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900" />
+        <input 
+          value={store} 
+          onChange={e=>setStore(e.target.value)} 
+          placeholder="yourstore.myshopify.com" 
+          required 
+          className={`${inputBase} text-slate-900 placeholder:text-slate-500`} 
+        />
         
-        <select value={revenue} onChange={e=>setRevenue(e.target.value)} required className="w-full bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900">
+        <select 
+          value={revenue} 
+          onChange={e=>setRevenue(e.target.value)} 
+          required 
+          className={`${inputBase} ${revenue ? 'text-slate-900' : 'text-slate-500'}`}
+        >
           <option value="" disabled>Monthly revenue</option>
-          <option value="$5k/mo - Starting">$5k/mo - Starting</option>
-          <option value="$10k - $20k/mo - Growth">$10k - $20k/mo - Growth</option>
-          <option value="$20k - $100k/mo - Scaling">$20k - $100k/mo - Scaling</option>
-          <option value="$100k+/mo - Enterprise">$100k+/mo - Enterprise</option>
+          <option value="$5k/mo - Starting" className="text-slate-900">$5k/mo - Starting</option>
+          <option value="$10k - $20k/mo - Growth" className="text-slate-900">$10k - $20k/mo - Growth</option>
+          <option value="$20k - $100k/mo - Scaling" className="text-slate-900">$20k - $100k/mo - Scaling</option>
+          <option value="$100k+/mo - Enterprise" className="text-slate-900">$100k+/mo - Enterprise</option>
         </select>
 
-        <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" required className="w-full bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900" />
-        <button disabled={loading} className="bg-[#0A2A7A] text-white rounded-xl py-3.5 text-sm font-bold">{loading ? "Sending..." : "Get My Free Audit"}</button>
+        <input 
+          value={email} 
+          onChange={e=>setEmail(e.target.value)} 
+          placeholder="you@brand.com" 
+          type="email" 
+          required 
+          className={`${inputBase} text-slate-900 placeholder:text-slate-500`} 
+        />
+        
+        <button disabled={loading} className="bg-[#0A2A7A] text-white rounded-xl py-3.5 text-sm font-bold disabled:opacity-60">
+          {loading ? "Sending..." : "Get My Free Audit"}
+        </button>
       </form>
     </div>
   );
