@@ -1,17 +1,12 @@
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setLoading(true);
-  try {
-    await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ store, revenue, email }),
-    });
-  } catch (err) {
-    console.log(err);
-  }
-  // Force success + backup lead to YOUR WhatsApp so you don't lose it
-  const text = `NEW LEAD novi-llc.com%0AStore: ${store}%0ARevenue: ${revenue}%0AEmail: ${email}`;
-  window.location.href = `https://wa.me/233243876362?text=${text}`;
-  setLoading(false);
-};
+<select
+  value={revenue}
+  onChange={(e) => setRevenue(e.target.value)}
+  required
+  className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white text-sm"
+>
+  <option value="" disabled hidden>Monthly revenue</option>
+  <option value="$5k/mo">$5k/mo — Starting</option>
+  <option value="$10k - $20k/mo">$10k - $20k/mo — Growing</option>
+  <option value="$20k - $100k/mo">$20k - $100k/mo — Scaling</option>
+  <option value="$100k+/mo">$100k+/mo — 7-figure</option>
+</select>
