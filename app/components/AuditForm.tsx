@@ -1,51 +1,65 @@
-import { NextResponse } from "next/server";
-import { Resend } from "resend";
+"use client";
+import { useState } from "react";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export default function AuditForm() {
+  const [store, setStore] = useState("");
+  const [revenue, setRevenue] = useState("");
+  const [goal, setGoal] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
 
-export async function POST(req: Request) {
-  const { store, revenue, goal, email } = await req.json();
+  const base = "w-full p-3 rounded-lg border border-[#0A2A7A]/20 bg-white text-[15px] text-[#0A2A7A] placeholder:text-[#9CA3AF] focus:border-[#0A2A7A] focus:outline-none";
+  const sel = (v: string) => v === ""? "text-[#9CA3AF]" : "text-[#0A2A7A]";
 
-  const html = `
-  <!DOCTYPE html>
-  <html>
-  <body style="margin:0; padding:0; background:#f5f5f7; font-family: Arial, sans-serif;">
-    <div style="max-width:580px; margin:30px auto; background:#FFFFFF; border-radius:16px; overflow:hidden; border:1px solid #e5e7eb;">
-      
-      <!-- HEADER - NOVI BLUE #0A2A7A -->
-      <div style="background-color:#0A2A7A; padding:24px 28px;">
-        <h1 style="color:#FFFFFF; margin:0; font-size:20px; font-weight:800;">New Client Lead 🚀</h1>
-        <p style="color:#FFFFFF; margin:8px 0 0 0; font-size:14px;">Someone just submitted the audit form on novi-llc.com</p>
-      </div>
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ store, revenue, goal, email }),
+    });
+    setLoading(false);
+    setDone(true);
+  }
 
-      <!-- BODY - NOVI COLORS -->
-      <div style="padding:28px; background:#FFFFFF;">
-        <div style="background:#FFFFFF; border:2px solid #0A2A7A; border-radius:12px; padding:20px;">
-          <p style="margin:0 0 12px 0; font-size:14px; color:#0A2A7A;"><strong style="color:#0A2A7A;">Store URL:</strong> ${store}</p>
-          <p style="margin:0 0 12px 0; font-size:14px; color:#0A2A7A;"><strong style="color:#0A2A7A;">Monthly Revenue:</strong> ${revenue}</p>
-          <p style="margin:0 0 12px 0; font-size:14px; color:#0A2A7A;"><strong style="color:#0A2A7A;">Your Goal / Reason:</strong> ${goal}</p>
-          <p style="margin:0; font-size:14px; color:#0A2A7A;"><strong style="color:#0A2A7A;">Client Email:</strong> ${email}</p>
+  if (done) {
+    return (
+      <div className="bg-[#0A2A7A] p-1.5 rounded-xl">
+        <div className="bg-white p-8 rounded-[10px] text-center">
+          <div className="text-[32px] mb-3">🎉</div>
+          <h3 className="font-bold text-[18px] text-[#0A2A7A]">Audit Request Received</h3>
+          <p className="text-[14px] text-[#0A2A7A]/70 mt-3 leading-relaxed">
+            Thank you for your submission.<br/>Our team will review your request and be in touch shortly.
+          </p>
         </div>
-
-        <!-- BUTTON - NOVI BLUE #0A2A7A + WHITE #FFFFFF -->
-        <a href="mailto:${email}" style="display:block; width:100%; background-color:#0A2A7A; color:#FFFFFF; text-align:center; padding:16px; border-radius:10px; font-weight:bold; font-size:15px; text-decoration:none; margin-top:24px; box-sizing:border-box;">
-          Reply to ${email}
-        </a>
-
-        <p style="color:#0A2A7A; opacity:0.6; font-size:11px; margin-top:20px; text-align:center;">This lead was sent via Resend • Signed by novi-llc.com</p>
       </div>
-    </div>
-  </body>
-  </html>
-  `;
+    );
+  }
 
-  await resend.emails.send({
-    from: "NOVI Leads <leads@novi-llc.com>",
-    to: process.env.LEAD_TO_EMAIL!,
-    subject: `New Lead: ${store} | ${revenue} | ${goal}`,
-    html,
-    replyTo: email,
-  });
-
-  return NextResponse.json({ ok: true });
+  return (
+    <form onSubmit={onSubmit} className="bg-white p-6 rounded-xl space-y-4 border border-gray-200">
+      <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={base} required />
+      <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`} required>
+        <option value="">Monthly Revenue</option>
+        <option>$5k - $20k/mo - Growth Stage</option>
+        <option>$20k - $100k/mo - Scaling Stage</option>
+        <option>$100k - $500k/mo - 7-Figure Path</option>
+        <option>$500k+/mo - Enterprise / 8-Figures</option>
+      </select>
+      <select value={goal} onChange={e=>setGoal(e.target.value)} className={`${base} ${sel(goal)}`} required>
+        <option value="">Your Goal / Reason</option>
+        <option>Improving Conversion Rate</option>
+        <option>Scaling to $100k+/mo</option>
+        <option>Paid Ads Audit</option>
+        <option>Store Redesign</option>
+        <option>Other</option>
+      </select>
+      <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={base} required />
+      <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">
+        {loading? "Sending..." : "Get My Free Audit"}
+      </button>
+    </form>
+  );
 }
