@@ -16,9 +16,18 @@ export async function POST(req: NextRequest) {
 
     const result = await resend.emails.send({
       from: "Novi LLC <onboarding@resend.dev>",
-      to: "Don.floran1@gmail.com",
-      subject: `New Lead: ${store} - ${email}`,
-      html: `<h2>New Lead from novi-llc.com</h2><p><b>Store:</b> ${store}</p><p><b>Revenue:</b> ${revenue}</p><p><b>Email:</b> ${email}</p><br><pre>${JSON.stringify(body, null, 2)}</pre>`,
+      to: ["info@novi-llc.com", "Don.floran1@gmail.com"], // NOW hits info@novi-llc.com
+      subject: `New Lead: ${store} - ${email} - ${revenue}`,
+      replyTo: email, // So you can reply directly to client
+      html: `
+        <h2>New Lead from novi-llc.com 🔥</h2>
+        <p><b>Store:</b> ${store}</p>
+        <p><b>Revenue:</b> ${revenue}</p>
+        <p><b>Email:</b> ${email}</p>
+        <hr>
+        <p>Reply directly to this email to contact the client.</p>
+        <br><pre>${JSON.stringify(body, null, 2)}</pre>
+      `,
     });
 
     if (result.error) {
@@ -26,7 +35,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: result.error.message }, { status: 400 });
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, id: result.data?.id });
   } catch (e: any) {
     console.error("SUBSCRIBE ERROR:", e);
     return NextResponse.json({ error: e.message }, { status: 500 });
