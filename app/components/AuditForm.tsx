@@ -1,70 +1,34 @@
-"use client";
-import { useState } from "react";
+import { NextResponse } from "next/server";
+import { Resend } from "resend";
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default function AuditForm() {
-  const [store, setStore] = useState("");
-  const [revenue, setRevenue] = useState("");
-  const [goal, setGoal] = useState("");
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setSent(false);
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ store, revenue, goal, email }),
-      });
-      const text = await res.text();
-      let data: any = {};
-      try { data = JSON.parse(text); } catch { throw new Error(text.slice(0,120)); }
-      if (!res.ok) throw new Error(data.error || "Failed");
-      setSent(true);
-      setStore(""); setRevenue(""); setGoal(""); setEmail("");
-      setTimeout(()=>setSent(false),6000);
-    } catch (err:any) {
-      alert("Failed: "+err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const inputBase = "w-full bg-gray-100 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900/10";
-  
-  return (
-    <div className="flex flex-col">
-      {sent && (
-        <div className="mb-5 flex items-center gap-3 rounded-xl border border-green-200 bg-green-50 px-4 py-4">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">✓</div>
-          <div><p className="font-semibold text-green-900 text-sm">Message sent successfully</p><p className="text-xs text-green-700">We received your details</p></div>
-        </div>
-      )}
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <input value={store} onChange={e=>setStore(e.target.value)} placeholder="yourstore.myshopify.com" required className={`${inputBase} text-slate-900 placeholder:text-slate-500`} />
-        <select value={revenue} onChange={e=>setRevenue(e.target.value)} required className={`${inputBase} ${revenue ? 'text-slate-900' : 'text-slate-500'}`}>
-          <option value="" disabled>Monthly revenue</option>
-          <option value="$5k/mo - Starting">$5k/mo - Starting</option>
-          <option value="$10k - $20k/mo - Growth">$10k - $20k/mo - Growth</option>
-          <option value="$20k - $100k/mo - Scaling">$20k - $100k/mo - Scaling</option>
-          <option value="$100k+/mo - Enterprise">$100k+/mo - Enterprise</option>
-        </select>
-        <select value={goal} onChange={e=>setGoal(e.target.value)} required className={`${inputBase} ${goal ? 'text-slate-900' : 'text-slate-500'}`}>
-          <option value="" disabled>What do you need help with?</option>
-          <option value="Scaling to $100k+/mo">Scaling to $100k+/mo</option>
-          <option value="Improving Conversion Rate">Improving Conversion Rate</option>
-          <option value="Paid Ads Audit">Paid Ads Audit</option>
-          <option value="Store Redesign / CRO">Store Redesign / CRO</option>
-          <option value="Other">Other</option>
-        </select>
-        <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" required className={`${inputBase} text-slate-900 placeholder:text-slate-500`} />
-        <button disabled={loading} className="bg-blue-900 text-white rounded-xl py-3.5 text-sm font-bold disabled:opacity-60">
-          {loading ? "Sending..." : "Get My Free Audit"}
-        </button>
-      </form>
-    </div>
-  );
+function getAction(goal: string) {
+  if (!goal) return "Review lead";
+  if (goal.includes("Conversion")) return "💰 CRO LEAD: This client has low conversion. Check PDP, cart, checkout. Send 3 quick wins + pitch CRO Audit.";
+  if (goal.includes("Scaling")) return "🔥 SCALING LEAD: High-intent. Wants $100k+. Send scaling case study + Loom teardown of their store. Pitch Scaling Audit.";
+  if (goal.includes("Ads")) return "📈 ADS LEAD: ROAS issue. Ask for ad account screenshot. Pitch Paid Ads Audit + Creatives.";
+  if (goal.includes("Redesign")) return "🎨 DESIGN LEAD: Wants redesign. Do 2-min Figma audit (hero, PDP). Pitch Redesign + CRO.";
+  if (goal.includes("Other")) return "📋 OTHER: Ask what exactly they need, then custom pitch.";
+  return "📋 Review store + revenue, then pitch.";
 }
+
+export async function POST(req: Request) {
+  try {
+    const { store, revenue, goal, email } = await req.json();
+    const safeGoal = goal || "Not selected";
+    const action = getAction(safeGoal);
+
+    await resend.emails.send({
+      from: "NOVI Leads <info@novi-llc.com>",
+      to: process.env.CONTACT_TO!,
+      subject: `New Lead: ${store} | ${safeGoal}`,
+      replyTo: email,
+      html: `
+        <div style="font-family:Inter,sans-serif;max-width:600px;margin:0 auto;padding:32px;border:1px solid #e5e7eb;border-radius:16px;">
+          <h2 style="margin:0 0 6px;">New Client Lead 🚀</h2>
+          <p style="margin:0 0 20px;color:#6b7280;font-size:13px;">Form submitted on novi-llc.com</p>
+          
+          <div style="background:#f9fafb;padding:20px;border-radius:12px;margin-bottom:18px;">
+            <p style="margin:0 0 10px;font-size:14px;"><span style="color:#6b7280;">Store:</span> <strong>${store}</strong></p>
+            <p style="margin:0 0 10px;font-size:14px;"><span style="color:#6b7280;">Revenue:</span> <strong>${revenue}</strong></p>
+            <p style="margin:0 0 10px;font-size
