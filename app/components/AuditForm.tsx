@@ -9,7 +9,7 @@ export default function AuditForm() {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
-  const inputStyle = "w-full p-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-blue-900";
+  const fieldClass = "w-full p-3 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900";
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -26,7 +26,7 @@ export default function AuditForm() {
 
   if (done) {
     return (
-      <div className="bg-gray-100 p-8 rounded-xl text-center border border-gray-200">
+      <div className="bg-[#F3F4F6] p-8 rounded-xl text-center border">
         <h3 className="font-bold text-lg">Audit Request Sent!</h3>
         <p className="text-sm text-gray-600 mt-2">We will review {store} and reply within 24h.</p>
       </div>
@@ -34,10 +34,10 @@ export default function AuditForm() {
   }
 
   return (
-    <form onSubmit={submit} className="bg-gray-100 p-6 rounded-xl space-y-4 border border-gray-200">
-      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={inputStyle} required />
+    <form onSubmit={submit} className="bg-[#F3F4F6] p-6 rounded-xl space-y-4 border">
+      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={fieldClass} required />
       
-      <select value={revenue} onChange={(e)=>setRevenue(e.target.value)} className={inputStyle} required>
+      <select value={revenue} onChange={(e)=>setRevenue(e.target.value)} className={fieldClass} required>
         <option value="">Monthly Revenue</option>
         <option>$5k - $20k/mo - Growth Stage</option>
         <option>$20k - $100k/mo - Scaling Stage</option>
@@ -45,7 +45,7 @@ export default function AuditForm() {
         <option>$500k+/mo - Enterprise / 8-Figures</option>
       </select>
       
-      <select value={goal} onChange={(e)=>setGoal(e.target.value)} className={inputStyle} required>
+      <select value={goal} onChange={(e)=>setGoal(e.target.value)} className={fieldClass} required>
         <option value="">Your Goal / Reason</option>
         <option>Improving Conversion Rate</option>
         <option>Scaling to $100k+/mo</option>
@@ -54,9 +54,9 @@ export default function AuditForm() {
         <option>Other</option>
       </select>
       
-      <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Work Email" type="email" className={inputStyle} required />
+      <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Work Email (e.g. you@brand.com)" type="email" className={fieldClass} required />
       
-      <button disabled={loading} className="w-full bg-blue-900 text-white p-3 rounded-lg font-bold hover:bg-blue-800 transition">
+      <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">
         {loading ? "Sending..." : "Get My Free Audit"}
       </button>
     </form>
