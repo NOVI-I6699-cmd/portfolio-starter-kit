@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const SHEET_URL = process.env.GOOGLE_SHEET_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbz3q1h2mXR0XdV-nJQdxJJNQBiPce2RwYnBt0RClCcLghlt0LMhy0gj3mwwsxt2yrhXcQ/exec";
 
 export async function POST(req: Request) {
   try {
@@ -11,17 +12,19 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
     }
 
-    // 1. Save to Google Sheet (does not block email if it fails)
-    const SHEET_URL = process.env.GOOGLE_SHEET_WEBHOOK_URL;
-    if (SHEET_URL) {
-      try {
-        await fetch(SHEET_URL, {
-          method: "POST",
-          body: JSON.stringify({ store, revenue, goal, email }),
-        });
-      } catch (sheetErr) {
-        console.error("Sheet error:", sheetErr);
-      }
+    // 1. Save to Google Sheet
+    try {
+      await fetch(SHEET_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          store, revenue, goal, email, 
+          timestamp: new Date().toISOString(),
+          storeUrl: store // send both names so sheet always catches it
+        }),
+      });
+    } catch (sheetErr) {
+      console.error("Sheet error:", sheetErr);
     }
 
     // 2. Send Email - Your original design
