@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import { useState } from "react";
 
 export default function AuditForm() {
@@ -40,13 +40,10 @@ export default function AuditForm() {
 
   return (
     <form onSubmit={onSubmit} className="bg-white p-6 rounded-xl space-y-4 border">
-      {/* 1. Store - required */}
       <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store (brand.com)" className={base} required />
-      
-      {/* 2. Email - required - moved up so you capture lead even if they skip revenue */}
       <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={base} required />
 
-      {/* 3. Revenue - OPTIONAL, starts at $5k, no $0 stores */}
+      {/* REVENUE - OPTIONAL - $5k+ only */}
       <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`}>
         <option value="">Monthly Revenue (Optional)</option>
         <option>$5k - $20k/mo - Growth Stage</option>
@@ -56,9 +53,9 @@ export default function AuditForm() {
         <option>Prefer not to say</option>
       </select>
 
-      {/* 4. Goal - OPTIONAL */}
-      <select value={goal} onChange={e=>setGoal(e.target.value)} className={`${base} ${sel(goal)}`}>
-        <option value="">Your Goal / Reason (Optional)</option>
+      {/* GOAL - REQUIRED - so you know how to serve */}
+      <select value={goal} onChange={e=>setGoal(e.target.value)} className={`${base} ${sel(goal)}`} required>
+        <option value="">Your Goal / Reason</option>
         <option>Improving Conversion Rate</option>
         <option>Scaling to $100k+/mo</option>
         <option>Paid Ads Audit</option>
@@ -69,7 +66,6 @@ export default function AuditForm() {
       <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">
         {loading? "Sending..." : "Get My Free Audit"}
       </button>
-      
       <p className="text-[11px] text-center text-[#0A2A7A]/50">We work with stores doing $5k+/mo</p>
     </form>
   );
