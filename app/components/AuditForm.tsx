@@ -24,18 +24,17 @@ export default function AuditForm() {
     if (res.ok) setDone(true);
   }
 
+  // PROFESSIONAL SUCCESS - AGENCY LEVEL
   if (done) {
     return (
       <div className="bg-[#0A2A7A] p-1.5 rounded-xl">
-        <div className="bg-white p-6 rounded-[10px]">
-          <h3 className="font-bold text-[16px] text-[#0A2A7A] text-center">Audit Request Sent! 🚀</h3>
-          <p className="text-[13px] text-[#0A2A7A]/70 text-center mt-1 mb-4">We will review and reply within 24h</p>
-          <div className="bg-white border-2 border-[#0A2A7A] rounded-lg p-4 space-y-2">
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Store URL:</span> {store}</p>
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Monthly Revenue:</span> {revenue}</p>
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Your Goal / Reason:</span> {goal}</p>
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Email:</span> {email}</p>
-          </div>
+        <div className="bg-white p-8 rounded-[10px] text-center">
+          <div className="text-[32px] mb-3">🎉</div>
+          <h3 className="font-bold text-[18px] text-[#0A2A7A]">Audit Request Received</h3>
+          <p className="text-[14px] text-[#0A2A7A]/70 mt-3 leading-relaxed">
+            Thank you for your submission.<br/>
+            Our team will review your request and be in touch shortly.
+          </p>
         </div>
       </div>
     );
