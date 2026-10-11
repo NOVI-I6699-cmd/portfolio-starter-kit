@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function AuditForm() {
   const [store, setStore] = useState("");
   const [revenue, setRevenue] = useState("");
+  const [goal, setGoal] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -16,21 +17,20 @@ export default function AuditForm() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ store, revenue, email }),
+        body: JSON.stringify({ store, revenue, goal, email }),
       });
       
-      // FIX: read as text first to avoid <!DOCTYPE crash
       const text = await res.text();
       let data: any = {};
       try { 
         data = JSON.parse(text); 
       } catch {
-        throw new Error("API route not found - /api/subscribe returned HTML. Check that app/api/subscribe/route.ts exists and Vercel deployed it. Preview: " + text.slice(0,120));
+        throw new Error("API route not found - /api/subscribe returned HTML. Preview: " + text.slice(0,120));
       }
       
       if (!res.ok) throw new Error(data.error || "Failed");
       setSent(true);
-      setStore(""); setRevenue(""); setEmail("");
+      setStore(""); setRevenue(""); setGoal(""); setEmail("");
       setTimeout(()=>setSent(false),6000);
     } catch (err:any) {
       alert("Failed: "+err.message);
@@ -66,21 +66,4 @@ export default function AuditForm() {
           <option value="" disabled>Monthly revenue</option>
           <option value="$5k/mo - Starting" className="text-slate-900">$5k/mo - Starting</option>
           <option value="$10k - $20k/mo - Growth" className="text-slate-900">$10k - $20k/mo - Growth</option>
-          <option value="$20k - $100k/mo - Scaling" className="text-slate-900">$20k - $100k/mo - Scaling</option>
-          <option value="$100k+/mo - Enterprise" className="text-slate-900">$100k+/mo - Enterprise</option>
-        </select>
-        <input 
-          value={email} 
-          onChange={e=>setEmail(e.target.value)} 
-          placeholder="you@brand.com" 
-          type="email" 
-          required 
-          className={`${inputBase} text-slate-900 placeholder:text-slate-500`} 
-        />
-        <button disabled={loading} className="bg-[#0A2A7A] text-white rounded-xl py-3.5 text-sm font-bold disabled:opacity-60">
-          {loading ? "Sending..." : "Get My Free Audit"}
-        </button>
-      </form>
-    </div>
-  );
-}
+          <option value="$20k - $100k/mo - Scaling" className="text-slate-900">$20k - $100k
