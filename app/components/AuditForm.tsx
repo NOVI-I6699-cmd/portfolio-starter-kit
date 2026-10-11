@@ -9,9 +9,8 @@ export default function AuditForm() {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
-  // SAME style for all - grey when empty, black when filled
-  const base = "w-full p-3 rounded-lg border border-gray-300 bg-white placeholder:text-[#9CA3AF] text-[15px]";
-  const selectColor = (val: string) => val === ""? "text-[#9CA3AF]" : "text-gray-900";
+  const base = "w-full p-3 rounded-lg border border-[#0A2A7A]/20 bg-[#FFFFFF] placeholder:text-[#0A2A7A]/50 text-[15px] focus:outline-none focus:border-[#0A2A7A] focus:ring-2 focus:ring-[#0A2A7A]/20";
+  const selectColor = (val: string) => val === ""? "text-[#0A2A7A]/50" : "text-[#0A2A7A]";
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -28,16 +27,18 @@ export default function AuditForm() {
 
   if (done) {
     return (
-      <div className="bg-[#F3F4F6] p-8 rounded-xl text-center border">
-        <h3 className="font-bold text-lg">Audit Request Sent!</h3>
-        <p className="text-sm text-gray-600 mt-2">We will review {store} and reply within 24h.</p>
+      <div className="bg-[#0A2A7A] p-6 rounded-xl text-center">
+        <div className="bg-[#FFFFFF] p-8 rounded-lg">
+          <h3 className="font-bold text-lg text-[#0A2A7A]">Audit Request Sent!</h3>
+          <p className="text-sm text-[#0A2A7A]/80 mt-2">We will review {store} and reply within 24h.</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <form onSubmit={submit} className="bg-[#F3F4F6] p-6 rounded-xl space-y-4 border">
-      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={`${base} text-gray-900`} required />
+    <form onSubmit={submit} className="bg-[#FFFFFF] p-6 rounded-xl space-y-4 border border-[#0A2A7A]/10 shadow-sm">
+      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={`${base} text-[#0A2A7A]`} required />
 
       <select value={revenue} onChange={(e)=>setRevenue(e.target.value)} className={`${base} ${selectColor(revenue)}`} required>
         <option value="">Monthly Revenue</option>
@@ -56,9 +57,9 @@ export default function AuditForm() {
         <option>Other</option>
       </select>
 
-      <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={`${base} text-gray-900`} required />
+      <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={`${base} text-[#0A2A7A]`} required />
 
-      <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">
+      <button disabled={loading} className="w-full bg-[#0A2A7A] text-[#FFFFFF] p-3 rounded-lg font-bold hover:bg-[#0A2A7A]/90 transition">
         {loading? "Sending..." : "Get My Free Audit"}
       </button>
     </form>
