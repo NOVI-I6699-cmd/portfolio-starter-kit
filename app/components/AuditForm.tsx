@@ -33,7 +33,7 @@ export default function AuditForm() {
 
   return (
     <form onSubmit={submit} className="bg-[#F3F4F6] p-6 rounded-xl space-y-4">
-      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Store URL (e.g. adidas.com)" className="w-full p-3 rounded-lg border border-gray-300" required />
+      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className="w-full p-3 rounded-lg border border-gray-300" required />
       <select value={revenue} onChange={(e)=>setRevenue(e.target.value)} className="w-full p-3 rounded-lg border border-gray-300" required>
         <option value="">Monthly Revenue</option>
         <option>$5k - $20k/mo - Growth Stage</option>
@@ -41,16 +41,4 @@ export default function AuditForm() {
         <option>$100k - $500k/mo - 7-Figure Path</option>
         <option>$500k+/mo - Enterprise / 8-Figures</option>
       </select>
-      <select value={goal} onChange={(e)=>setGoal(e.target.value)} className="w-full p-3 rounded-lg border border-gray-300" required>
-        <option value="">Your Goal / Reason</option>
-        <option>Improving Conversion Rate</option>
-        <option>Scaling to $100k+/mo</option>
-        <option>Paid Ads Audit</option>
-        <option>Store Redesign</option>
-        <option>Other</option>
-      </select>
-      <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Work Email" type="email" className="w-full p-3 rounded-lg border border-gray-300" required />
-      <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">{loading ? "Sending..." : "Get My Free Audit"}</button>
-    </form>
-  );
-}
+      <select value={goal} onChange={(e)=>setGoal(e.target.value)} className="w-full p-3 rounded-lg
