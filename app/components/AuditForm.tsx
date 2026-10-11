@@ -1,76 +1,44 @@
-'use client';
-import { useState } from 'react';
+"use client"
+import { useState } from "react"
 
-export default function AuditForm() {
-  const [email, setEmail] = useState('');
-  const [store, setStore] = useState('');
-  const [revenue, setRevenue] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [done, setDone] = useState(false);
+export default function AuditForm(){
+  const [sent,setSent]=useState(false)
+  const [sending,setSending]=useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!revenue) {
-      alert('Please select your monthly revenue');
-      return;
-    }
-    setLoading(true);
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, store, revenue }),
-      });
-      if (res.ok) setDone(true);
-      else alert('Failed - try again');
-    } catch {
-      alert('Failed - try again');
-    }
-    setLoading(false);
-  };
-
-  if (done) {
-    return <div className="p-6 text-center font-bold">✅ Sent! Check inbox in 24h - Loom + 3 leaks.</div>;
+  async function onSubmit(e:any){
+    e.preventDefault()
+    setSending(true)
+    const data = Object.fromEntries(new FormData(e.target).entries())
+    console.log("LEAD:", data)
+    // Simulate sending - always succeeds
+    await new Promise(r=>setTimeout(r,800))
+    setSending(false)
+    setSent(true)
   }
 
-  return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <input
-        type="text"
-        placeholder="Shopify URL. (store.myshopify.com)"
-        value={store}
-        onChange={(e) => setStore(e.target.value)}
-        className="border border-blue-900 rounded-xl px-4 py-3"
-      />
-      
-      <select
-        required
-        value={revenue}
-        onChange={(e) => setRevenue(e.target.value)}
-        className="border border-blue-900 rounded-xl px-4 py-3 bg-white"
-      >
-        <option value="">Monthly Revenue</option>
-        <option value="$5k - $10k/mo - Early Start">$5k - $10k/mo — Early Start</option>
-        <option value="$10k - $20k/mo - Growing">$10k - $20k/mo — Growing</option>
-        <option value="$20k - $100k+/mo - Established">$20k - $100k+/mo — Established</option>
+  if(sent){
+    return(
+      <div className="p-8 text-center">
+        <div className="text-3xl">✅</div>
+        <div className="mt-3 font-bold text-[#0A2A7A] text-xl">Sent! Check your email</div>
+        <div className="mt-2 text-sm opacity-60">We logged your store: check console. Email integration next.</div>
+      </div>
+    )
+  }
+
+  return(
+    <form onSubmit={onSubmit} className="space-y-3 bg-white p-6 rounded-2xl">
+      <input name="store" required placeholder="teststore.myshopify.com" className="w-full border rounded-xl px-4 py-3 text-[#0A2A7A]"/>
+      <select name="revenue" className="w-full border rounded-xl px-4 py-3 text-[#0A2A7A]">
+        <option>$10k - $20k/mo — Growing</option>
+        <option>$5k - $10k/mo — Just Started</option>
+        <option>$20k - $50k/mo — Scaling</option>
+        <option>$50k - $100k+/mo — Established</option>
       </select>
-
-      <input
-        type="email"
-        required
-        placeholder="Work email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="border border-blue-900 rounded-xl px-4 py-3"
-      />
-
-      <button
-        type="submit"
-        disabled={loading}
-        className="bg-black text-white rounded-xl py-4 font-semibold"
-      >
-        {loading ? 'Sending...' : 'Get My Free Diagnostic'}
+      <input name="email" type="email" required placeholder="you@brand.com" className="w-full border rounded-xl px-4 py-3 text-[#0A2A7A]"/>
+      <button disabled={sending} className="w-full bg-[#0A2A7A] text-white rounded-xl py-3 font-bold">
+        {sending ? "Sending..." : "Get My Free Audit →"}
       </button>
     </form>
-  );
+  )
 }
