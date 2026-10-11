@@ -16,8 +16,8 @@ export async function POST(req: NextRequest) {
 
     const result = await resend.emails.send({
       from: "Novi LLC <info@novi-llc.com>",
-      to: ["info@novi-llc.com"],
-      cc: ["Don.floran1@gmail.com"],
+      to: ["eveilsaint6699@gmail.com"],
+      cc: ["info@novi-llc.com"],
       subject: `New Lead: ${store} - ${email} - ${revenue}`,
       replyTo: email,
       html: `
