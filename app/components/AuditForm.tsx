@@ -6,6 +6,7 @@ export default function AuditForm() {
   const [revenue, setRevenue] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,8 +17,9 @@ export default function AuditForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ store, revenue, email }),
       });
-      alert("Sent! We got it at info@novi-llc.com");
+      setSent(true);
       setStore(""); setRevenue(""); setEmail("");
+      setTimeout(() => setSent(false), 6000);
     } catch (err) {
       console.log(err);
     }
@@ -27,25 +29,24 @@ export default function AuditForm() {
   // All 3 same grey background
   const base = "w-full bg-slate-100 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900/10";
   const inputClass = base + " text-slate-900 placeholder:text-slate-400";
-  const selectClass = base + (revenue === "" ? " text-slate-400" : " text-slate-900");
+  const selectClass = base + (revenue === ""? " text-slate-400" : " text-slate-900");
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <input value={store} onChange={(e) => setStore(e.target.value)} placeholder="yourstore.myshopify.com" required className={inputClass} />
-      
-      <select value={revenue} onChange={(e) => setRevenue(e.target.value)} required className={selectClass}>
-        <option value="" disabled hidden>Monthly revenue</option>
-        <option value="$5k/mo">$5k/mo - Starting</option>
-        <option value="$10k - $20k/mo">$10k - $20k/mo - Growing</option>
-        <option value="$20k - $100k/mo">$20k - $100k/mo - Scaling</option>
-        <option value="$100k+/mo">$100k+/mo - 7-figure</option>
-      </select>
+    <div className="flex flex-col">
+      {sent && (
+        <div className="mb-5 flex items-center gap-3 rounded-2xl border border-green-200 bg-[#f0fdf4] px-5 py-4 shadow-sm animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-500 shadow-[0_0_0_6px_rgba(34,197,94,0.15)]">
+            <span className="text-[18px]">🔔</span>
+          </div>
+          <div className="leading-tight">
+            <p className="font-semibold text-green-900">Message sent successfully</p>
+            <p className="mt-0.5 text-[13px] text-green-700">We received your details — we'll be in touch shortly.</p>
+          </div>
+          <button onClick={()=>setSent(false)} className="ml-auto text-green-400 hover:text-green-600 text-lg leading-none">✕</button>
+        </div>
+      )}
 
-      <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@brand.com" type="email" required className={inputClass} />
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <input value={store} onChange={(e) => setStore(e.target.value)} placeholder="yourstore.myshopify.com" required className={inputClass} />
 
-      <button disabled={loading} className="bg-[#0A2A7A] text-white rounded-xl py-3.5 text-sm font-bold">
-        {loading ? "Sending..." : "Get My Free Audit"}
-      </button>
-    </form>
-  );
-}
+        <select value={revenue} onChange
