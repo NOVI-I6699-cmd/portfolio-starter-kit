@@ -1,74 +1,53 @@
-"use client";
-import { useState } from "react";
+import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
-export default function AuditForm() {
-  const [store, setStore] = useState("");
-  const [revenue, setRevenue] = useState("");
-  const [goal, setGoal] = useState("");
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [done, setDone] = useState(false);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-  const base = "w-full p-3 rounded-lg border border-[#0A2A7A]/20 bg-[#FFFFFF] placeholder:text-[#9CA3AF] text-[15px] focus:border-[#0A2A7A] focus:ring-1 focus:ring-[#0A2A7A]";
-  const selectColor = (v: string) => v === ""? "text-[#9CA3AF]" : "text-[#0A2A7A]";
+export async function POST(req: Request) {
+  const { store, revenue, goal, email } = await req.json();
 
-  async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    const res = await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ store, revenue, goal, email }),
-    });
-    setLoading(false);
-    if (res.ok) setDone(true);
-  }
-
-  // SUCCESS CARD - Shows all 4 + Novi Brand Colors
-  if (done) {
-    return (
-      <div className="bg-[#0A2A7A] p-1.5 rounded-xl">
-        <div className="bg-[#FFFFFF] p-6 rounded-[10px]">
-          <h3 className="font-bold text-[16px] text-[#0A2A7A] text-center">Audit Request Sent! 🚀</h3>
-          <p className="text-[13px] text-[#0A2A7A]/70 text-center mt-1 mb-4">We will review and reply within 24h</p>
-
-          <div className="bg-[#FFFFFF] border-2 border-[#0A2A7A] rounded-lg p-4 space-y-2">
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Store URL:</span> {store}</p>
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Monthly Revenue:</span> {revenue}</p>
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Your Goal / Reason:</span> {goal}</p>
-            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Email:</span> {email}</p>
-          </div>
-        </div>
+  // Force brand colors - this WILL show blue in Gmail
+  const html = `
+  <div style="font-family: Arial, sans-serif; background-color: #f4f5f7; padding: 30px;">
+    <div style="max-width: 560px; margin: 0 auto; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E5E7EB;">
+      
+      <!-- HEADER BLUE -->
+      <div style="background-color: #0A2A7A; padding: 24px 28px;">
+        <h1 style="color: #FFFFFF; margin: 0; font-size: 20px; font-weight: bold;">New Client Lead 🚀</h1>
+        <p style="color: #FFFFFF; margin: 8px 0 0 0; font-size: 14px;">Someone just submitted the audit form on novi-llc.com</p>
       </div>
-    );
+
+      <!-- CARD WHITE + BLUE TEXT -->
+      <div style="padding: 28px;">
+        <div style="background-color: #FFFFFF; border: 2px solid #0A2A7A; border-radius: 12px; padding: 20px;">
+          <p style="color: #0A2A7A; font-size: 14px; margin: 0 0 10px 0;"><strong style="color: #0A2A7A;">Store URL:</strong> <span style="color: #0A2A7A; font-weight: bold;">${store}</span></p>
+          <p style="color: #0A2A7A; font-size: 14px; margin: 0 0 10px 0;"><strong style="color: #0A2A7A;">Monthly Revenue:</strong> <span style="color: #0A2A7A;">${revenue}</span></p>
+          <p style="color: #0A2A7A; font-size: 14px; margin: 0 0 10px 0;"><strong style="color: #0A2A7A;">Your Goal / Reason:</strong> <span style="color: #0A2A7A; font-weight: bold;">${goal}</span></p>
+          <p style="color: #0A2A7A; font-size: 14px; margin: 0;"><strong style="color: #0A2A7A;">Client Email:</strong> <span style="color: #0A2A7A; font-weight: bold;">${email}</span></p>
+        </div>
+
+        <!-- BUTTON BLUE - This fixes your grey button -->
+        <a href="mailto:${email}" style="display: block; width: 100%; background-color: #0A2A7A; color: #FFFFFF; text-align: center; padding: 16px 20px; border-radius: 10px; font-weight: bold; font-size: 15px; text-decoration: none; margin-top: 24px;">
+          Reply to ${email}
+        </a>
+
+        <p style="color: #0A2A7A; opacity: 0.5; font-size: 11px; margin-top: 20px; text-align: center;">This lead was sent via Resend • Signed by novi-llc.com • Reply-To is set to client</p>
+      </div>
+    </div>
+  </div>
+  `;
+
+  try {
+    await resend.emails.send({
+      from: "NOVI Leads <leads@novi-llc.com>",
+      to: process.env.LEAD_TO_EMAIL!,
+      subject: `New Lead: ${store} | ${revenue} | ${goal}`,
+      html: html,
+      replyTo: email,
+    });
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: "Failed" }, { status: 500 });
   }
-
-  return (
-    <form onSubmit={submit} className="bg-[#FFFFFF] p-6 rounded-xl space-y-4 border border-[#0A2A7A]/10 shadow-sm">
-      <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={`${base} text-[#0A2A7A]`} required />
-
-      <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${selectColor(revenue)}`} required>
-        <option value="">Monthly Revenue</option>
-        <option>$5k - $20k/mo - Growth Stage</option>
-        <option>$20k - $100k/mo - Scaling Stage</option>
-        <option>$100k - $500k/mo - 7-Figure Path</option>
-        <option>$500k+/mo - Enterprise / 8-Figures</option>
-      </select>
-
-      <select value={goal} onChange={e=>setGoal(e.target.value)} className={`${base} ${selectColor(goal)}`} required>
-        <option value="">Your Goal / Reason</option>
-        <option>Improving Conversion Rate</option>
-        <option>Scaling to $100k+/mo</option>
-        <option>Paid Ads Audit</option>
-        <option>Store Redesign</option>
-        <option>Other</option>
-      </select>
-
-      <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={`${base} text-[#0A2A7A]`} required />
-
-      <button disabled={loading} className="w-full bg-[#0A2A7A] text-[#FFFFFF] p-3 rounded-lg font-bold hover:bg-[#0A2A7A]/90">
-        {loading? "Sending..." : "Get My Free Audit"}
-      </button>
-    </form>
-  );
 }
