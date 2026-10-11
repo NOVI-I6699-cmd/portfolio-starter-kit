@@ -39,14 +39,14 @@ export default function AuditForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="bg-white p-6 rounded-xl space-y-4 border border-gray-200">
-      <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={base} required />
+    <form onSubmit={onSubmit} className="bg-white p-6 rounded-xl space-y-4 border">
+      <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store" className={base} required />
       <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`} required>
         <option value="">Monthly Revenue</option>
         <option>$5k - $20k/mo - Growth Stage</option>
         <option>$20k - $100k/mo - Scaling Stage</option>
         <option>$100k - $500k/mo - 7-Figure Path</option>
-        <option>$500k+/mo - Enterprise / 8-Figures</option>
+        <option>$500k+/mo - Enterprise</option>
       </select>
       <select value={goal} onChange={e=>setGoal(e.target.value)} className={`${base} ${sel(goal)}`} required>
         <option value="">Your Goal / Reason</option>
