@@ -1,28 +1,49 @@
-import { NextResponse } from "next/server";
-import { Resend } from "resend";
-const resend = new Resend(process.env.RESEND_API_KEY);
+"use client";
+import { useState } from "react";
 
-function getAction(goal: string) {
-  if (!goal) return "Review lead and send custom audit.";
-  if (goal.includes("Conversion")) return "💰 CRO LEAD: Low conversion. Check PDP, cart, checkout. Send 3 quick wins + pitch CRO Audit.";
-  if (goal.includes("Scaling")) return "🔥 SCALING LEAD: High-intent $100k+. Send scaling case study + Loom teardown. Pitch Scaling Audit.";
-  if (goal.includes("Ads")) return "📈 ADS LEAD: ROAS issue. Ask for ad account screenshot. Pitch Paid Ads Audit + Creatives.";
-  if (goal.includes("Redesign")) return "🎨 DESIGN LEAD: Wants redesign. Do 2-min Figma audit (hero, PDP). Pitch Redesign + CRO.";
-  if (goal.includes("Other")) return "📋 OTHER: Ask what exactly they need, then custom pitch.";
-  return "📋 Review store + revenue, then pitch.";
+export default function AuditForm() {
+  const [store, setStore] = useState("");
+  const [revenue, setRevenue] = useState("");
+  const [goal, setGoal] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ store, revenue, goal, email }),
+    });
+    setLoading(false);
+    if (res.ok) setDone(true);
+    else alert("Error - try again");
+  }
+
+  if (done) return <div className="bg-[#F3F4F6] p-8 rounded-xl text-center"><h3 className="font-bold text-lg">✅ Audit Request Sent!</h3><p className="text-sm text-gray-600 mt-2">We will review {store} and reply within 24h.</p></div>;
+
+  return (
+    <form onSubmit={submit} className="bg-[#F3F4F6] p-6 rounded-xl space-y-4">
+      <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Store URL (e.g. adidas.com)" className="w-full p-3 rounded-lg border border-gray-300" required />
+      <select value={revenue} onChange={e=>setRevenue(e.target.value)} className="w-full p-3 rounded-lg border border-gray-300" required>
+        <option value="">Monthly Revenue</option>
+        <option>$0 - $5k/mo</option>
+        <option>$5k - $20k/mo</option>
+        <option>$20k - $100k/mo - Scaling</option>
+        <option>$100k+/mo - Established</option>
+      </select>
+      <select value={goal} onChange={e=>setGoal(e.target.value)} className="w-full p-3 rounded-lg border border-gray-300" required>
+        <option value="">Your Goal / Reason</option>
+        <option>Improving Conversion Rate</option>
+        <option>Scaling to $100k+/mo</option>
+        <option>Paid Ads Audit</option>
+        <option>Store Redesign</option>
+        <option>Other</option>
+      </select>
+      <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="Work Email" type="email" className="w-full p-3 rounded-lg border border-gray-300" required />
+      <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">{loading ? "Sending..." : "Get My Free Audit →"}</button>
+    </form>
+  );
 }
-
-export async function POST(req: Request) {
-  try {
-    const { store, revenue, goal, email } = await req.json();
-    const safeGoal = goal || "Not selected";
-    const action = getAction(safeGoal);
-
-    await resend.emails.send({
-      from: "NOVI Leads <info@novi-llc.com>",
-      to: process.env.CONTACT_TO!,
-      subject: `New Lead: ${store} | ${safeGoal} | ${revenue}`,
-      replyTo: email,
-      html: `
-        <div style="background:#f1f5f9; padding:32px 16px; font-family:Inter, -apple-system, sans-serif;">
-          <div style="max-width:560px; margin:0 auto; background:#ffffff; border:1px solid #e2e8f0; border-radius:20px; overflow:hidden; box-shadow:0 8px 30px rgba(10,42,122,0.
