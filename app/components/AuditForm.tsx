@@ -9,8 +9,8 @@ export default function AuditForm() {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
-  const base = "w-full p-3 rounded-lg border border-[#0A2A7A]/20 bg-[#FFFFFF] placeholder:text-[#0A2A7A]/50 text-[15px] focus:outline-none focus:border-[#0A2A7A] focus:ring-2 focus:ring-[#0A2A7A]/20";
-  const selectColor = (val: string) => val === ""? "text-[#0A2A7A]/50" : "text-[#0A2A7A]";
+  const base = "w-full p-3 rounded-lg border border-[#0A2A7A]/20 bg-[#FFFFFF] placeholder:text-[#9CA3AF] text-[15px] focus:border-[#0A2A7A] focus:ring-1 focus:ring-[#0A2A7A]";
+  const selectColor = (v: string) => v === ""? "text-[#9CA3AF]" : "text-[#0A2A7A]";
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -22,15 +22,22 @@ export default function AuditForm() {
     });
     setLoading(false);
     if (res.ok) setDone(true);
-    else alert("Error");
   }
 
+  // SUCCESS CARD - Shows all 4 + Novi Brand Colors
   if (done) {
     return (
-      <div className="bg-[#0A2A7A] p-6 rounded-xl text-center">
-        <div className="bg-[#FFFFFF] p-8 rounded-lg">
-          <h3 className="font-bold text-lg text-[#0A2A7A]">Audit Request Sent!</h3>
-          <p className="text-sm text-[#0A2A7A]/80 mt-2">We will review {store} and reply within 24h.</p>
+      <div className="bg-[#0A2A7A] p-1.5 rounded-xl">
+        <div className="bg-[#FFFFFF] p-6 rounded-[10px]">
+          <h3 className="font-bold text-[16px] text-[#0A2A7A] text-center">Audit Request Sent! 🚀</h3>
+          <p className="text-[13px] text-[#0A2A7A]/70 text-center mt-1 mb-4">We will review and reply within 24h</p>
+
+          <div className="bg-[#FFFFFF] border-2 border-[#0A2A7A] rounded-lg p-4 space-y-2">
+            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Store URL:</span> {store}</p>
+            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Monthly Revenue:</span> {revenue}</p>
+            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Your Goal / Reason:</span> {goal}</p>
+            <p className="text-[13px] text-[#0A2A7A]"><span className="font-bold">Email:</span> {email}</p>
+          </div>
         </div>
       </div>
     );
@@ -38,9 +45,9 @@ export default function AuditForm() {
 
   return (
     <form onSubmit={submit} className="bg-[#FFFFFF] p-6 rounded-xl space-y-4 border border-[#0A2A7A]/10 shadow-sm">
-      <input value={store} onChange={(e)=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={`${base} text-[#0A2A7A]`} required />
+      <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store (e.g. yourstore.myshopify.com)" className={`${base} text-[#0A2A7A]`} required />
 
-      <select value={revenue} onChange={(e)=>setRevenue(e.target.value)} className={`${base} ${selectColor(revenue)}`} required>
+      <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${selectColor(revenue)}`} required>
         <option value="">Monthly Revenue</option>
         <option>$5k - $20k/mo - Growth Stage</option>
         <option>$20k - $100k/mo - Scaling Stage</option>
@@ -48,7 +55,7 @@ export default function AuditForm() {
         <option>$500k+/mo - Enterprise / 8-Figures</option>
       </select>
 
-      <select value={goal} onChange={(e)=>setGoal(e.target.value)} className={`${base} ${selectColor(goal)}`} required>
+      <select value={goal} onChange={e=>setGoal(e.target.value)} className={`${base} ${selectColor(goal)}`} required>
         <option value="">Your Goal / Reason</option>
         <option>Improving Conversion Rate</option>
         <option>Scaling to $100k+/mo</option>
@@ -57,9 +64,9 @@ export default function AuditForm() {
         <option>Other</option>
       </select>
 
-      <input value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={`${base} text-[#0A2A7A]`} required />
+      <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={`${base} text-[#0A2A7A]`} required />
 
-      <button disabled={loading} className="w-full bg-[#0A2A7A] text-[#FFFFFF] p-3 rounded-lg font-bold hover:bg-[#0A2A7A]/90 transition">
+      <button disabled={loading} className="w-full bg-[#0A2A7A] text-[#FFFFFF] p-3 rounded-lg font-bold hover:bg-[#0A2A7A]/90">
         {loading? "Sending..." : "Get My Free Audit"}
       </button>
     </form>
