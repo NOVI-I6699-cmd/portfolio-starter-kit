@@ -8,11 +8,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing RESEND_API_KEY" }, { status: 500 });
     }
     const resend = new Resend(apiKey);
-    const { store, revenue, email } = await req.json();
+    const body = await req.json();
+    
+    const email = body.email || body.customerEmail || "no-email";
+    const store = body.store || body.storeUrl || "";
+    const revenue = body.revenue || body.monthlyRevenue || "";
 
     const result = await resend.emails.send({
-      from: "Novi LLC <onboarding@resend.dev>",
-      to: ["Don.floran1@gmail.com"], // ONLY 1 - this WILL deliver
+      from: "Novi LLC <info@novi-llc.com>",
+      to: ["info@novi-llc.com"],
+      cc: ["Don.floran1@gmail.com"],
       subject: `New Lead: ${store} - ${email} - ${revenue}`,
       replyTo: email,
       html: `
@@ -20,15 +25,17 @@ export async function POST(req: NextRequest) {
         <p><b>Store:</b> ${store}</p>
         <p><b>Revenue:</b> ${revenue}</p>
         <p><b>Email:</b> ${email}</p>
+        <hr>
+        <pre>${JSON.stringify(body, null, 2)}</pre>
       `,
     });
 
     if (result.error) {
       console.error("RESEND ERROR:", result.error);
-      return NextResponse.json({ error: result.error }, { status: 400 });
+      return NextResponse.json({ error: result.error.message }, { status: 400 });
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, id: result.data?.id });
   } catch (e: any) {
     console.error("SUBSCRIBE ERROR:", e);
     return NextResponse.json({ error: e.message }, { status: 500 });
