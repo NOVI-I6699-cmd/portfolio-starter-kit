@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function AuditForm() {
   const [store, setStore] = useState("");
-  const [revenue, setRevenue] = useState(""); // <-- THIS is what was missing, makes it show "Monthly revenue"
+  const [revenue, setRevenue] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -24,6 +24,9 @@ export default function AuditForm() {
     setLoading(false);
   };
 
+  // One shared style so all 3 match perfectly
+  const inputStyle = "w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0A2A7A] placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0A2A7A]/10 focus:border-[#0A2A7A]/20";
+
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <input
@@ -31,14 +34,14 @@ export default function AuditForm() {
         onChange={(e) => setStore(e.target.value)}
         placeholder="yourstore.myshopify.com"
         required
-        className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white text-sm"
+        className={inputStyle}
       />
 
       <select
         value={revenue}
         onChange={(e) => setRevenue(e.target.value)}
         required
-        className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white text-sm"
+        className={`${inputStyle} ${revenue === "" ? "text-slate-400" : "text-[#0A2A7A]"}`}
       >
         <option value="" disabled hidden>Monthly revenue</option>
         <option value="$5k/mo">$5k/mo — Starting</option>
@@ -53,10 +56,10 @@ export default function AuditForm() {
         placeholder="you@brand.com"
         type="email"
         required
-        className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white text-sm"
+        className={inputStyle}
       />
 
-      <button disabled={loading} className="bg-black text-white rounded-lg py-3 text-sm">
+      <button disabled={loading} className="bg-[#0A2A7A] text-white rounded-xl py-3.5 text-sm font-bold hover:bg-[#0A2A7A]/90 transition">
         {loading ? "Sending..." : "Get My Free Audit"}
       </button>
     </form>
