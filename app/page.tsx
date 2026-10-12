@@ -1,5 +1,4 @@
 "use client"
-import Link from 'next/link'
 import AuditForm from "./components/AuditForm"
 import WhatsAppButton from "./components/WhatsAppButton"
 
@@ -38,29 +37,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-[#0A2A7A]">Insights — Real leaks we fix for all stores</h2>
           <div className="mt-8 grid gap-5">
-            <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">INBOX RADAR - 01 • CLICK TO READ →</div>
-              <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23 Percent →</div>
-              <div className="mt-4 grid md:grid-cols-3 gap-3 text-sm">
-                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Trigger Delay</div><div className="mt-1 opacity-70 text-xs">1h to 5 mins = +11% recovery</div></div>
-                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">No SMS Fallback</div><div className="mt-1 opacity-70 text-xs">Fire SMS after 30 mins if spam</div></div>
-                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Bad Exclusion</div><div className="mt-1 opacity-70 text-xs">You block engaged users by mistake</div></div>
-              </div>
-            </Link>
-            <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">CASE STUDY - 02 • CLICK TO READ →</div>
-              <div className="mt-2 text-xl font-bold text-[#0A2A7A]">From Spam to Inbox in 72h - Full in 14 Days →</div>
-              <div className="mt-3 text-sm leading-7 opacity-70 text-[#0A2A7A]">
-                <div>Day 1-2: SPF DKIM DMARC broken + 38% dead list. Fixed DNS, cleaned list.</div>
-                <div>Day 3: 92% inbox - first sales from spam folder.</div>
-                <div>Day 4-14: Warm 100 to 5000 per day. 23% revenue recovered. Gmail needs 7-10 days trust.</div>
-              </div>
-            </Link>
-            <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">STRATEGY - 03 • CLICK TO READ →</div>
-              <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Shopify SEO in 2026 →</div>
-              <div className="mt-3 text-sm opacity-70 text-[#0A2A7A]">EEAT + Core Web Vitals. We fix collection schema, speed, UGC reviews. Works for $5k to $100k stores.</div>
-            </Link>
+            <div className="bg-white rounded-2xl border p-6"><div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">INBOX RADAR - 01</div><div className="mt-2 text-xl font-bold text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23 Percent</div><div className="mt-4 grid md:grid-cols-3 gap-3 text-sm"><div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Trigger Delay</div><div className="mt-1 opacity-70 text-xs">1h to 5 mins = +11% recovery</div></div><div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">No SMS Fallback</div><div className="mt-1 opacity-70 text-xs">Fire SMS after 30 mins if spam</div></div><div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Bad Exclusion</div><div className="mt-1 opacity-70 text-xs">You block engaged users by mistake</div></div></div></div>
+            <div className="bg-white rounded-2xl border p-6"><div className="text-xs uppercase tracking-widest font-semibold text-[#8B5E00]">CASE STUDY - 02</div><div className="mt-2 text-xl font-bold text-[#0A2A7A]">From Spam to Inbox in 72h - Full in 14 Days</div><div className="mt-3 text-sm leading-7 opacity-70 text-[#0A2A7A]"><div>Day 1-2: SPF DKIM DMARC broken + 38% dead list. Fixed DNS, cleaned list.</div><div>Day 3: 92% inbox - first sales from spam folder.</div><div>Day 4-14: Warm 100 to 5000 per day. 23% revenue recovered. Gmail needs 7-10 days trust.</div></div></div>
+            <div className="bg-white rounded-2xl border p-6"><div className="text-xs uppercase tracking-widest font-semibold">STRATEGY - 03</div><div className="mt-2 text-xl font-bold text-[#0A2A7A]">Shopify SEO in 2026</div><div className="mt-3 text-sm opacity-70 text-[#0A2A7A]">EEAT + Core Web Vitals. We fix collection schema, speed, UGC reviews. Works for $5k to $100k stores.</div></div>
           </div>
         </div>
       </section>
