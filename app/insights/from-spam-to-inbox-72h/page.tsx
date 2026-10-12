@@ -36,9 +36,9 @@ export default function Page(){
           </div>
 
           <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3">
-            <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 3: Cart Recovery Flow</p>
-            <img src="/cart-email-proof.jpg" alt="Cart Recovery Flow" className="w-full rounded-lg border border-black/5 block" />
-            <p className="mt-2 text-xs text-[#0A2A7A]/60">Same flow, 18% to 44% open after deliverability fix. No copy change.</p>
+            <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 3: Cart Recovery Flow - Info@novi-llc.com - 1234, Accra, Ghana</p>
+            <img src="/cart-email-proof.jpg" alt="Cart Recovery Flow - Info@novi-llc.com Accra Ghana" className="w-full rounded-lg border border-black/5 block" />
+            <p className="mt-2 text-xs text-[#0A2A7A]/60">Same flow, 18% to 44% open after deliverability fix. No copy change. NOVI LLC • 1234, Accra, Ghana • Info@novi-llc.com</p>
           </div>
         </div>
 
