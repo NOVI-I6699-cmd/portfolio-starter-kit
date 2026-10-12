@@ -12,46 +12,42 @@ export default function Page(){
       <div className="mt-10 space-y-10 text-[15.5px] leading-7 text-[#0A2A7A]/90">
         <div className="border border-[#0A2A7A]/10 rounded-2xl p-6 bg-[#0A2A7A]/5">
           <p className="text-sm font-bold text-[#0A2A7A]">Result</p>
-          <p className="mt-2 text-sm"><span className="opacity-60">Day 0:</span> 40% spam, Gmail Promotions + Spam tab</p>
+          <p className="mt-2 text-sm"><span className="opacity-60">Day 0:</span> 40% spam, Gmail Promotions + Spam</p>
           <p className="text-sm"><span className="opacity-60">Day 3:</span> 92% inbox, Gmail Primary tab</p>
           <p className="text-sm"><span className="opacity-60">Day 14:</span> Open rate 61%, +$11.4k recovered revenue</p>
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">Context</h2>
-          <p className="mt-3 opacity-80">Brand doing $55k/mo. Owner told me: "Emails don't work for us." I checked Klaviyo — they were right, 8% revenue from email. But deliverability was 38% spam. No wonder.</p>
-        </div>
-
-        <div>
           <h2 className="text-xl font-bold text-[#0A2A7A]">72 Hour Protocol</h2>
-          <div className="mt-3 space-y-3 opacity-80">
-            <p><strong>Hour 0-12: Stop bleeding.</strong> Paused all campaigns, paused all flows except transactional. Suppressed 11k cold contacts.</p>
-            <p><strong>Hour 12-36: Auth fix.</strong> New sending subdomain mail.getnovi.com, SPF/DKIM/DMARC fixed, one-click list-unsubscribe header.</p>
-            <p><strong>Hour 36-72: Warm + Proof.</strong> Sent only to 1.2k super-engaged (opened last 7 days) with plain text founder story. No images. Got 71% open.</p>
-          </div>
+          <p className="mt-3 opacity-80"><strong>Hour 0-12:</strong> Paused campaigns, suppressed 11k cold contacts. <br/><strong>Hour 12-36:</strong> New subdomain mail.getnovi.com, fixed SPF/DKIM/DMARC. <br/><strong>Hour 36-72:</strong> Sent only to 1.2k super-engaged, plain text, 71% open.</p>
         </div>
 
         <div className="space-y-8">
+          {/* PROOF 1 - INBOX RADAR */}
           <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3">
-            <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 1: Gmail Primary Tab (Day 3)</p>
-            <img src="/gmail-primary-proof.jpg" alt="Gmail Primary" className="w-full rounded-lg border border-black/5" />
-            <p className="mt-2 text-xs text-[#0A2A7A]/60">Before: Promotions. After: Primary with star.</p>
+            <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 1: Inbox Radar Dashboard - 92% Inbox</p>
+            <img src="/inbox-radar-dashboard.jpg" alt="Inbox Radar Dashboard" className="w-full rounded-lg border border-black/5" />
+            <p className="mt-2 text-xs text-[#0A2A7A]/60">GlockApps: Inbox rate 52% → 92% in 72h.</p>
           </div>
+
+          {/* PROOF 2 - GMAIL PRIMARY */}
           <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3">
-            <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 2: Inbox Radar Dashboard</p>
-            <img src="/inbox-radar-dashboard.jpg" alt="Inbox Radar" className="w-full rounded-lg border border-black/5" />
-            <p className="mt-2 text-xs text-[#0A2A7A]/60">Inbox rate 52% → 92% in 72h via Google Postmaster + GlockApps.</p>
+            <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 2: Gmail Primary Tab</p>
+            <img src="/gmail-primary-proof.jpg" alt="Gmail Primary Tab" className="w-full rounded-lg border border-black/5" />
+            <p className="mt-2 text-xs text-[#0A2A7A]/60">Before: Promotions. After: Primary with star — Day 3.</p>
           </div>
+
+          {/* PROOF 3 - CART RECOVERY - FIXED */}
           <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3">
             <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 3: Cart Recovery Flow</p>
-            <img src="/cart-email-proof.jpg" alt="Cart Recovery" className="w-full rounded-lg border border-black/5" />
+            <img src="/cart-email-proof.jpg" alt="Cart Recovery Flow" className="w-full rounded-lg border border-black/5" />
             <p className="mt-2 text-xs text-[#0A2A7A]/60">Same flow, 18% to 44% open after deliverability fix. No copy change.</p>
           </div>
         </div>
 
         <div>
           <h2 className="text-xl font-bold text-[#0A2A7A]">14 Day Full Recovery</h2>
-          <p className="mt-3 opacity-80">After Primary tab win, we slowly scaled to engaged 30d, then 60d. Rebuilt 3 core flows with conditional splits (engaged vs non-engaged). Day 14 email was 31% of total revenue that day.</p>
+          <p className="mt-3 opacity-80">After Primary tab win, we scaled to engaged 30d, then 60d. Day 14 email was 31% of total revenue that day.</p>
         </div>
       </div>
 
