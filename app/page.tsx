@@ -50,7 +50,7 @@ export default function Home() {
             </Link>
 
             <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#8B5E00]">CASE STUDY - 02 • CLICK TO READ →</div>
+              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">CASE STUDY - 02 • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">From Spam to Inbox in 72h - Full in 14 Days →</div>
               <div className="mt-3 text-sm leading-7 opacity-70 text-[#0A2A7A]">
                 <div>Day 1-2: SPF DKIM DMARC broken + 38% dead list. Fixed DNS, cleaned list.</div>
@@ -60,7 +60,7 @@ export default function Home() {
             </Link>
 
             <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold">STRATEGY - 03 • CLICK TO READ →</div>
+              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">STRATEGY - 03 • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Shopify SEO in 2026 →</div>
               <div className="mt-3 text-sm opacity-70 text-[#0A2A7A]">EEAT + Core Web Vitals. We fix collection schema, speed, UGC reviews. Works for $5k to $100k stores.</div>
             </Link>
@@ -71,10 +71,4 @@ export default function Home() {
       <footer className="text-white py-10 bg-[#0A2A7A]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
           <div><div className="font-bold">Novi LLC</div><div className="mt-1 text-xs text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div><div className="mt-2 text-xs text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div><div className="mt-2 text-xs text-white/70">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div><div className="mt-3 text-sm"><a href="mailto:info@novi-llc.com" className="underline text-white/80">info@novi-llc.com</a></div></div>
-          <div className="flex flex-wrap gap-5 text-sm text-white/80"><a href="mailto:info@novi-llc.com" className="underline font-semibold">Contact us</a><a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a><a href="https://x.com/novi_llc" target="_blank" className="underline">X</a><a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a></div>
-        </div>
-      </footer>
-      <WhatsAppButton />
-    </main>
-  )
-}
+          <div className="flex flex-wrap gap-5 text-sm text-white/80
