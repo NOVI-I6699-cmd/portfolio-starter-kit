@@ -16,6 +16,7 @@ export default function Home() {
           <a href="mailto:info@novi-llc.com" className="bg-white px-5 py-2.5 rounded-lg text-sm font-bold shadow text-[#0A2A7A]">Book a Call</a>
         </div>
       </header>
+
       <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-start">
         <div>
           <div className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 border text-[#0A2A7A]">
@@ -34,11 +35,13 @@ export default function Home() {
         </div>
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
+
       <section id="insights" className="bg-slate-50 border-y py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-[#0A2A7A]">Insights — Real leaks we fix for all stores</h2>
+          <p className="mt-2 text-sm opacity-60">All case studies now with proof images — click to read</p>
           <div className="mt-8 grid gap-5">
-            <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
+            <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md hover:border-[#0A2A7A]/20 transition">
               <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">INBOX RADAR - 01 • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23 Percent →</div>
               <div className="mt-4 grid md:grid-cols-3 gap-3 text-sm">
@@ -47,16 +50,18 @@ export default function Home() {
                 <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Bad Exclusion</div><div className="mt-1 opacity-70 text-xs">You block engaged users by mistake</div></div>
               </div>
             </Link>
-            <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">CASE STUDY - 02 • CLICK TO READ →</div>
+
+            <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border-2 border-[#0A2A7A]/20 p-6 hover:shadow-lg hover:border-[#0A2A7A]/40 transition bg-gradient-to-br from-white to-blue-50/30">
+              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">CASE STUDY - 02 • POPULAR • 3 PROOF IMAGES ✅ • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">From Spam to Inbox in 72h - Full in 14 Days →</div>
               <div className="mt-3 text-sm leading-7 opacity-70 text-[#0A2A7A]">
                 <div>Day 1-2: SPF DKIM DMARC broken + 38% dead list. Fixed DNS, cleaned list.</div>
-                <div>Day 3: 92% inbox - first sales from spam folder.</div>
-                <div>Day 4-14: Warm 100 to 5000 per day. 23% revenue recovered. Gmail needs 7-10 days trust.</div>
+                <div>Day 3: 92% inbox - first sales from spam folder. Proof: Inbox Radar + Gmail Primary + Cart Email (Info@novi-llc.com • 1234, Accra, Ghana)</div>
+                <div>Day 4-14: Warm 100 to 5000 per day. 23% revenue recovered.</div>
               </div>
             </Link>
-            <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
+
+            <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md hover:border-[#0A2A7A]/20 transition">
               <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">STRATEGY - 03 • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Shopify SEO in 2026 →</div>
               <div className="mt-3 text-sm opacity-70 text-[#0A2A7A]">EEAT + Core Web Vitals. We fix collection schema, speed, UGC reviews. Works for $5k to $100k stores.</div>
@@ -64,10 +69,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <footer className="text-white py-10 bg-[#0A2A7A]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
-          <div><div className="font-bold">Novi LLC</div><div className="mt-1 text-xs text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div><div className="mt-2 text-xs text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div><div className="mt-2 text-xs text-white/70">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div><div className="mt-3 text-sm"><a href="mailto:info@novi-llc.com" className="underline text-white/80">info@novi-llc.com</a></div></div>
-          <div className="flex flex-wrap gap-5 text-sm text-white/80"><a href="mailto:info@novi-llc.com" className="underline font-semibold">Contact us</a><a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a><a href="https://x.com/novi_llc" target="_blank" className="underline">X</a><a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a></div>
+          <div>
+            <div className="font-bold">Novi LLC • 1234, Accra, Ghana</div>
+            <div className="mt-1 text-xs text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div>
+            <div className="mt-2 text-xs text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div>
+            <div className="mt-2 text-xs text-white/70">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
+            <div className="mt-3 text-sm"><a href="mailto:info@novi-llc.com" className="underline text-white/80">info@novi-llc.com</a> • Contact: Info@novi-llc.com</div>
+          </div>
+          <div className="flex flex-wrap gap-5 text-sm text-white/80">
+            <a href="mailto:info@novi-llc.com" className="underline font-semibold">Contact us</a>
+            <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a>
+            <a href="https://x.com/novi_llc" target="_blank" className="underline">X</a>
+            <a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a>
+          </div>
         </div>
       </footer>
       <WhatsAppButton />
