@@ -10,4 +10,5 @@ export default function Page(){
       <div className="mt-10 space-y-6 text-[15px] leading-7 opacity-80">
         <div><strong className="text-[#0A2A7A]">1. EEAT for Shopify</strong><br/>Add author box, founder story, real address (Accra + EST), About page with LinkedIn. Product pages need UGC reviews, FAQ schema, how-to schema.</div>
         <div><strong className="text-[#0A2A7A]">2. Collection Schema</strong><br/>Fix missing `CollectionPage` schema, `Product` schema with `aggregateRating`, `BreadcrumbList`. We add via custom liquid, not app.</div>
-        <div><strong className="text-[#0A2A7A]">3. Speed</strong><br/>Core Web Vitals: LCP under 2
+        <div><strong className="text-[#0A2A7A]">3. Speed</strong><br/>Core Web Vitals: LCP under 2.5s. Lazy load, remove app bloat, critical CSS. Works for $5k to $100k stores.</div>
+        <div className="bg-slate-50 border rounded-xl p-5 mt-8"><strong>What we do:</strong> Audit → Schema fix → Speed → UGC. $5k stores get $1,150/mo SEO
