@@ -1,19 +1,22 @@
-<div className="mt-8 grid gap-5">
-  <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-    <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">INBOX RADAR - 01 • NEW CASE STUDY</div>
-    <div className="mt-2 text-xl font-bold text-[#0A2A7A]">How I Fixed a 23% Revenue Leak for a Shopify Brand Doing $40k/mo →</div>
-    <div className="mt-3 text-sm opacity-70">SPF, DKIM, DMARC broken. Fixed in 72h, $9,200 recovered in 14 days.</div>
-  </Link>
+"use client"
+import Link from 'next/link'
+import AuditForm from "./components/AuditForm"
+import WhatsAppButton from "./components/WhatsAppButton"
 
-  <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-    <div className="text-xs uppercase tracking-widest font-semibold text-[#8B5E00]">CASE STUDY - 02</div>
-    <div className="mt-2 text-xl font-bold text-[#0A2A7A]">From Spam to Inbox in 72h - Full in 14 Days →</div>
-    <div className="mt-3 text-sm leading-7 opacity-70"><div>Day 1-2: Fixed DNS, cleaned list. Day 3: 92% inbox. Day 4-14: Warm 100 to 5000 per day. 23% revenue recovered.</div></div>
-  </Link>
+export default function Home() {
+  return (
+    <main className="bg-white">
+      <header className="text-white sticky top-0 z-50 shadow-sm bg-[#0A2A7A]">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+          <div className="flex flex-col leading-none">
+            <div className="font-bold text-lg tracking-tight">Novi LLC</div>
+            <div className="text-xs mt-1 text-white/70 tracking-wide">Shopify Agency | E-commerce Growth and Brand Strategy</div>
+            <div className="text-xs mt-0.5 text-white/50">Accra, Ghana - Remote Worldwide - EST Hours</div>
+          </div>
+          <a href="mailto:info@novi-llc.com" className="bg-white px-5 py-2.5 rounded-lg text-sm font-bold shadow text-[#0A2A7A]">Book a Call</a>
+        </div>
+      </header>
 
-  <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-    <div className="text-xs uppercase tracking-widest font-semibold">STRATEGY - 03</div>
-    <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Shopify SEO in 2026 →</div>
-    <div className="mt-3 text-sm opacity-70">EEAT + Core Web Vitals. We fix collection schema, speed, UGC reviews. Works for $5k to $100k stores.</div>
-  </Link>
-</div>
+      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <div className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg
