@@ -14,21 +14,21 @@ export default function Page(){
         <div><strong className="text-[#0A2A7A]">Day 1-2: Diagnosis</strong><br/>SPF fail, DKIM fail, DMARC none. 38% dead list. 12k contacts never engaged. Klaviyo sending to spam trap. Fixed DNS at Cloudflare, cleaned list with 2-step validation, suppressed 38%.</div>
         <div><strong className="text-[#0A2A7A]">Day 3: Quick Win</strong><br/>92% inbox. First sales from spam folder recovered. How? Proper SPF, DKIM, DMARC quarantine.</div>
 
-        <div>
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#0A2A7A]/60 mb-2">Proof: Gmail Primary Tab</p>
-          <img src="/gmail-primary-proof.jpg" alt="Gmail Primary Proof" className="w-full rounded-xl border shadow-sm" />
+        <div className="bg-white border rounded-xl p-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#0A2A7A]/60 mb-2 px-2 pt-1">Proof: Gmail Primary Tab</p>
+          <img src="/gmail-primary-proof.jpg?v=1" alt="Gmail Primary Proof" className="w-full rounded-xl border shadow-sm" />
         </div>
 
-        <div>
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#0A2A7A]/60 mb-2">Proof: Inbox Radar Dashboard - 92% inbox</p>
-          <img src="/inbox-radar-dashboard.jpg" alt="Inbox Radar Dashboard" className="w-full rounded-xl border shadow-sm" />
+        <div className="bg-white border rounded-xl p-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#0A2A7A]/60 mb-2 px-2 pt-1">Proof: Inbox Radar Dashboard - 92% inbox</p>
+          <img src="/inbox-radar-dashboard.jpg?v=1" alt="Inbox Radar Dashboard" className="w-full rounded-xl border shadow-sm" />
         </div>
 
         <div><strong className="text-[#0A2A7A]">Day 4-14: Warmup</strong><br/>Warm 100 → 5000 per day. 23% revenue recovered. $6,800 in 14 days.</div>
 
-        <div>
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#0A2A7A]/60 mb-2">Proof: Cart recovery that converted after inbox fix</p>
-          <img src="/cart-email-proof.jpg" alt="Cart Email Proof" className="w-full rounded-xl border shadow-sm" />
+        <div className="bg-white border rounded-xl p-2">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#0A2A7A]/60 mb-2 px-2 pt-1">Proof: Cart recovery that converted after inbox fix</p>
+          <img src="/cart-email-proof.jpg?v=1" alt="Cart Email Proof" className="w-full rounded-xl border shadow-sm" />
         </div>
 
         <div className="bg-slate-50 border rounded-xl p-5 mt-8"><strong>Result:</strong> Inbox Radar system works for $5k/mo to $100k/mo stores.</div>
