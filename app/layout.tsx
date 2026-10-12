@@ -16,6 +16,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Novi LLC — Shopify Agency | E-commerce Growth & Brand Strategy',
   description: 'I help US Shopify brands doing $10k/mo recover 30% revenue with email. Async Loom teardown in 24h.',
+  verification: {
+    other: {
+      'impact-site-verification': '9341737b-0d24-48a9-aee6-0550c60cb08e',
+    },
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
