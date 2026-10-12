@@ -23,23 +23,21 @@ export default function Page(){
         </div>
 
         <div className="space-y-8">
-          <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3 overflow-hidden">
+          <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3">
             <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 1: Inbox Radar Dashboard - 92% Inbox</p>
             <img src="/inbox-radar-dashboard.jpg" alt="Inbox Radar Dashboard" className="w-full rounded-lg border border-black/5 block" />
             <p className="mt-2 text-xs text-[#0A2A7A]/60">GlockApps: Inbox rate 52% → 92% in 72h.</p>
           </div>
 
-          <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3 overflow-hidden">
+          <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3">
             <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 2: Gmail Primary Tab</p>
             <img src="/gmail-primary-proof.jpg" alt="Gmail Primary Tab" className="w-full rounded-lg border border-black/5 block" />
             <p className="mt-2 text-xs text-[#0A2A7A]/60">Before: Promotions. After: Primary with star — Day 3.</p>
           </div>
 
-          <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3 overflow-hidden">
+          <div className="bg-white border border-[#0A2A7A]/10 rounded-xl p-3">
             <p className="text-xs font-bold uppercase mb-3 text-[#0A2A7A]/60">Proof 3: Cart Recovery Flow</p>
-            <div className="w-full rounded-lg border border-black/5 bg-white overflow-hidden">
-              <img src="/cart-email-proof.jpg" alt="Cart Recovery Flow" className="w-full block" style={{minHeight:'200px', objectFit:'contain'}} />
-            </div>
+            <img src="/cart-email-proof.jpg" alt="Cart Recovery Flow" className="w-full rounded-lg border border-black/5 block" />
             <p className="mt-2 text-xs text-[#0A2A7A]/60">Same flow, 18% to 44% open after deliverability fix. No copy change.</p>
           </div>
         </div>
