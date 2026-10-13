@@ -36,11 +36,11 @@ export default function Home() {
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      {/* FOUNDER SECTION - FINAL HYBRID - DARK NAVY + CIRCLE PHOTO */}
-      <section className="bg-[#07124B] py-20">
+      {/* FOUNDER SECTION - FINAL - NOVI BLUE #0A2A7A MATCH */}
+      <section className="bg-[#0A2A7A] py-20">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_1fr] gap-12 items-center">
           <div className="flex flex-col items-center text-center">
-            <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden bg-[#0A2A7A] shadow-2xl">
+            <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden bg-[#0E3A9A] shadow-2xl">
               <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full h-full object-cover" />
             </div>
             <p className="mt-5 text-[11px] tracking-[0.2em] text-white/60 uppercase">Founder • NOVI LLC</p>
@@ -66,17 +66,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MISSION / GOAL - FINAL PREMIUM - OPTION 2 HYBRID */}
       <section className="py-16 px-6 bg-white border-y">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border shadow-sm">
           <div className="bg-slate-50 p-8 md:p-10">
             <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]/60 mb-3">Our Mission</div>
-            <h3 className="text-2xl font-bold text-[#0A2A7A] leading-tight">We stop profitable Shopify brands from paying to email ghosts.</h3>
-            <p className="mt-4 text-sm leading-6 text-[#0A2A7A]/60">Inbox Radar finds deliverability, Klaviyo and SEO leaks in 24h — fixed in 14 days.</p>
+            <h3 className="text-2xl font-bold text-[#0A2A7A] leading-tight">We maximize retained revenue by eliminating invisible leaks.</h3>
+            <p className="mt-4 text-sm leading-6 text-[#0A2A7A]/60">We audit deliverability, Klaviyo automation, and SEO structural gaps in 24h — repaired in 14 days.</p>
           </div>
           <div className="bg-[#0A2A7A] p-8 md:p-10 text-white">
             <div className="text-xs uppercase tracking-widest font-semibold text-white/50 mb-3">Our Goal / Vision</div>
-            <h3 className="text-2xl font-bold leading-tight">To become the #1 leak-detection partner for $5k+/mo Shopify stores.</h3>
-            <p className="mt-4 text-sm leading-6 text-white/60">Accra to US & EU brands. EST hours. ACH Wire & Euro via Grey.</p>
+            <h3 className="text-2xl font-bold leading-tight">To become the leading leak-detection partner for $5k+/mo stores.</h3>
+            <p className="mt-4 text-sm leading-6 text-white/60">The default revenue-recovery audit before another dollar goes to ads. Accra to US & EU — EST Hours. ACH Wire & Euro via Grey.</p>
           </div>
         </div>
       </section>
