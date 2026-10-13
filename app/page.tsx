@@ -36,19 +36,32 @@ export default function Home() {
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      <section className="py-20 px-6 bg-white border-t">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          <div className="order-2 md:order-1 pt-2">
-            <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A] mb-3">Founder</div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#0A2A7A]">Built by an operator, not an agency.</h2>
-            <div className="mt-6 space-y-4 text-[15px] leading-7 text-[#0A2A7A]/70">
-              <p>I'm <span className="font-bold text-[#0A2A7A]">Floran Dieudonnie, Founder @ NOVI LLC</span>. Built in Accra with a phone, a laptop, and an obsession for finding revenue others miss.</p>
-              <p>I don't run a big agency. I run a <span className="font-semibold text-[#0A2A7A]">leak-detection lab</span> for Shopify stores doing $5k to $100k+/mo. We find the 23% you lose to spam folders, broken Klaviyo flows, and SEO gaps.</p>
-              <p className="text-sm font-semibold text-[#0A2A7A]">Accra, Ghana - Remote Worldwide - EST Hours. We accept US ACH Wire and Euro via Grey.</p>
+      {/* FOUNDER SECTION - FINAL HYBRID - DARK NAVY + CIRCLE PHOTO */}
+      <section className="bg-[#07124B] py-20">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_1fr] gap-12 items-center">
+          <div className="flex flex-col items-center text-center">
+            <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden bg-[#0A2A7A] shadow-2xl">
+              <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full h-full object-cover" />
             </div>
+            <p className="mt-5 text-[11px] tracking-[0.2em] text-white/60 uppercase">Founder • NOVI LLC</p>
+            <p className="text-sm font-bold text-white">Floran Dieudonnie</p>
           </div>
-          <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full max-w-[380px] rounded-2xl shadow-2xl object-cover border aspect-[4/5]" />
+          <div className="text-white">
+            <div className="text-xs uppercase tracking-widest font-semibold text-white/50 mb-3">Founder</div>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+              Built by an <span className="underline decoration-white/30">operator, not an agency.</span>
+            </h2>
+            <div className="mt-6 space-y-4 text-[16px] leading-8 text-white/90">
+              <p>
+                I'm Floran Dieudonnie, Founder @ NOVI LLC. I didn't build this from a plush boardroom with seed funding. I built it here in Accra, Ghana — laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.
+              </p>
+              <p>
+                I don't run a bloated agency with Account Executives and vanity metrics. I run a lean <span className="font-bold text-white bg-white/10 px-2 py-0.5 rounded">leak-detection lab</span> for Shopify brands doing <span className="font-bold text-white">$5k to $100k+/mo</span>.
+              </p>
+              <p>
+                Our data is clear: the average store forfeits <span className="font-bold text-white text-xl">23%</span> to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic to competitors. We don't guess; we audit, isolate, and repair in 14 days. Accra — Remote Worldwide — EST Hours. US ACH Wire & Euro via Grey.
+              </p>
+            </div>
           </div>
         </div>
       </section>
