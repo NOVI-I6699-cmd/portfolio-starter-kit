@@ -16,6 +16,7 @@ export default function Home() {
           <a href="mailto:info@novi-llc.com" className="bg-white px-5 py-2.5 rounded-lg text-sm font-bold shadow text-[#0A2A7A]">Book a Call</a>
         </div>
       </header>
+
       <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-start">
         <div>
           <div className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 border text-[#0A2A7A]">
@@ -34,6 +35,36 @@ export default function Home() {
         </div>
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
+
+      <section className="py-20 px-6 bg-white border-t">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="order-2 md:order-1">
+            <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A] mb-3">Founder</div>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#0A2A7A]">Built by an operator, not an agency.</h2>
+            <p className="mt-6 text-base leading-7 text-[#0A2A7A]/70">
+              I'm <span className="font-bold text-[#0A2A7A]">Floran Dieudonnie, Founder @ NOVI LLC</span>. Built in Accra with a phone, a laptop, and an obsession for finding revenue others miss.
+            </p>
+          </div>
+          <div className="order-1 md:order-2 flex justify-center">
+            <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full max-w-[380px] rounded-2xl shadow-2xl object-cover border" />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-slate-50 border-y text-center">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]/60 mb-3">Our Mission</div>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0A2A7A]">We stop profitable Shopify brands from paying to email ghosts.</h2>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-[#0A2A7A] text-white text-center">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-xs uppercase tracking-widest text-white/50 mb-3">Our Goal / Vision</div>
+          <h2 className="text-2xl md:text-3xl font-bold">To become the #1 leak-detection partner for $5k+/mo Shopify stores.</h2>
+        </div>
+      </section>
+
       <section id="insights" className="bg-slate-50 border-y py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-[#0A2A7A]">Insights — Real leaks we fix for all stores</h2>
@@ -41,33 +72,50 @@ export default function Home() {
             <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
               <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">INBOX RADAR - 01 • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23 Percent →</div>
-              <div className="mt-4 grid md:grid-cols-3 gap-3 text-sm">
-                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Trigger Delay</div><div className="mt-1 opacity-70 text-xs">1h to 5 mins = +11% recovery</div></div>
-                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">No SMS Fallback</div><div className="mt-1 opacity-70 text-xs">Fire SMS after 30 mins if spam</div></div>
-                <div className="bg-slate-50 border rounded-xl p-3"><div className="font-bold">Bad Exclusion</div><div className="mt-1 opacity-70 text-xs">You block engaged users by mistake</div></div>
-              </div>
             </Link>
             <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
               <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">CASE STUDY - 02 • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">From Spam to Inbox in 72h - Full in 14 Days →</div>
-              <div className="mt-3 text-sm leading-7 opacity-70 text-[#0A2A7A]">
-                <div>Day 1-2: SPF DKIM DMARC broken + 38% dead list. Fixed DNS, cleaned list.</div>
-                <div>Day 3: 92% inbox - first sales from spam folder.</div>
-                <div>Day 4-14: Warm 100 to 5000 per day. 23% revenue recovered. Gmail needs 7-10 days trust.</div>
-              </div>
             </Link>
             <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
               <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">STRATEGY - 03 • CLICK TO READ →</div>
               <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Shopify SEO in 2026 →</div>
-              <div className="mt-3 text-sm opacity-70 text-[#0A2A7A]">EEAT + Core Web Vitals. We fix collection schema, speed, UGC reviews. Works for $5k to $100k stores.</div>
             </Link>
           </div>
         </div>
       </section>
-      <footer className="text-white py-10 bg-[#0A2A7A]">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-6">
-          <div><div className="font-bold">Novi LLC</div><div className="mt-1 text-xs text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div><div className="mt-2 text-xs text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div><div className="mt-2 text-xs text-white/70">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div><div className="mt-3 text-sm"><a href="mailto:info@novi-llc.com" className="underline text-white/80">info@novi-llc.com</a></div></div>
-          <div className="flex flex-wrap gap-5 text-sm text-white/80"><a href="mailto:info@novi-llc.com" className="underline font-semibold">Contact us</a><a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline">LinkedIn</a><a href="https://x.com/novi_llc" target="_blank" className="underline">X</a><a href="https://wa.me/233243876362" target="_blank" className="underline">WhatsApp</a></div>
+
+      <footer className="text-white py-12 bg-[#0A2A7A]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <div className="font-bold text-lg">Novi LLC</div>
+              <div className="mt-1 text-sm text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div>
+              <div className="mt-2 text-sm text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div>
+              <div className="mt-4 space-y-1 text-sm text-white/80">
+                <div>(+233) 243 87 6362</div>
+                <div>(+233) 536 20 7353</div>
+                <div>(+233) 268 47 9954</div>
+              </div>
+              <div className="mt-4 text-xs text-white/60 max-w-sm">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
+            </div>
+            <div>
+              <div className="font-bold text-sm uppercase tracking-widest">Contact us</div>
+              <div className="mt-4 flex flex-col gap-3 text-sm">
+                <a href="mailto:info@novi-llc.com" className="underline text-white/90 hover:text-white">info@novi-llc.com</a>
+                <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline text-white/80 hover:text-white">LinkedIn</a>
+                <a href="https://x.com/novi_llc" target="_blank" className="underline text-white/80 hover:text-white">X</a>
+                <a href="https://wa.me/233243876362" target="_blank" className="underline text-white/80 hover:text-white">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+          <div className="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/50">
+            <div>Copyrights 2026 | Novi LLC</div>
+            <div className="flex gap-4">
+              <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
+              <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
+            </div>
+          </div>
         </div>
       </footer>
       <WhatsAppButton />
