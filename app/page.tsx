@@ -36,7 +36,6 @@ export default function Home() {
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      {/* FOUNDER - LOCKED TO NOVI BLUE #0A2A7A - MATCHES HEADER */}
       <section className="bg-[#0A2A7A] py-20" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_1fr] gap-12 items-center">
           <div className="flex flex-col items-center text-center">
@@ -93,42 +92,3 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
-
-      <footer className="text-white py-12 bg-[#0A2A7A]" style={{backgroundColor: '#0A2A7A'}}>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-10">
-            <div>
-              <div className="font-bold text-lg">Novi LLC</div>
-              <div className="mt-1 text-sm text-white/70">Shopify Agency | E-commerce Growth and Brand Strategy</div>
-              <div className="mt-2 text-sm text-white/60">Accra, Ghana - Remote Worldwide - EST Hours</div>
-              <div className="mt-4 space-y-1 text-sm text-white/80">
-                <div>(+233) 243 87 6362</div>
-                <div>(+233) 536 20 7353</div>
-                <div>(+233) 268 47 9954</div>
-              </div>
-              <div className="mt-4 text-xs text-white/60 max-w-sm">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
-            </div>
-            <div>
-              <div className="font-bold text-sm uppercase tracking-widest">Contact us</div>
-              <div className="mt-4 flex flex-col gap-3 text-sm">
-                <a href="mailto:info@novi-llc.com" className="underline text-white/90 hover:text-white">info@novi-llc.com</a>
-                <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline text-white/80 hover:text-white">LinkedIn</a>
-                <a href="https://x.com/novi_llc" target="_blank" className="underline text-white/80 hover:text-white">X</a>
-                <a href="https://wa.me/233243876362" target="_blank" className="underline text-white/80 hover:text-white">WhatsApp</a>
-              </div>
-            </div>
-          </div>
-          <div className="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/50">
-            <div>Copyrights 2026 | Novi LLC</div>
-            <div className="flex gap-4">
-              <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
-              <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <WhatsAppButton />
-    </main>
-  )
-}
