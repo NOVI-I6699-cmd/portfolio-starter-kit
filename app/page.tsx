@@ -36,7 +36,6 @@ export default function Home() {
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      {/* FOUNDER - LOCKED TO NOVI BLUE #0A2A7A - MATCHES HEADER */}
       <section className="bg-[#0A2A7A] py-20" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_1fr] gap-12 items-center">
           <div className="flex flex-col items-center text-center">
@@ -48,9 +47,7 @@ export default function Home() {
           </div>
           <div className="text-white">
             <div className="text-xs uppercase tracking-widest font-semibold text-white/50 mb-3">Founder</div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-              Built by an <span className="underline decoration-white/30">operator, not an agency.</span>
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Built by an <span className="underline decoration-white/30">operator, not an agency.</span></h2>
             <div className="mt-6 space-y-4 text-[16px] leading-8 text-white/90">
               <p>I'm Floran Dieudonnie, Founder @ NOVI LLC. I didn't build this from a plush boardroom with seed funding. I built it here in Accra, Ghana — laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
               <p>I don't run a bloated agency with Account Executives and vanity metrics. I run a lean <span className="font-bold text-white bg-white/10 px-2 py-0.5 rounded">leak-detection lab</span> for Shopify brands doing <span className="font-bold text-white">$5k to $100k+/mo</span>.</p>
@@ -73,74 +70,4 @@ export default function Home() {
             <p className="mt-4 text-sm leading-6 text-white/60">The default revenue-recovery audit before another dollar goes to ads. Accra to US & EU — EST Hours. ACH Wire & Euro via Grey.</p>
           </div>
         </div>
-      </section>
-
-      <section id="insights" className="bg-slate-50 border-y py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0A2A7A]">Insights — Real leaks we fix for all stores</h2>
-          <div className="mt-8 grid gap-5">
-            <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">INBOX RADAR - 01 • CLICK TO READ →</div>
-              <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Why Your Klaviyo Flows Lose 23 Percent →</div>
-            </Link>
-            <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">CASE STUDY - 02 • CLICK TO READ →</div>
-              <div className="mt-2 text-xl font-bold text-[#0A2A7A]">From Spam to Inbox in 72h - Full in 14 Days →</div>
-            </Link>
-            <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]">STRATEGY - 03 • CLICK TO READ →</div>
-              <div className="mt-2 text-xl font-bold text-[#0A2A7A]">Shopify SEO in 2026 →</div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER - FINAL LIVELY - GHANA VISIBLE - RIGHT SIDE FILLED - GREEN READY */}
-      <footer className="relative text-white py-16 overflow-hidden bg-[#0A2A7A]" style={{backgroundColor: '#0A2A7A'}}>
-        <div className="absolute inset-0 z-0">
-          <img src="/ghana-novi-footer-bg.jpg" alt="Ghana Accra Novi LLC Background" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0" style={{background: 'linear-gradient(to right, #0A2A7A 0%, #0A2A7A 45%, rgba(10,42,122,0.78) 70%, rgba(10,42,122,0.38) 100%)'}}></div>
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-[1.2fr_0.7fr_0.9fr] gap-10 items-start">
-            <div>
-              <div className="font-bold text-lg">Novi LLC</div>
-              <div className="mt-1 text-sm text-white/80">Shopify Agency | E-commerce Growth and Brand Strategy</div>
-              <div className="mt-2 text-sm text-white/70">Accra, Ghana - Remote Worldwide - EST Hours</div>
-              <div className="mt-4 space-y-1 text-sm text-white/90 font-medium">
-                <div>(+233) 243 87 6362</div>
-                <div>(+233) 536 20 7353</div>
-                <div>(+233) 268 47 9954</div>
-              </div>
-              <div className="mt-4 text-xs text-white/70 max-w-sm leading-5">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
-            </div>
-            <div>
-              <div className="font-bold text-sm uppercase tracking-widest">Contact us</div>
-              <div className="mt-4 flex flex-col gap-3 text-sm">
-                <a href="mailto:info@novi-llc.com" className="underline text-white/90 hover:text-white">info@novi-llc.com</a>
-                <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline text-white/80 hover:text-white">LinkedIn</a>
-                <a href="https://x.com/novi_llc" target="_blank" className="underline text-white/80 hover:text-white">X</a>
-                <a href="https://wa.me/233243876362" target="_blank" className="underline text-white/80 hover:text-white">WhatsApp</a>
-              </div>
-            </div>
-            <div className="relative min-h-[180px] flex flex-col items-end justify-end text-right">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-white/60">Built From</div>
-              <div className="text-4xl font-black leading-none mt-1 tracking-tight">ACCRA</div>
-              <div className="text-4xl font-black leading-none text-white/70 tracking-tight">GHANA</div>
-              <div className="mt-3 text-xs text-white/70">Laboma Beach • Black Star Gate</div>
-              <div className="mt-3 inline-flex px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-[10px] tracking-widest font-semibold backdrop-blur">REMOTE WORLDWIDE • EST HOURS</div>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/60">
-            <div>Copyrights 2026 | Novi LLC</div>
-            <div className="flex gap-4">
-              <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
-              <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <WhatsAppButton />
-    </div>
-  )
-}
+      </
