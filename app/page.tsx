@@ -37,31 +37,34 @@ export default function Home() {
       </section>
 
       <section className="py-20 px-6 bg-white border-t">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div className="order-2 md:order-1 pt-2">
             <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A] mb-3">Founder</div>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#0A2A7A]">Built by an operator, not an agency.</h2>
-            <p className="mt-6 text-base leading-7 text-[#0A2A7A]/70">
-              I'm <span className="font-bold text-[#0A2A7A]">Floran Dieudonnie, Founder @ NOVI LLC</span>. Built in Accra with a phone, a laptop, and an obsession for finding revenue others miss.
-            </p>
+            <div className="mt-6 space-y-4 text-[15px] leading-7 text-[#0A2A7A]/70">
+              <p>I'm <span className="font-bold text-[#0A2A7A]">Floran Dieudonnie, Founder @ NOVI LLC</span>. Built in Accra with a phone, a laptop, and an obsession for finding revenue others miss.</p>
+              <p>I don't run a big agency. I run a <span className="font-semibold text-[#0A2A7A]">leak-detection lab</span> for Shopify stores doing $5k to $100k+/mo. We find the 23% you lose to spam folders, broken Klaviyo flows, and SEO gaps.</p>
+              <p className="text-sm font-semibold text-[#0A2A7A]">Accra, Ghana - Remote Worldwide - EST Hours. We accept US ACH Wire and Euro via Grey.</p>
+            </div>
           </div>
-          <div className="order-1 md:order-2 flex justify-center">
-            <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full max-w-[380px] rounded-2xl shadow-2xl object-cover border" />
+          <div className="order-1 md:order-2 flex justify-center md:justify-end">
+            <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full max-w-[380px] rounded-2xl shadow-2xl object-cover border aspect-[4/5]" />
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-slate-50 border-y text-center">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]/60 mb-3">Our Mission</div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0A2A7A]">We stop profitable Shopify brands from paying to email ghosts.</h2>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 bg-[#0A2A7A] text-white text-center">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-xs uppercase tracking-widest text-white/50 mb-3">Our Goal / Vision</div>
-          <h2 className="text-2xl md:text-3xl font-bold">To become the #1 leak-detection partner for $5k+/mo Shopify stores.</h2>
+      <section className="py-16 px-6 bg-white border-y">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border shadow-sm">
+          <div className="bg-slate-50 p-8 md:p-10">
+            <div className="text-xs uppercase tracking-widest font-semibold text-[#0A2A7A]/60 mb-3">Our Mission</div>
+            <h3 className="text-2xl font-bold text-[#0A2A7A] leading-tight">We stop profitable Shopify brands from paying to email ghosts.</h3>
+            <p className="mt-4 text-sm leading-6 text-[#0A2A7A]/60">Inbox Radar finds deliverability, Klaviyo and SEO leaks in 24h — fixed in 14 days.</p>
+          </div>
+          <div className="bg-[#0A2A7A] p-8 md:p-10 text-white">
+            <div className="text-xs uppercase tracking-widest font-semibold text-white/50 mb-3">Our Goal / Vision</div>
+            <h3 className="text-2xl font-bold leading-tight">To become the #1 leak-detection partner for $5k+/mo Shopify stores.</h3>
+            <p className="mt-4 text-sm leading-6 text-white/60">Accra to US & EU brands. EST hours. ACH Wire & Euro via Grey.</p>
+          </div>
         </div>
       </section>
 
