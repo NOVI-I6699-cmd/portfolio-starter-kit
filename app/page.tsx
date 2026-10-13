@@ -6,7 +6,7 @@ import WhatsAppButton from "./components/WhatsAppButton"
 export default function Home() {
   return (
     <main className="bg-white">
-      <header className="text-white sticky top-0 z-50 shadow-sm bg-[#0A2A7A]">
+      <header className="text-white sticky top-0 z-50 shadow-sm bg-[#0A2A7A]" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex flex-col leading-none">
             <div className="font-bold text-lg tracking-tight">Novi LLC</div>
@@ -36,11 +36,11 @@ export default function Home() {
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      {/* FOUNDER SECTION - FINAL - NOVI BLUE #0A2A7A MATCH */}
-      <section className="bg-[#0A2A7A] py-20">
+      {/* FOUNDER - LOCKED TO NOVI BLUE #0A2A7A - MATCHES HEADER */}
+      <section className="bg-[#0A2A7A] py-20" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_1fr] gap-12 items-center">
           <div className="flex flex-col items-center text-center">
-            <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden bg-[#0E3A9A] shadow-2xl">
+            <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden bg-[#0E3A9A] shadow-2xl" style={{backgroundColor: '#0E3A9A'}}>
               <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full h-full object-cover" />
             </div>
             <p className="mt-5 text-[11px] tracking-[0.2em] text-white/60 uppercase">Founder • NOVI LLC</p>
@@ -52,21 +52,14 @@ export default function Home() {
               Built by an <span className="underline decoration-white/30">operator, not an agency.</span>
             </h2>
             <div className="mt-6 space-y-4 text-[16px] leading-8 text-white/90">
-              <p>
-                I'm Floran Dieudonnie, Founder @ NOVI LLC. I didn't build this from a plush boardroom with seed funding. I built it here in Accra, Ghana — laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.
-              </p>
-              <p>
-                I don't run a bloated agency with Account Executives and vanity metrics. I run a lean <span className="font-bold text-white bg-white/10 px-2 py-0.5 rounded">leak-detection lab</span> for Shopify brands doing <span className="font-bold text-white">$5k to $100k+/mo</span>.
-              </p>
-              <p>
-                Our data is clear: the average store forfeits <span className="font-bold text-white text-xl">23%</span> to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic to competitors. We don't guess; we audit, isolate, and repair in 14 days. Accra — Remote Worldwide — EST Hours. US ACH Wire & Euro via Grey.
-              </p>
+              <p>I'm Floran Dieudonnie, Founder @ NOVI LLC. I didn't build this from a plush boardroom with seed funding. I built it here in Accra, Ghana — laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
+              <p>I don't run a bloated agency with Account Executives and vanity metrics. I run a lean <span className="font-bold text-white bg-white/10 px-2 py-0.5 rounded">leak-detection lab</span> for Shopify brands doing <span className="font-bold text-white">$5k to $100k+/mo</span>.</p>
+              <p>Our data is clear: the average store forfeits <span className="font-bold text-white text-xl">23%</span> to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic to competitors. We don't guess; we audit, isolate, and repair in 14 days. Accra — Remote Worldwide — EST Hours. US ACH Wire & Euro via Grey.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* MISSION / GOAL - FINAL PREMIUM - OPTION 2 HYBRID */}
       <section className="py-16 px-6 bg-white border-y">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border shadow-sm">
           <div className="bg-slate-50 p-8 md:p-10">
@@ -74,7 +67,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-[#0A2A7A] leading-tight">We maximize retained revenue by eliminating invisible leaks.</h3>
             <p className="mt-4 text-sm leading-6 text-[#0A2A7A]/60">We audit deliverability, Klaviyo automation, and SEO structural gaps in 24h — repaired in 14 days.</p>
           </div>
-          <div className="bg-[#0A2A7A] p-8 md:p-10 text-white">
+          <div className="bg-[#0A2A7A] p-8 md:p-10 text-white" style={{backgroundColor: '#0A2A7A'}}>
             <div className="text-xs uppercase tracking-widest font-semibold text-white/50 mb-3">Our Goal / Vision</div>
             <h3 className="text-2xl font-bold leading-tight">To become the leading leak-detection partner for $5k+/mo stores.</h3>
             <p className="mt-4 text-sm leading-6 text-white/60">The default revenue-recovery audit before another dollar goes to ads. Accra to US & EU — EST Hours. ACH Wire & Euro via Grey.</p>
@@ -102,7 +95,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="text-white py-12 bg-[#0A2A7A]">
+      <footer className="text-white py-12 bg-[#0A2A7A]" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
