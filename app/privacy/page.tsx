@@ -8,7 +8,7 @@ export default function Privacy() {
       <link rel="canonical" href="https://novi-llc.com/privacy" />
       <header className="text-white py-4" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-4xl mx-auto px-6">
-          <button 
+          <button
             onClick={() => {
               if (window.history.length > 1) {
                 router.back()
@@ -24,9 +24,9 @@ export default function Privacy() {
         </div>
       </header>
       <main className="max-w-4xl mx-auto px-6 py-12">
-        <h1 className="text-3xl font-bold" style={{color: '#0A2A7A'}}>Privacy Policy</h1>
-        <p className="mt-2 text-sm opacity-60">Last updated: May 12, 2026 - NOVI LLC</p>
-        <div className="mt-8 space-y-4 text-sm leading-7 break-words" style={{color: '#0A2A7A'}}>
+        <h1 className="text-[30px] leading-[1.08] tracking-[-0.02em] md:text-[42px] font-bold [text-wrap:balance]" style={{color: '#0A2A7A'}}>Privacy Policy</h1>
+        <p className="mt-3 text-sm opacity-60">Last updated: May 12, 2026 - NOVI LLC</p>
+        <div className="mt-8 space-y-4 text-[15.5px] leading-7 break-words" style={{color: '#0A2A7A'}}>
           <p>NOVI LLC respects your privacy. We collect only store URL, email, and audit data needed to run Inbox Radar leak detection for Shopify stores.</p>
           <p>We do not sell your data. We use Klaviyo, Shopify, and Google APIs only to detect deliverability and SEO leaks. We do not share data with third parties for marketing.</p>
           <p>Data is stored securely. You can request deletion anytime by contacting info@novi-llc.com.</p>
