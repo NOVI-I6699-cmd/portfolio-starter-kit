@@ -56,7 +56,12 @@ export default function Home() {
             <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
               <p>I am Floran Dieudonnie, Founder at NOVI LLC. I did not build this from a plush boardroom with seed funding. I built it here in Accra, Ghana - laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
               <p>I do not run a bloated agency with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands doing 5k to 100k plus per month.</p>
-              <p>Our data is clear: the average store forfeits 23 percent to silent killers - emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic to competitors. We do not guess; we audit,      <section className="py-16 px-6 bg-white border-y">
+              <p>Our data is clear: the average store forfeits 23 percent to silent killers - emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic to competitors. We do not guess; we audit, isolate, and repair in 14 days. Accra - Remote Worldwide - EST Hours. US ACH Wire and Euro via Grey.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+            <section className="py-16 px-6 bg-white border-y">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border shadow-sm">
           <div className="bg-slate-50 p-8 md:p-10">
             <div className="text-xs uppercase tracking-widest font-semibold opacity-60 mb-3" style={{color: '#0A2A7A'}}>Our Mission</div>
