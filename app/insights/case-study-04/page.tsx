@@ -10,7 +10,7 @@ export default function CaseStudy04() {
 
         <div className="mt-10">
           <p className="text-xs tracking-[0.2em] font-bold opacity-50" style={{color: '#0A2A7A'}}>CRO / UX — CASE STUDY 04</p>
-          <h1 className="text-4xl md:text-[42px] font-bold mt-3 leading-tight" style={{color: '#0A2A7A'}}>
+          <h1 className="text-[30px] leading-[1.08] tracking-[-0.02em] md:text-[42px] font-bold mt-3 [text-wrap:balance]" style={{color: '#0A2A7A'}}>
             The Back Button That Was Killing Warm Leads
           </h1>
           <p className="mt-4 text-sm font-bold" style={{color: '#0A2A7A'}}>
