@@ -83,7 +83,7 @@ export default function Home() {
 
       <section id="case-studies" className="bg-slate-50 border-y py-16 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold" style={{color: '#0A2A7A'}}>Real Leaks: How We Recovered Revenue for Shopify Brands</h2>
+          <h2 className="text-[36px] md:text-[44px] font-semibold leading-[1.05] tracking-[-0.02em] max-w-[560px]" style={{color: '#0A2A7A', fontFamily: 'serif'}}>Real Leaks: How We Recovered Revenue for Shopify Brands</h2>
           <div className="mt-8 grid gap-5">
             <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
               <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>INBOX RADAR - 01 - CLICK TO READ</div>
