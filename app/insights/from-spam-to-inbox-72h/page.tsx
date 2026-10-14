@@ -48,7 +48,10 @@ export default function Page(){
         </div>
       </div>
 
-      <Link href="/#case-studies" className="mt-12 inline-block px-6 py-3 rounded-full text-sm font-bold text-white bg-[#0A2A7A]">← Back to Case Studies</Link>
+      {/* SAME BUTTON AS YOUR CIRCLED CASE 04 */}
+      <Link href="/#case-studies" className="mt-12 inline-flex border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
+        ← Back to Case Studies Heading
+      </Link>
     </main>
   )
 }
