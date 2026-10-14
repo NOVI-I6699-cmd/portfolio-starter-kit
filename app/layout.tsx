@@ -20,13 +20,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [
+      { url: '/novi-logo.jpg', type: 'image/jpeg' },
+    ],
+    apple: [
+      { url: '/novi-logo.jpg' },
+    ],
+    shortcut: '/novi-logo.jpg',
+  },
   openGraph: {
     type: 'website',
     url: 'https://novi-llc.com',
     siteName: 'Novi LLC',
     title: 'Novi LLC — Shopify Agency | E-commerce Growth & Brand Strategy',
     description: 'Shopify Growth Agency based in Accra, Ghana - Remote Worldwide. We help Shopify stores $5k to $100k+ per month recover 23% revenue.',
-    images: ['/novi-logo.jpg'],
+    images: [
+      {
+        url: '/novi-logo.jpg',
+        width: 1024,
+        height: 1024,
+        alt: 'Novi LLC - Shopify Agency',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
