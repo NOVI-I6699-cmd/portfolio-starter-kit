@@ -1,42 +1,44 @@
 import { MetadataRoute } from 'next'
 
+export const baseUrl = 'https://novi-llc.com'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://novi-llc.com',
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://novi-llc.com/privacy',
+      url: `${baseUrl}/privacy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: 'https://novi-llc.com/terms',
+      url: `${baseUrl}/terms`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: 'https://novi-llc.com/insights/how-i-fixed-23-percent-revenue-leak-shopify',
+      url: `${baseUrl}/insights/how-i-fixed-23-percent-revenue-leak-shopify`,
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: 'https://novi-llc.com/insights/from-spam-to-inbox-72h',
+      url: `${baseUrl}/insights/from-spam-to-inbox-72h`,
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: 'https://novi-llc.com/insights/shopify-seo-2026',
+      url: `${baseUrl}/insights/shopify-seo-2026`,
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: 'https://novi-llc.com/insights/case-study-04',
+      url: `${baseUrl}/insights/case-study-04`,
       lastModified: new Date(),
       priority: 0.8,
     },
