@@ -4,7 +4,10 @@ export default function Page(){
     <main className="max-w-3xl mx-auto px-6 py-20 bg-white">
       <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A]">← Back to Case Studies</Link>
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">CASE STUDY - 02</p>
-      <h1 className="mt-3 text-[30px] leading-[1.08] tracking-[-0.02em] md:text-[42px] font-bold [text-wrap:balance] text-[#0A2A7A]">From Spam to Inbox in 72h - Full Recovery in 14 Days</h1>
+
+      {/* UNIFIED SERIF H1 - same as Case 01, 03, 04, Terms, Privacy */}
+      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] text-[#0A2A7A]">From Spam to Inbox in 72h - Full Recovery in 14 Days</h1>
+
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 9 min read</p>
       <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">How we took a Shopify brand from 40 percent spam to 92 percent inbox in 3 days, and full revenue recovery in 14 days.</p>
@@ -18,7 +21,7 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">72 Hour Protocol</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">72 Hour Protocol</h2>
           <p className="mt-3 opacity-80"><strong>Hour 0-12:</strong> Paused campaigns, suppressed 11k cold contacts.<br/><strong>Hour 12-36:</strong> New subdomain mail.getnovi.com, fixed SPF/DKIM/DMARC.<br/><strong>Hour 36-72:</strong> Sent only to 1.2k super-engaged, plain text, 71% open.</p>
         </div>
 
@@ -43,12 +46,12 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">14 Day Full Recovery</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">14 Day Full Recovery</h2>
           <p className="mt-3 opacity-80">After Primary tab win, we scaled to engaged 30d, then 60d. Day 14 email was 31% of total revenue that day.</p>
         </div>
       </div>
 
-      {/* SAME BUTTON AS YOUR CIRCLED CASE 04 */}
+      {/* $0 FIX - same as your circled Case 04 */}
       <Link href="/#case-studies" className="mt-12 inline-flex border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
         ← Back to Case Studies Heading
       </Link>
