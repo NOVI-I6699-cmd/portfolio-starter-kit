@@ -4,7 +4,7 @@ export default function Page(){
     <main className="max-w-3xl mx-auto px-6 py-20 bg-white">
       <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A]">← Back to Case Studies</Link>
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">CASE STUDY - 02</p>
-      <h1 className="mt-3 text-4xl font-bold leading-tight text-[#0A2A7A]">From Spam to Inbox in 72h - Full Recovery in 14 Days</h1>
+      <h1 className="mt-3 text-[30px] leading-[1.08] tracking-[-0.02em] md:text-[42px] font-bold [text-wrap:balance] text-[#0A2A7A]">From Spam to Inbox in 72h - Full Recovery in 14 Days</h1>
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 9 min read</p>
       <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">How we took a Shopify brand from 40 percent spam to 92 percent inbox in 3 days, and full revenue recovery in 14 days.</p>
