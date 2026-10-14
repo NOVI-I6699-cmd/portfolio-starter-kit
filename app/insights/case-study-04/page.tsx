@@ -4,7 +4,7 @@ export default function CaseStudy04() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-6 py-16">
-        {/* TOP - ONLY "Back to Case Studies" - NO HEADING */}
+        {/* TOP - NO HEADING */}
         <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A] transition-colors">
           ← Back to Case Studies
         </Link>
@@ -14,7 +14,14 @@ export default function CaseStudy04() {
           <h1 className="text-4xl md:text-[42px] font-bold mt-3 leading-tight" style={{color: '#0A2A7A'}}>
             The Back Button That Was Killing Warm Leads
           </h1>
-          <p className="text-lg mt-3 opacity-70 leading-7" style={{color: '#0A2A7A'}}>
+          {/* ADDED - THE TINY FIX YOU WANTED */}
+          <p className="mt-4 text-sm font-bold" style={{color: '#0A2A7A'}}>
+            By Floran Dieudonnie - NOVI LLC
+          </p>
+          <p className="mt-1 text-xs" style={{color: '#0A2A7A'}} className="opacity-60">
+            Shopify Agency | E-commerce Growth and Brand Strategy - 5 min read
+          </p>
+          <p className="text-lg mt-4 opacity-70 leading-7" style={{color: '#0A2A7A'}}>
             The $0 anchor fix that stops losing 60% of binge readers.
           </p>
         </div>
@@ -72,7 +79,6 @@ export default function CaseStudy04() {
           </div>
         </div>
 
-        {/* BOTTOM - SECOND CLICK - WITH HEADING */}
         <div className="mt-12">
           <Link href="/#case-studies" className="inline-flex self-start border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
             ← Back to Case Studies Heading
