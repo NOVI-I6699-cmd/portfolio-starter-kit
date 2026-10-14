@@ -10,7 +10,7 @@ export default function AuditForm() {
   const [done, setDone] = useState(false);
 
   const base = "w-full p-3 rounded-lg border border-[#0A2A7A]/20 bg-white text-[15px] text-[#0A2A7A] placeholder:text-[#9CA3AF] focus:border-[#0A2A7A] focus:outline-none";
-  const sel = (v: string) => v === ""? "text-[#9CA3AF]" : "text-[#0A2A7A]";
+  const sel = (v: string) => (v === ""? "text-[#9CA3AF]" : "text-[#0A2A7A]");
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -31,7 +31,9 @@ export default function AuditForm() {
           <div className="text-[32px] mb-3">🎉</div>
           <h3 className="font-bold text-[18px] text-[#0A2A7A]">Audit Request Received</h3>
           <p className="text-[14px] text-[#0A2A7A]/70 mt-3 leading-relaxed">
-            Thank you for your submission.<br/>Our team will review your request and be in touch shortly.
+            Thank you for your submission.
+            <br />
+            Our team will review your request and be in touch shortly.
           </p>
         </div>
       </div>
@@ -40,10 +42,14 @@ export default function AuditForm() {
 
   return (
     <form onSubmit={onSubmit} className="bg-white p-6 rounded-xl space-y-4 border">
-      <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store (brand.com)" className={base} required />
-      <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={base} required />
-
-      {/* REVENUE - REQUIRED - $5k+ only */}
-      <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`} required>
+      <input value={store} onChange={(e) => setStore(e.target.value)} placeholder="Shopify Store (brand.com)" className={base} required />
+      <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={base} required />
+      <select value={revenue} onChange={(e) => setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`} required>
         <option value="">Monthly Revenue *</option>
-        <option>$5
+        <option>$5k - $20k/mo - Growth Stage</option>
+        <option>$20k - $100k/mo - Scaling Stage</option>
+        <option>$100k - $500k/mo - 7-Figure Path</option>
+        <option>$500k+/mo - Enterprise</option>
+        <option>Prefer not to say</option>
+      </select>
+      <select value={goal} onChange={(e) => setGoal(e.target.value
