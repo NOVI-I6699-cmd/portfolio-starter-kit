@@ -38,8 +38,12 @@ export default function Home() {
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      <section className="py-20" style={{backgroundColor: '#0A2A7A'}}>
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_minmax(0,1fr)] gap-12 items-center">
+      {/* FOUNDER SECTION WITH 5% WATERMARK */}
+      <section className="py-20 relative overflow-hidden" style={{backgroundColor: '#0A2A7A'}}>
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+          <img src="/novi-logo.jpg" alt="" className="w-[700px] h-[700px] rounded-full object-cover opacity-[0.05]" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_minmax(0,1fr)] gap-12 items-center">
           <div className="flex flex-col items-center text-center">
             <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden shadow-2xl" style={{backgroundColor: '#123A9A'}}>
               <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full h-full object-cover" />
