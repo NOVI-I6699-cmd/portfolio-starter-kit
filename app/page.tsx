@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div className="text-white min-w-0">
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Founder</div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight break-words">Built by an operator, not an agency.</h2>
+            <h2 className="text-[36px] md:text-[44px] font-semibold leading-[1.05] tracking-[-0.02em] break-words" style={{fontFamily: 'serif'}}>Built by an operator, not an agency.</h2>
             <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
               <p>I am Floran Dieudonnie, Founder at NOVI LLC. I did not build this from a plush boardroom with seed funding. I built it here in Accra, Ghana - laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
               <p>I do not run a bloated agency with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands doing 5k to 100k plus per month.</p>
@@ -70,12 +70,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border shadow-sm">
           <div className="bg-slate-50 p-8 md:p-10">
             <div className="text-xs uppercase tracking-widest font-semibold opacity-60 mb-3" style={{color: '#0A2A7A'}}>Our Mission</div>
-            <h3 className="text-2xl font-bold leading-tight" style={{color: '#0A2A7A'}}>We maximize retained revenue by eliminating invisible leaks.</h3>
+            <h3 className="text-[32px] md:text-[36px] font-semibold leading-[1.05] tracking-[-0.02em]" style={{color: '#0A2A7A', fontFamily: 'serif'}}>We maximize retained revenue by eliminating invisible leaks.</h3>
             <p className="mt-4 text-sm leading-6 opacity-60" style={{color: '#0A2A7A'}}>We audit deliverability, Klaviyo automation, and SEO structural gaps in 24h - repaired in 14 days.</p>
           </div>
           <div className="p-8 md:p-10 text-white" style={{backgroundColor: '#0A2A7A'}}>
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Our Goal / Vision</div>
-            <h3 className="text-2xl font-bold leading-tight">To become the leading leak-detection partner for $5k plus per month stores.</h3>
+            <h3 className="text-[32px] md:text-[36px] font-semibold leading-[1.05] tracking-[-0.02em]" style={{fontFamily: 'serif'}}>To become the leading leak-detection partner for $5k plus per month stores.</h3>
             <p className="mt-4 text-sm leading-6" style={{color: 'rgba(255,255,255,0.6)'}}>The default revenue-recovery audit before another dollar goes to ads. Accra to US and EU - EST Hours. ACH Wire and Euro via Grey.</p>
           </div>
         </div>
