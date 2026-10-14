@@ -1,20 +1,26 @@
-import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Privacy Policy | Novi LLC - Shopify Agency Accra Ghana',
-  description: 'Privacy Policy for Novi LLC - Shopify Agency in Accra Ghana. We respect your privacy.',
-  alternates: {
-    canonical: 'https://novi-llc.com/privacy',
-  },
-}
+'use client'
+import { useRouter } from 'next/navigation'
 
 export default function Privacy() {
+  const router = useRouter()
   return (
     <div className="min-h-screen bg-white">
+      <link rel="canonical" href="https://novi-llc.com/privacy" />
       <header className="text-white py-4" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-4xl mx-auto px-6">
-          <Link href="/" className="text-sm" style={{color: 'rgba(255,255,255,0.8)'}}>← Back to Home</Link>
+          <button 
+            onClick={() => {
+              if (window.history.length > 1) {
+                router.back()
+              } else {
+                router.push('/')
+              }
+            }}
+            className="text-sm hover:opacity-100 opacity-80 transition-opacity"
+            style={{color: 'rgba(255,255,255,0.8)'}}
+          >
+            ← Back
+          </button>
         </div>
       </header>
       <main className="max-w-4xl mx-auto px-6 py-12">
