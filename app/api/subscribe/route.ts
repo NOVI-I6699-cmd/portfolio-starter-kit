@@ -1,3 +1,32 @@
+  import { NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+const SHEET_URL = process.env.GOOGLE_SHEET_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbz3q1h2mXR0XdV-nJQdxJJNQBiPce2RwYnBt0RClCcLghlt0LMhy0gj3mwwsxt2yrhXcQ/exec";
+
+export async function POST(req: Request) {
+  try {
+    const { store, revenue, goal, email } = await req.json();
+
+    if (!store || !revenue || !goal || !email) {
+      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+    }
+
+    // 1. Save to Google Sheet
+    try {
+      await fetch(SHEET_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          store, revenue, goal, email, 
+          timestamp: new Date().toISOString(),
+          storeUrl: store
+        }),
+      });
+    } catch (sheetErr) {
+      console.error("Sheet error:", sheetErr);
+    }
+
     // 2. Send INTERNAL email to you
     const { error: internalError } = await resend.emails.send({
       from: "NOVI Leads <info@novi-llc.com>",
@@ -17,12 +46,12 @@
               <p style="margin: 0 0 12px; font-size: 14px; color: #0A2A7A;"><span style="color: #0A2A7A; opacity: 0.7;">Your Goal / Reason:</span> <strong style="color: #0A2A7A;">${goal}</strong></p>
               <p style="margin: 0; font-size: 14px; color: #0A2A7A;"><span style="color: #0A2A7A; opacity: 0.7;">Client Email:</span> <strong><a href="mailto:${email}" style="color: #0A2A7A; text-decoration: underline;">${email}</a></strong></p>
             </div>
-            <a href="mailto:${email}?subject=Re: Your ${store} Audit Request" style="background: #0A2A7A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; font-size: 14px;">Reply to ${email}</a>
+            <a href="mailto:${email}?subject=Re: Your ${store} Audit Request&body=Hey!%0A%0AThanks for reaching out via novi-llc.com" style="background: #0A2A7A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; font-size: 14px;">Reply to ${email}</a>
           </div>
         </div>
       `,
     });
-    // 3. NEW: Send AUTOMATED email to client WITH ROUND LOGO - FIXED JPG
+          // 3. Send CLIENT email with ROUND JPG LOGO
     try {
       await resend.emails.send({
         from: "Novi LLC <info@novi-llc.com>",
