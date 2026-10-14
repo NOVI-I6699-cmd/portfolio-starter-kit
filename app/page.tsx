@@ -4,8 +4,49 @@ import AuditForm from "./components/AuditForm"
 import WhatsAppButton from "./components/WhatsAppButton"
 
 export default function Home() {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://novi-llc.com/#organization",
+    "name": "Novi LLC",
+    "alternateName": "NOVI - Shopify Growth Agency",
+    "url": "https://novi-llc.com",
+    "logo": "https://novi-llc.com/logo.png",
+    "description": "Shopify Agency | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours.",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Accra, Ghana"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Floran Dieudonnie",
+      "jobTitle": "Founder",
+      "image": "https://novi-llc.com/founder-floran-dieudonnie-novi-llc.jpg",
+      "sameAs": "https://www.linkedin.com/in/floran-novi-llc/"
+    },
+    "telephone": "+233243876362",
+    "email": "info@novi-llc.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Accra",
+      "addressCountry": "GH"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/floran-novi-llc/",
+      "https://x.com/novi_llc",
+      "https://wa.me/233243876362"
+    ],
+    "knowsAbout": ["Shopify", "Shopify Agency", "E-commerce Growth", "Brand Strategy", "Klaviyo", "Shopify CRO"],
+    "disambiguatingDescription": "Not affiliated with NOVI Space, Inc., an aerospace/defense company in Arlington, VA. Novi LLC is an independent Shopify e-commerce growth agency based in Accra, Ghana, serving US and EU brands.",
+    "slogan": "Shopify Stores Leak 23% Revenue. We Find It."
+  };
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
       <header className="text-white sticky top-0 z-50 shadow-sm" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex flex-col leading-none">
@@ -73,74 +114,4 @@ export default function Home() {
       </section>
 
       <section id="case-studies" className="bg-slate-50 border-y py-16 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold" style={{color: '#0A2A7A'}}>Insights - Real leaks we fix for all stores</h2>
-          <div className="mt-8 grid gap-5">
-            <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>INBOX RADAR - 01 - CLICK TO READ</div>
-              <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>Why Your Klaviyo Flows Lose 23 Percent</div>
-            </Link>
-            <Link href="/insights/from-spam-to-inbox-72h" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>CASE STUDY - 02 - CLICK TO READ</div>
-              <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>From Spam to Inbox in 72h - Full in 14 Days</div>
-            </Link>
-            <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
-              <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>STRATEGY - 03 - CLICK TO READ</div>
-              <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>Shopify SEO in 2026</div>
-            </Link>
-            <Link href="/insights/case-study-04" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition ring-1 ring-blue-100">
-              <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>CRO / UX - 04 - NEW - CLICK TO READ</div>
-              <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>The Back Button That Was Killing Warm Leads</div>
-              <div className="mt-1 text-sm opacity-60">The $0 anchor fix that stops losing 60% of binge readers + video proof</div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <footer className="relative text-white py-16 overflow-hidden" style={{backgroundColor: '#0A2A7A'}}>
-        <div className="absolute inset-0 z-0">
-          <img src="/ghana-novi-footer-bg.jpg" alt="Ghana Accra Novi LLC Background" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0" style={{background: 'linear-gradient(to right, #0A2A7A 0%, #0A2A7A 45%, rgba(10,42,122,0.78) 70%, rgba(10,42,122,0.38) 100%)'}}></div>
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-[1.2fr_0.7fr_0.9fr] gap-10 items-start">
-            <div>
-              <div className="font-bold text-lg">Novi LLC</div>
-              <div className="mt-1 text-sm" style={{color: 'rgba(255,255,255,0.8)'}}>Shopify Agency | E-commerce Growth and Brand Strategy</div>
-              <div className="mt-2 text-sm" style={{color: 'rgba(255,255,255,0.7)'}}>Accra, Ghana - Remote Worldwide - EST Hours</div>
-              <div className="mt-4 space-y-1 text-sm font-medium" style={{color: 'rgba(255,255,255,0.9)'}}>
-                <div>(+233) 243 87 6362</div>
-                <div>(+233) 536 20 7353</div>
-                <div>(+233) 268 47 9954</div>
-              </div>
-              <div className="mt-4 text-xs max-w-sm leading-5" style={{color: 'rgba(255,255,255,0.7)'}}>We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
-            </div>
-            <div>
-              <div className="font-bold text-sm uppercase tracking-widest">Contact us</div>
-              <div className="mt-4 flex flex-col gap-3 text-sm">
-                <a href="mailto:info@novi-llc.com" className="underline" style={{color: 'rgba(255,255,255,0.9)'}}>info@novi-llc.com</a>
-                <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline" style={{color: 'rgba(255,255,255,0.8)'}}>LinkedIn</a>
-                <a href="https://x.com/novi_llc" target="_blank" className="underline" style={{color: 'rgba(255,255,255,0.8)'}}>X</a>
-                <a href="https://wa.me/233243876362" target="_blank" className="underline" style={{color: 'rgba(255,255,255,0.8)'}}>WhatsApp</a>
-              </div>
-            </div>
-            <div className="relative min-h-[180px] flex flex-col items-end justify-end text-right">
-              <div className="text-[10px] uppercase tracking-[0.3em]" style={{color: 'rgba(255,255,255,0.6)'}}>Built From</div>
-              <div className="text-4xl font-black leading-none mt-1 tracking-tight">ACCRA</div>
-              <div className="text-4xl font-black leading-none tracking-tight" style={{color: 'rgba(255,255,255,0.7)'}}>GHANA</div>
-              <div className="mt-4 inline-flex px-3 py-1.5 rounded-full border text-[10px] tracking-widest font-semibold backdrop-blur" style={{backgroundColor: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)'}}>REMOTE WORLDWIDE - EST HOURS</div>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between gap-4 text-xs" style={{borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)'}}>
-            <div>Copyrights 2026 | Novi LLC</div>
-            <div className="flex gap-4">
-              <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
-              <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <WhatsAppButton />
-    </div>
-  )
-}
+        <div className="max-w-7xl
