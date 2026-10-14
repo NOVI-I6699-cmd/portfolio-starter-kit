@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
+import BackButton from '../components/BackButton'
 
 export const metadata: Metadata = {
   title: 'Terms and Conditions | Novi LLC - Shopify Agency Accra Ghana',
@@ -14,7 +14,7 @@ export default function Terms() {
     <div className="min-h-screen bg-white">
       <header className="text-white py-4" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-4xl mx-auto px-6">
-          <Link href="/" className="text-sm" style={{color: 'rgba(255,255,255,0.8)'}}>← Back to Home</Link>
+          <BackButton />
         </div>
       </header>
       <main className="max-w-4xl mx-auto px-6 py-12">
