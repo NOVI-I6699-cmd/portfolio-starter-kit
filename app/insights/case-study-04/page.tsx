@@ -10,9 +10,12 @@ export default function CaseStudy04() {
 
         <div className="mt-10">
           <p className="text-xs tracking-[0.2em] font-bold opacity-50" style={{color: '#0A2A7A'}}>CRO / UX — CASE STUDY 04</p>
-          <h1 className="text-[30px] leading-[1.08] tracking-[-0.02em] md:text-[42px] font-bold mt-3 [text-wrap:balance]" style={{color: '#0A2A7A'}}>
+
+          {/* UNIFIED SERIF H1 - now matches Terms, Privacy, Case 01,02,03 */}
+          <h1 className="font-serif text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold mt-3 [text-wrap:balance] max-w-[20ch]" style={{color: '#0A2A7A'}}>
             The Back Button That Was Killing Warm Leads
           </h1>
+
           <p className="mt-4 text-sm font-bold" style={{color: '#0A2A7A'}}>
             By Floran Dieudonnie - NOVI LLC
           </p>
@@ -26,7 +29,7 @@ export default function CaseStudy04() {
 
         <div className="mt-12 space-y-10">
           <div>
-            <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>Problem — The Scroll Reset Leak</h2>
+            <h2 className="font-serif text-xl font-bold" style={{color: '#0A2A7A'}}>Problem — The Scroll Reset Leak</h2>
             <p className="mt-3 leading-7 text-[15px] opacity-80">
               In Novi LLC, we noticed a silent leak. A visitor reads Case Study 01, clicks Back, and lands at the top of the homepage. To read Case Study 02, they must scroll all the way down to Insights again.
             </p>
@@ -36,7 +39,7 @@ export default function CaseStudy04() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>Diagnosis</h2>
+            <h2 className="font-serif text-xl font-bold" style={{color: '#0A2A7A'}}>Diagnosis</h2>
             <div className="mt-3 bg-zinc-900 text-white rounded-xl p-4 text-sm font-mono leading-6">
               <div>Before: <span className="text-red-400">href="/"</span> → browser resets scroll to top</div>
               <div className="mt-2">After: <span className="text-green-400">href="/#case-studies" + id="case-studies"</span> → browser keeps user on Insights</div>
@@ -44,7 +47,7 @@ export default function CaseStudy04() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>The $0 Fix — 2 Minutes</h2>
+            <h2 className="font-serif text-xl font-bold" style={{color: '#0A2A7A'}}>The $0 Fix — 2 Minutes</h2>
             <ul className="mt-3 list-disc ml-5 text-[15px] leading-7 opacity-80">
               <li>Homepage Insights section: add <code>id="case-studies" className="scroll-mt-20"</code></li>
               <li>All case study pages: change Back link from <code>/</code> to <code>/#case-studies</code></li>
@@ -53,7 +56,7 @@ export default function CaseStudy04() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>Result — Before / After Video</h2>
+            <h2 className="font-serif text-xl font-bold" style={{color: '#0A2A7A'}}>Result — Before / After Video</h2>
             <p className="mt-2 text-sm opacity-70">Novi LLC branding. Red = Before (jumps to top). Green = After (stays on Insights).</p>
             <div className="mt-5 w-full rounded-2xl overflow-hidden border bg-black aspect-video shadow-lg">
               <iframe
@@ -67,7 +70,7 @@ export default function CaseStudy04() {
           </div>
 
           <div className="border-t pt-8">
-            <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>Why This Matters For Your Shopify Store</h2>
+            <h2 className="font-serif text-xl font-bold" style={{color: '#0A2A7A'}}>Why This Matters For Your Shopify Store</h2>
             <p className="mt-3 leading-7 text-[15px] opacity-80">
               You spend $$$ to bring someone to your site. They view 2-3 products. If Back = Top, you force them to re-find what they were comparing. Most won't. You just paid to leak your own traffic.
             </p>
