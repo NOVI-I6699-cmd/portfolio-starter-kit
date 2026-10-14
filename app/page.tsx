@@ -3,50 +3,38 @@ import Link from 'next/link'
 import AuditForm from "./components/AuditForm"
 import WhatsAppButton from "./components/WhatsAppButton"
 
-export default function Home() {
-  const orgSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://novi-llc.com/#organization",
-    "name": "Novi LLC",
-    "alternateName": "NOVI - Shopify Growth Agency",
-    "url": "https://novi-llc.com",
-    "logo": "https://novi-llc.com/logo.png",
-    "description": "Shopify Agency | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours.",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Accra, Ghana"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Floran Dieudonnie",
-      "jobTitle": "Founder",
-      "image": "https://novi-llc.com/founder-floran-dieudonnie-novi-llc.jpg",
-      "sameAs": "https://www.linkedin.com/in/floran-novi-llc/"
-    },
-    "telephone": "+233243876362",
-    "email": "info@novi-llc.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Accra",
-      "addressCountry": "GH"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/floran-novi-llc/",
-      "https://x.com/novi_llc",
-      "https://wa.me/233243876362"
-    ],
-    "knowsAbout": ["Shopify", "Shopify Agency", "E-commerce Growth", "Brand Strategy", "Klaviyo", "Shopify CRO"],
-    "disambiguatingDescription": "Not affiliated with NOVI Space, Inc., an aerospace/defense company in Arlington, VA. Novi LLC is an independent Shopify e-commerce growth agency based in Accra, Ghana, serving US and EU brands.",
-    "slogan": "Shopify Stores Leak 23% Revenue. We Find It."
-  };
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://novi-llc.com/#organization",
+  "name": "Novi LLC",
+  "alternateName": "NOVI - Shopify Growth Agency",
+  "url": "https://novi-llc.com",
+  "logo": "https://novi-llc.com/logo.png",
+  "description": "Shopify Agency | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours.",
+  "founder": {
+    "@type": "Person",
+    "name": "Floran Dieudonnie",
+    "sameAs": "https://www.linkedin.com/in/floran-novi-llc/"
+  },
+  "telephone": "+233243876362",
+  "email": "info@novi-llc.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/floran-novi-llc/",
+    "https://x.com/novi_llc"
+  ],
+  "knowsAbout": ["Shopify", "E-commerce Growth", "Shopify CRO"],
+  "disambiguatingDescription": "Not affiliated with NOVI Space Inc aerospace company. Novi LLC is a Shopify agency based in Accra Ghana."
+};
 
+export default function Home() {
   return (
-    <div className="bg-white">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
       />
+      <div className="bg-white">
       <header className="text-white sticky top-0 z-50 shadow-sm" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex flex-col leading-none">
@@ -71,47 +59,14 @@ export default function Home() {
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$20k/mo</div><div className="text-xs opacity-60 mt-1">$4,600/mo lost</div></div>
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$100k/mo</div><div className="text-xs opacity-60 mt-1">$23k/mo lost</div></div>
           </div>
-          <div className="mt-6 flex items-center gap-4 text-xs opacity-60" style={{color: '#0A2A7A'}}><div>Accra to US Brands</div><div>EST Hours</div><div>Inbox in 72h</div></div>
-          <div className="mt-3 text-xs font-semibold" style={{color: '#0A2A7A'}}>We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
         </div>
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      <section className="py-20" style={{backgroundColor: '#0A2A7A'}}>
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_minmax(0,1fr)] gap-12 items-center">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden shadow-2xl" style={{backgroundColor: '#123A9A'}}>
-              <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder NOVI LLC" className="w-full h-full object-cover" />
-            </div>
-            <p className="mt-5 text-[11px] tracking-[0.2em] uppercase" style={{color: 'rgba(255,255,255,0.6)'}}>Founder - NOVI LLC</p>
-            <p className="text-sm font-bold text-white">Floran Dieudonnie</p>
-          </div>
-          <div className="text-white min-w-0">
-            <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Founder</div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight break-words">Built by an operator, not an agency.</h2>
-            <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
-              <p>I am Floran Dieudonnie, Founder at NOVI LLC. I did not build this from a plush boardroom with seed funding. I built it here in Accra, Ghana - laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
-              <p>I do not run a bloated agency with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands doing 5k to 100k plus per month.</p>
-              <p>Our data is clear: the average store forfeits 23 percent to silent killers - emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic to competitors. We do not guess; we audit, isolate, and repair in 14 days. Accra - Remote Worldwide - EST Hours. US ACH Wire and Euro via Grey.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 bg-white border-y">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border shadow-sm">
-          <div className="bg-slate-50 p-8 md:p-10">
-            <div className="text-xs uppercase tracking-widest font-semibold opacity-60 mb-3" style={{color: '#0A2A7A'}}>Our Mission</div>
-            <h3 className="text-2xl font-bold leading-tight" style={{color: '#0A2A7A'}}>We maximize retained revenue by eliminating invisible leaks.</h3>
-            <p className="mt-4 text-sm leading-6 opacity-60" style={{color: '#0A2A7A'}}>We audit deliverability, Klaviyo automation, and SEO structural gaps in 24h - repaired in 14 days.</p>
-          </div>
-          <div className="p-8 md:p-10 text-white" style={{backgroundColor: '#0A2A7A'}}>
-            <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Our Goal / Vision</div>
-            <h3 className="text-2xl font-bold leading-tight">To become the leading leak-detection partner for $5k plus per month stores.</h3>
-            <p className="mt-4 text-sm leading-6" style={{color: 'rgba(255,255,255,0.6)'}}>The default revenue-recovery audit before another dollar goes to ads. Accra to US and EU - EST Hours. ACH Wire and Euro via Grey.</p>
-          </div>
-        </div>
-      </section>
-
       <section id="case-studies" className="bg-slate-50 border-y py-16 scroll-mt-20">
-        <div className="max-w-7xl
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-bold" style={{color: '#0A2A7A'}}>Insights - Real leaks we fix for all stores</h2>
+          <div className="mt-8 grid gap-5">
+            <Link href="/insights/how-i-fixed-23-percent-revenue-leak-shopify" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
+              <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>INBOX RADAR - 01</div>
+              <div className="mt-2 text-xl font-bold" style={{color: '#0A2
