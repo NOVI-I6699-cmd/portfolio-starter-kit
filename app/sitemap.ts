@@ -9,11 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
-      images: [
-        `${baseUrl}/novi-logo.jpg`,
-        `${baseUrl}/founder-floran-dieudonnie-novi-llc.jpg`,
-        `${baseUrl}/ghana-novi-footer-bg.jpg`,
-      ],
     },
     {
       url: `${baseUrl}/insights/how-i-fixed-23-percent-revenue-leak-shopify`,
@@ -38,7 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
-      images: [`${baseUrl}/novi-logo.jpg`],
     },
     {
       url: `${baseUrl}/privacy`,
