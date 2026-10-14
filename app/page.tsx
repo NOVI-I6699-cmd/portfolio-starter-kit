@@ -1,4 +1,4 @@
-"use client"
+    "use client"
 import Link from 'next/link'
 import AuditForm from "./components/AuditForm"
 import WhatsAppButton from "./components/WhatsAppButton"
@@ -88,6 +88,11 @@ export default function Home() {
               <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>STRATEGY - 03 - CLICK TO READ</div>
               <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>Shopify SEO in 2026</div>
             </Link>
+            <Link href="/case-study-04" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
+              <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>CRO / UX - 04 - NEW - CLICK TO READ</div>
+              <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>The Back Button That Was Killing Warm Leads</div>
+              <div className="mt-1 text-sm opacity-60">The $0 anchor fix that stops losing 60% of binge readers + video proof</div>
+            </Link>
           </div>
         </div>
       </section>
@@ -102,40 +107,4 @@ export default function Home() {
             <div>
               <div className="font-bold text-lg">Novi LLC</div>
               <div className="mt-1 text-sm" style={{color: 'rgba(255,255,255,0.8)'}}>Shopify Agency | E-commerce Growth and Brand Strategy</div>
-              <div className="mt-2 text-sm" style={{color: 'rgba(255,255,255,0.7)'}}>Accra, Ghana - Remote Worldwide - EST Hours</div>
-              <div className="mt-4 space-y-1 text-sm font-medium" style={{color: 'rgba(255,255,255,0.9)'}}>
-                <div>(+233) 243 87 6362</div>
-                <div>(+233) 536 20 7353</div>
-                <div>(+233) 268 47 9954</div>
-              </div>
-              <div className="mt-4 text-xs max-w-sm leading-5" style={{color: 'rgba(255,255,255,0.7)'}}>We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
-            </div>
-            <div>
-              <div className="font-bold text-sm uppercase tracking-widest">Contact us</div>
-              <div className="mt-4 flex flex-col gap-3 text-sm">
-                <a href="mailto:info@novi-llc.com" className="underline" style={{color: 'rgba(255,255,255,0.9)'}}>info@novi-llc.com</a>
-                <a href="https://www.linkedin.com/in/floran-novi-llc/" target="_blank" className="underline" style={{color: 'rgba(255,255,255,0.8)'}}>LinkedIn</a>
-                <a href="https://x.com/novi_llc" target="_blank" className="underline" style={{color: 'rgba(255,255,255,0.8)'}}>X</a>
-                <a href="https://wa.me/233243876362" target="_blank" className="underline" style={{color: 'rgba(255,255,255,0.8)'}}>WhatsApp</a>
-              </div>
-            </div>
-            <div className="relative min-h-[180px] flex flex-col items-end justify-end text-right">
-              <div className="text-[10px] uppercase tracking-[0.3em]" style={{color: 'rgba(255,255,255,0.6)'}}>Built From</div>
-              <div className="text-4xl font-black leading-none mt-1 tracking-tight">ACCRA</div>
-              <div className="text-4xl font-black leading-none tracking-tight" style={{color: 'rgba(255,255,255,0.7)'}}>GHANA</div>
-              <div className="mt-4 inline-flex px-3 py-1.5 rounded-full border text-[10px] tracking-widest font-semibold backdrop-blur" style={{backgroundColor: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)'}}>REMOTE WORLDWIDE - EST HOURS</div>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between gap-4 text-xs" style={{borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)'}}>
-            <div>Copyrights 2026 | Novi LLC</div>
-            <div className="flex gap-4">
-              <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
-              <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <WhatsAppButton />
-    </div>
-  )
-}
+              <div className="mt-2 text-sm" style={{color: 'rgba(255,
