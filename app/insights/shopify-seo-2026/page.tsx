@@ -5,8 +5,8 @@ export default function Page(){
       <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A]">← Back to Case Studies</Link>
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">STRATEGY - 03</p>
 
-      {/* UNIFIED SERIF H1 - matches Terms, Privacy, Case 01,02,04 */}
-      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] text-[#0A2A7A]">Shopify SEO in 2026 - EEAT, Schema, and Speed</h1>
+      {/* FINAL UNIFIED - matches Case 01 $40k/mo fix */}
+      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">Shopify SEO in 2026 - EEAT, Schema, and Speed</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 9 min read</p>
@@ -61,7 +61,6 @@ export default function Page(){
         </div>
       </div>
 
-      {/* FIXED BACK BUTTON - $0 anchor fix */}
       <Link href="/#case-studies" className="mt-12 inline-flex border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
         ← Back to Case Studies Heading
       </Link>
