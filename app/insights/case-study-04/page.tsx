@@ -30,8 +30,8 @@ export default function CaseStudy04() {
         <section>
           <h2 className="text-2xl font-semibold">Diagnosis</h2>
           <div className="mt-3 font-mono text-sm bg-zinc-900 text-white p-4 rounded-lg">
-            <div>Before: href="/"</div>
-            <div className="mt-2 text-green-400">After: href="/#case-studies" + id="case-studies"</div>
+            <div>Before: href=&quot;/&quot;</div>
+            <div className="mt-2 text-green-400">After: href=&quot;/#case-studies&quot; + id=&quot;case-studies&quot;</div>
           </div>
         </section>
 
@@ -39,7 +39,7 @@ export default function CaseStudy04() {
           <h2 className="text-2xl font-semibold">Fix</h2>
           <ul className="mt-3 list-disc ml-6 space-y-2 opacity-80">
             <li>Change Back link to /#case-studies</li>
-            <li>Add id="case-studies" to Insights section</li>
+            <li>Add id=&quot;case-studies&quot; to Insights section</li>
             <li>Browser handles scroll restoration natively. No extra JS.</li>
           </ul>
         </section>
@@ -63,8 +63,8 @@ export default function CaseStudy04() {
         <section className="border-t pt-8">
           <h2 className="text-2xl font-semibold">Client Lesson</h2>
           <p className="mt-3 opacity-80">
-            We audit this "Scroll Reset Leak" on every store. It's a small UX bug with big revenue impact.
-            If your Shopify store has this, you're leaking warm buyers daily.
+            We audit this &quot;Scroll Reset Leak&quot; on every store. It&apos;s a small UX bug with big revenue impact.
+            If your Shopify store has this, you&apos;re leaking warm buyers daily.
           </p>
         </section>
       </div>
