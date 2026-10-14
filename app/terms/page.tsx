@@ -1,20 +1,26 @@
-import type { Metadata } from 'next'
-import BackButton from '../components/BackButton'
-
-export const metadata: Metadata = {
-  title: 'Terms and Conditions | Novi LLC - Shopify Agency Accra Ghana',
-  description: 'Terms and Conditions for Novi LLC - Shopify Agency Accra Ghana - Leak detection for Shopify stores.',
-  alternates: {
-    canonical: 'https://novi-llc.com/terms',
-  },
-}
+'use client'
+import { useRouter } from 'next/navigation'
 
 export default function Terms() {
+  const router = useRouter()
   return (
     <div className="min-h-screen bg-white">
+      <link rel="canonical" href="https://novi-llc.com/terms" />
       <header className="text-white py-4" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-4xl mx-auto px-6">
-          <BackButton />
+          <button 
+            onClick={() => {
+              if (window.history.length > 1) {
+                router.back()
+              } else {
+                router.push('/')
+              }
+            }}
+            className="text-sm hover:opacity-100 opacity-80"
+            style={{color: 'rgba(255,255,255,0.8)'}}
+          >
+            ← Back
+          </button>
         </div>
       </header>
       <main className="max-w-4xl mx-auto px-6 py-12">
