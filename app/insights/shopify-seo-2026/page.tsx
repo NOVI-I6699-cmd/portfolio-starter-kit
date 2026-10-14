@@ -4,7 +4,10 @@ export default function Page(){
     <main className="max-w-3xl mx-auto px-6 py-20 bg-white">
       <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A]">← Back to Case Studies</Link>
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">STRATEGY - 03</p>
-      <h1 className="mt-3 text-4xl font-bold leading-tight text-[#0A2A7A]">Shopify SEO in 2026 - EEAT, Schema, and Speed</h1>
+
+      {/* UNIFIED SERIF H1 - matches Terms, Privacy, Case 01,02,04 */}
+      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] text-[#0A2A7A]">Shopify SEO in 2026 - EEAT, Schema, and Speed</h1>
+
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 9 min read</p>
       <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">EEAT plus Core Web Vitals is everything in 2026. Shopify brands that win organic are not doing more blogs. They are doing better trust and faster sites. Here is the full playbook we use for 7-figure Shopify brands.</p>
@@ -21,18 +24,18 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">1. EEAT for Shopify - The #1 Ranking Factor</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">1. EEAT for Shopify - The #1 Ranking Factor</h2>
           <p className="mt-3 opacity-80">Google's Quality Rater Guidelines now hit Shopify hard. If you sell wellness, beauty, supplements - you need real trust.</p>
           <ul className="mt-3 space-y-3 opacity-80 list-disc pl-5">
             <li><strong>Author Box:</strong> Every article needs author with photo, LinkedIn, credentials. Not "NOVI Team". Real person.</li>
             <li><strong>Founder Story Page:</strong> /pages/about-us with real address, real photos, not stock. Link to Crunchbase, LinkedIn.</li>
-            <li><strong>Contact + Policy:</strong> Real phone, real email in footer, shipping/return with dates updated 2026.</li>
             <li><strong>UGC Proof:</strong> Add review schema + real customer photos on product pages.</li>
+            <li><strong>Contact + Policy:</strong> Real phone, real email in footer, shipping/return with dates updated 2026.</li>
           </ul>
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">2. Collection Schema - Where Most Brands Lose</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">2. Collection Schema - Where Most Brands Lose</h2>
           <p className="mt-3 opacity-80">Shopify auto-adds Product schema, but 90% of stores have broken CollectionPage schema.</p>
           <div className="mt-3 rounded-xl border border-[#0A2A7A]/10 p-4 bg-white text-sm">
             <p className="font-bold">Fix checklist:</p>
@@ -43,7 +46,7 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">3. Speed - LCP Under 2.5s</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">3. Speed - LCP Under 2.5s</h2>
           <p className="mt-3 opacity-80">In 2026, speed is LCP and INP on mobile. Remove 40% of apps. Each app = 50-150ms JS.</p>
           <ul className="mt-3 space-y-3 opacity-80 list-disc pl-5">
             <li><strong>App Bloat Audit:</strong> Most brands have 18 apps, need 9.</li>
@@ -53,12 +56,12 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">4. Internal Linking - Free 20% Lift</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">4. Internal Linking - Free 20% Lift</h2>
           <p className="mt-3 opacity-80">Add 3 collection links inside every collection description, link blog to collections, and add footer sitemap with top collections.</p>
         </div>
       </div>
 
-      {/* SAME AS YOUR CIRCLED CASE 04 */}
+      {/* FIXED BACK BUTTON - $0 anchor fix */}
       <Link href="/#case-studies" className="mt-12 inline-flex border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
         ← Back to Case Studies Heading
       </Link>
