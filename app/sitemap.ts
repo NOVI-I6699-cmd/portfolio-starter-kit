@@ -22,25 +22,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-    {
-      url: `${baseUrl}/insights/how-i-fixed-23-percent-revenue-leak-shopify`,
-      lastModified: new Date(),
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/insights/from-spam-to-inbox-72h`,
-      lastModified: new Date(),
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/insights/shopify-seo-2026`,
-      lastModified: new Date(),
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/insights/case-study-04`,
-      lastModified: new Date(),
-      priority: 0.8,
-    },
   ]
 }
