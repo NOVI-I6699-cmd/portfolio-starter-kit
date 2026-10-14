@@ -6,13 +6,13 @@ export default function Page(){
 
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">INBOX RADAR - 01</p>
 
-      {/* UNIFIED SERIF H1 - same as Terms, Privacy, SEO, Case 04 */}
-      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] text-[#0A2A7A]">How I Fixed a 23 Percent Revenue Leak for a Shopify Brand Doing 40k per mo</h1>
+      {/* FIXED - $40k/mo - no more orphan mo */}
+      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">How I Fixed a 23% Revenue Leak for a Shopify Brand Doing $40k/mo</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 8 min read</p>
 
-      <p className="mt-8 text-lg leading-relaxed text-[#0A2A7A]/70">For most Shopify brands doing 10k to 100k per mo, the biggest loss is not ads. It is email deliverability. This brand was leaving $9,200 per month on the table.</p>
+      <p className="mt-8 text-lg leading-relaxed text-[#0A2A7A]/70">For most Shopify brands doing $10k to $100k/mo, the biggest loss is not ads. It is email deliverability. This brand was leaving $9,200 per month on the table.</p>
 
       <div className="mt-10 space-y-10 text-[15.5px] leading-7 text-[#0A2A7A]/90">
         <div className="border border-[#0A2A7A]/10 rounded-2xl p-6 bg-[#0A2A7A]/5">
@@ -61,7 +61,6 @@ export default function Page(){
         </div>
       </div>
 
-      {/* $0 FIX - keeps readers on page, same as your circled Case 04 */}
       <Link href="/#case-studies" className="mt-12 inline-flex border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
         ← Back to Case Studies Heading
       </Link>
