@@ -4,8 +4,9 @@ export default function CaseStudy04() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-6 py-16">
-        <Link href="/#case-studies" className="text-sm font-medium hover:underline" style={{color: '#0A2A7A'}}>
-          ← Back to Insights
+        {/* TOP - NOW MATCHES CASE 01 / 02 / 03 - FADED UNTIL HOVER */}
+        <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A] transition-colors">
+          ← Back to Case Studies Heading
         </Link>
 
         <div className="mt-10">
@@ -23,7 +24,6 @@ export default function CaseStudy04() {
             <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>Problem — The Scroll Reset Leak</h2>
             <p className="mt-3 leading-7 text-[15px] opacity-80">
               In Novi LLC, we noticed a silent leak. A visitor reads Case Study 01, clicks Back, and lands at the top of the homepage.
-              To read Case Study 02, they must scroll all the way down to Insights again.
             </p>
           </div>
 
@@ -46,7 +46,6 @@ export default function CaseStudy04() {
 
           <div>
             <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>Result — Before / After Video</h2>
-            <p className="mt-2 text-sm opacity-70">Novi LLC branding — Red = Before, Green = After.</p>
             <div className="mt-5 w-full rounded-2xl overflow-hidden border bg-black aspect-video shadow-lg">
               <iframe
                 src="https://www.youtube.com/embed/QlnEkkfvGu4"
@@ -57,18 +56,9 @@ export default function CaseStudy04() {
               />
             </div>
           </div>
-
-          <div className="border-t pt-8">
-            <h2 className="text-xl font-bold" style={{color: '#0A2A7A'}}>Why This Matters For Your Shopify Store</h2>
-            <p className="mt-3 leading-7 text-[15px] opacity-80">
-              You spend $$$ to bring someone to your site. They view 2-3 products. If Back = Top, you force them to re-find what they were comparing. Most won't. You just paid to leak your own traffic.
-            </p>
-            <p className="mt-3 leading-7 text-[15px] font-semibold" style={{color: '#0A2A7A'}}>
-              At Novi LLC, we audit this as part of Inbox Radar — deliverability, Klaviyo, and SEO + CRO leaks in 24h. Fixed in 14 days.
-            </p>
-          </div>
         </div>
 
+        {/* BOTTOM - WHITE PILL YOU LIKED */}
         <div className="mt-12">
           <Link href="/#case-studies" className="inline-flex self-start border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
             ← Back to Case Studies Heading
