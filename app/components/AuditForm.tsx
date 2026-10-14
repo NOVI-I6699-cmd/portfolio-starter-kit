@@ -49,7 +49,7 @@ export default function AuditForm() {
             <option>Prefer not to say</option>
           </select>
           <select value={goal} onChange={(e) => setGoal(e.target.value)} className={`${base} ${sel(goal)}`} required>
-            <option value="">Your Goal / Reason</option>
+            <option value="">Your Goal / Reason *</option>
             <option>Improving Conversion Rate</option>
             <option>Scaling to $100k+/mo</option>
             <option>Paid Ads Audit</option>
