@@ -132,7 +132,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between gap-4 text-xs" style={{borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)'}}>
-            <div>Copyrights 2026 | Novi LLC</div>
+            <div>© 2026 Novi LLC — Shopify Agency, Accra, Ghana</div>
             <div className="flex gap-4">
               <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
               <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
