@@ -5,7 +5,10 @@ export default function Page(){
       <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A] transition-colors">← Back to Case Studies</Link>
 
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">INBOX RADAR - 01</p>
-      <h1 className="mt-3 text-[30px] leading-[1.08] tracking-[-0.02em] md:text-[42px] font-bold [text-wrap:balance] text-[#0A2A7A]">How I Fixed a 23 Percent Revenue Leak for a Shopify Brand Doing 40k per mo</h1>
+
+      {/* UNIFIED SERIF H1 - same as Terms, Privacy, SEO, Case 04 */}
+      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] text-[#0A2A7A]">How I Fixed a 23 Percent Revenue Leak for a Shopify Brand Doing 40k per mo</h1>
+
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 8 min read</p>
 
@@ -23,13 +26,13 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">1. The Leak</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">1. The Leak</h2>
           <p className="mt-3 opacity-80">Brand came to us doing $40k/mo. Klaviyo showed 12% of total revenue from email. For a brand at this stage, it should be 25-35%. I checked deliverability: 40% of campaigns landing in spam on Gmail, 62% on Yahoo. Open rate collapsed from 48% to 32% in 6 weeks.</p>
           <p className="mt-3 opacity-80">They thought it was copywriting. It wasn't.</p>
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">2. The Diagnosis - 3 Root Causes</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">2. The Diagnosis - 3 Root Causes</h2>
           <ul className="mt-3 space-y-3 opacity-80 list-disc pl-5">
             <li><strong>Unsegmented Sends:</strong> Sending to 18k list including 9k unengaged. ISPs flagged as spammy sender.</li>
             <li><strong>Broken Authentication:</strong> SPF soft-fail, DMARC p=none, shared domain.</li>
@@ -38,7 +41,7 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">3. The NOVI Fix - Inbox Radar System</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">3. The NOVI Fix - Inbox Radar System</h2>
           <div className="mt-3 space-y-3 opacity-80">
             <p><strong>Day 1: List Surgery.</strong> Suppressed everyone who didn't open in 90 days. Created engaged segment of 7.2k. Reputation instantly improved.</p>
             <p><strong>Day 2: Tech Fix.</strong> Dedicated sending domain, fixed SPF/DKIM/DMARC to p=quarantine, warmed domain 14 days, implemented Google Postmaster.</p>
@@ -53,12 +56,12 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="text-xl font-bold text-[#0A2A7A]">Takeaway</h2>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">Takeaway</h2>
           <p className="mt-3 opacity-80">If you are under 40% open rate on engaged segment, you have a deliverability problem, not a copy problem. Fix list, fix tech, then fix content. In that order.</p>
         </div>
       </div>
 
-      {/* SAME AS YOUR CIRCLED CASE 04 */}
+      {/* $0 FIX - keeps readers on page, same as your circled Case 04 */}
       <Link href="/#case-studies" className="mt-12 inline-flex border px-6 py-3 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition" style={{borderColor: '#0A2A7A', color: '#0A2A7A'}}>
         ← Back to Case Studies Heading
       </Link>
