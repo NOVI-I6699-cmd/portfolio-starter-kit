@@ -11,8 +11,8 @@ export default function CaseStudy04() {
         <div className="mt-10">
           <p className="text-xs tracking-[0.2em] font-bold opacity-50" style={{color: '#0A2A7A'}}>CRO / UX — CASE STUDY 04</p>
 
-          {/* UNIFIED SERIF H1 - now matches Terms, Privacy, Case 01,02,03 */}
-          <h1 className="font-serif text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold mt-3 [text-wrap:balance] max-w-[20ch]" style={{color: '#0A2A7A'}}>
+          {/* FINAL UNIFIED SERIF H1 - matches Case 01 $40k/mo fix */}
+          <h1 className="font-serif text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold mt-3 [text-wrap:balance] max-w-[20ch] md:max-w-[28ch]" style={{color: '#0A2A7A'}}>
             The Back Button That Was Killing Warm Leads
           </h1>
 
