@@ -14,8 +14,25 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://novi-llc.com'),
   title: 'Novi LLC — Shopify Agency | E-commerce Growth & Brand Strategy | Accra Ghana',
   description: 'Novi LLC is a Shopify Growth Agency based in Accra, Ghana - Remote Worldwide - EST Hours. We help Shopify stores doing $5k to $100k+ per month recover 23% revenue. Not affiliated with NOVI Space Inc aerospace company.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://novi-llc.com',
+    siteName: 'Novi LLC',
+    title: 'Novi LLC — Shopify Agency | E-commerce Growth & Brand Strategy',
+    description: 'Shopify Growth Agency based in Accra, Ghana - Remote Worldwide. We help Shopify stores $5k to $100k+ per month recover 23% revenue.',
+    images: ['/logo.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Novi LLC — Shopify Agency',
+    description: 'Shopify Growth Agency - Accra Ghana - Remote Worldwide - EST Hours',
+  },
   verification: {
     other: {
       'impact-site-verification': '9341737b-0d24-48a9-aee6-0550c60cb08e',
