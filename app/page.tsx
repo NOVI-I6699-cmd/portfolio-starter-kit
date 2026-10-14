@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="insights" className="bg-slate-50 border-y py-16">
+      <section id="case-studies" className="bg-slate-50 border-y py-16 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold" style={{color: '#0A2A7A'}}>Insights - Real leaks we fix for all stores</h2>
           <div className="mt-8 grid gap-5">
