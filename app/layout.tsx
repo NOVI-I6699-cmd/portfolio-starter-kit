@@ -26,12 +26,13 @@ export const metadata: Metadata = {
     siteName: 'Novi LLC',
     title: 'Novi LLC — Shopify Agency | E-commerce Growth & Brand Strategy',
     description: 'Shopify Growth Agency based in Accra, Ghana - Remote Worldwide. We help Shopify stores $5k to $100k+ per month recover 23% revenue.',
-    images: ['/logo.png'],
+    images: ['/novi-logo.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Novi LLC — Shopify Agency',
     description: 'Shopify Growth Agency - Accra Ghana - Remote Worldwide - EST Hours',
+    images: ['/novi-logo.jpg'],
   },
   verification: {
     other: {
@@ -47,7 +48,7 @@ const orgSchema = {
   "name": "Novi LLC",
   "alternateName": "NOVI - Shopify Growth Agency",
   "url": "https://novi-llc.com",
-  "logo": "https://novi-llc.com/logo.png",
+  "logo": "https://novi-llc.com/novi-logo.jpg",
   "description": "Shopify Agency | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours.",
   "founder": {
     "@type": "Person",
