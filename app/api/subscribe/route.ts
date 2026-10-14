@@ -20,15 +20,15 @@ export async function POST(req: Request) {
         body: JSON.stringify({ 
           store, revenue, goal, email, 
           timestamp: new Date().toISOString(),
-          storeUrl: store // send both names so sheet always catches it
+          storeUrl: store
         }),
       });
     } catch (sheetErr) {
       console.error("Sheet error:", sheetErr);
     }
 
-    // 2. Send Email - Your original design
-    const { data, error } = await resend.emails.send({
+    // 2. Send INTERNAL email to you
+    const { error: internalError } = await resend.emails.send({
       from: "NOVI Leads <info@novi-llc.com>",
       to: process.env.CONTACT_TO!,
       subject: `New Lead: ${store} | ${revenue} | ${goal}`,
@@ -50,20 +50,62 @@ export async function POST(req: Request) {
                style="background: #0A2A7A; color: #FFFFFF; padding: 14px 28px; border-radius: 10px; text-decoration: none; display: inline-block; font-weight: 700; font-size: 14px;">
                Reply to ${email}
             </a>
-            <p style="color: #0A2A7A; opacity: 0.5; font-size: 11px; margin-top: 32px; border-top: 1px solid #eee; padding-top: 16px;">
-              This lead was sent via Resend • Signed by novi-llc.com • Reply-To is set to client • Saved to Google Sheet
-            </p>
           </div>
         </div>
       `,
     });
 
-    if (error) {
-      console.error("Resend error:", error);
-      return NextResponse.json({ error: error.message }, { status: 500 });
+    // 3. NEW: Send AUTOMATED email to client WITH ROUND LOGO
+    try {
+      await resend.emails.send({
+        from: "Novi LLC <info@novi-llc.com>",
+        to: email,
+        subject: `Your Shopify audit request is queued — Novi LLC`,
+        html: `
+          <div style="font-family: Inter, -apple-system, sans-serif; max-width: 600px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; overflow: hidden;">
+            <div style="padding: 24px 28px; background: #FFFFFF;">
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                <img src="https://novi-llc.com/logo.png" alt="Novi LLC" width="44" height="44" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block;" />
+                <div style="font-weight: 800; font-size: 16px; color: #0A2A7A;">Novi LLC</div>
+              </div>
+              
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #0A2A7A; opacity: 0.7; margin-bottom: 8px;">✓ AUDIT QUEUED</div>
+              <div style="font-size: 20px; font-weight: 800; color: #0A2A7A; margin-bottom: 12px;">Got your request.</div>
+              
+              <p style="font-size: 14px; color: #374151; line-height: 22px; margin-bottom: 16px;">
+                We're reviewing your Shopify store from <a href="https://novi-llc.com" style="color: #0A2A7A; font-weight: 600;">novi-llc.com</a> — thanks.
+              </p>
+              
+              <div style="font-size: 14px; color: #374151; line-height: 24px; margin-bottom: 20px;">
+                1. Quick check of your checkout + Klaviyo (15 min)<br/>
+                2. We will record a 2-min Loom for you<br/>
+                3. You get it within 12 hours
+              </div>
+              
+              <p style="font-size: 14px; color: #111827; font-weight: 500; margin-bottom: 24px;">
+                Want the top of the queue? Just reply "YES" — We'll bump you to first.
+              </p>
+
+              <div style="border-top: 1px solid #E5E7EB; padding-top: 16px; margin-top: 24px;">
+                <p style="font-size: 13px; color: #374151; margin: 0;">Thank you,</p>
+                <p style="font-size: 13px; font-weight: 700; color: #111827; margin: 4px 0;">Novi LLC</p>
+                <p style="font-size: 12px; color: #6B7280; margin: 0;">Shopify Agency | Built in Accra, serving global brands.</p>
+                <a href="https://novi-llc.com" style="font-size: 12px; color: #0A2A7A; font-weight: 600;">novi-llc.com</a>
+              </div>
+            </div>
+          </div>
+        `,
+      });
+    } catch (clientErr) {
+      console.error("Client email error:", clientErr);
     }
 
-    return NextResponse.json({ success: true, id: data?.id });
+    if (internalError) {
+      console.error("Resend error:", internalError);
+      return NextResponse.json({ error: internalError.message }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true });
   } catch (err: any) {
     console.error("API error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });
