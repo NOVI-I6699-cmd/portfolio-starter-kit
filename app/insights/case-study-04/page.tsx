@@ -50,14 +50,12 @@ export default function CaseStudy04() {
             Red = Before (jumps to top). Green = After (stays on Insights). Same video you scheduled for Friday.
           </p>
           <div className="mt-4">
-            <video
-              src="/videos/novi-before-after.mp4"
-              controls
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full rounded-xl border"
+            <iframe
+              src="https://www.youtube.com/embed/HAxFw7L-T8Q"
+              className="w-full aspect-video rounded-xl border"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="Novi Before After"
             />
           </div>
         </section>
