@@ -25,8 +25,12 @@ export default function Home() {
             <span className="h-2 w-2 rounded-full bg-green-500"></span>
             Serving Shopify stores from $5k+ to $100k+ per month - 3 spots left
           </div>
-          <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-none tracking-tight" style={{color: '#0A2A7A'}}>Shopify Stores Leak 23% Revenue. We Find It.</h1>
-          <div className="mt-4 text-base leading-7 opacity-70 max-w-xl" style={{color: '#0A2A7A'}}>Whether you do $5k per month or $100k per month - Inbox Radar finds deliverability, Klaviyo, and SEO leaks in 24h. Fixed in 14 days.</div>
+          <h1 className="mt-5 text-[36px] md:text-[44px] font-semibold leading-[1.05] tracking-[-0.02em] max-w-[560px]" style={{color: '#0A2A7A', fontFamily: 'serif'}}>
+            Stop Losing 23% of Your Shopify Revenue
+          </h1>
+          <p className="mt-4 text-[17px] md:text-[18px] leading-7 max-w-[640px]" style={{color: '#5A5A5A'}}>
+            Whether you do $5k or $100k/month — Inbox Radar finds your deliverability, Klaviyo, and SEO leaks in 24 hours. Fixed in 14 days.
+          </p>
           <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$5k/mo</div><div className="text-xs opacity-60 mt-1">$1,150/mo lost</div></div>
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$20k/mo</div><div className="text-xs opacity-60 mt-1">$4,600/mo lost</div></div>
@@ -61,7 +65,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-            <section className="py-16 px-6 bg-white border-y">
+
+      <section className="py-16 px-6 bg-white border-y">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border shadow-sm">
           <div className="bg-slate-50 p-8 md:p-10">
             <div className="text-xs uppercase tracking-widest font-semibold opacity-60 mb-3" style={{color: '#0A2A7A'}}>Our Mission</div>
