@@ -2,7 +2,7 @@ import Link from 'next/link'
 export default function Page(){
   return (
     <main className="max-w-3xl mx-auto px-6 py-20 bg-white">
-      <Link href="/" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A] transition-colors">Back to NOVI LLC</Link>
+      <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A] transition-colors">← Back to Case Studies</Link>
       
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">INBOX RADAR - 01</p>
       <h1 className="mt-3 text-4xl font-bold leading-tight text-[#0A2A7A]">How I Fixed a 23 Percent Revenue Leak for a Shopify Brand Doing 40k per mo</h1>
@@ -58,7 +58,7 @@ export default function Page(){
         </div>
       </div>
 
-      <Link href="/" className="mt-12 inline-block px-6 py-3 rounded-full text-sm font-bold text-white bg-[#0A2A7A] hover:bg-[#0A2A7A]/90 transition-colors">Back to all insights</Link>
+      <Link href="/#case-studies" className="mt-12 inline-block px-6 py-3 rounded-full text-sm font-bold text-white bg-[#0A2A7A] hover:bg-[#0A2A7A]/90 transition-colors">← Back to Case Studies</Link>
     </main>
   )
 }
