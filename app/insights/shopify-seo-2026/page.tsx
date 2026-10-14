@@ -6,7 +6,7 @@ export default function Page(){
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">STRATEGY - 03</p>
       <h1 className="mt-3 text-4xl font-bold leading-tight text-[#0A2A7A]">Shopify SEO in 2026 - EEAT, Schema, and Speed</h1>
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
-      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 12 min read</p>
+      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 9 min read</p>
       <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">EEAT plus Core Web Vitals is everything in 2026. Shopify brands that win organic are not doing more blogs. They are doing better trust and faster sites. Here is the full playbook we use for 7-figure Shopify brands.</p>
 
       <div className="mt-10 space-y-10 text-[15.5px] leading-7 text-[#0A2A7A]/90">
