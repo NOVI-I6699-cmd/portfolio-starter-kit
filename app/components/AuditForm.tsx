@@ -43,30 +43,7 @@ export default function AuditForm() {
       <input value={store} onChange={e=>setStore(e.target.value)} placeholder="Shopify Store (brand.com)" className={base} required />
       <input value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={base} required />
 
-      {/* REVENUE - OPTIONAL - $5k+ only */}
-      <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`}>
-        <option value="">Monthly Revenue (Optional)</option>
-        <option>$5k - $20k/mo - Growth Stage</option>
-        <option>$20k - $100k/mo - Scaling Stage</option>
-        <option>$100k - $500k/mo - 7-Figure Path</option>
-        <option>$500k+/mo - Enterprise</option>
-        <option>Prefer not to say</option>
-      </select>
-
-      {/* GOAL - REQUIRED - so you know how to serve */}
-      <select value={goal} onChange={e=>setGoal(e.target.value)} className={`${base} ${sel(goal)}`} required>
-        <option value="">Your Goal / Reason</option>
-        <option>Improving Conversion Rate</option>
-        <option>Scaling to $100k+/mo</option>
-        <option>Paid Ads Audit</option>
-        <option>Store Redesign</option>
-        <option>Other</option>
-      </select>
-
-      <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">
-        {loading? "Sending..." : "Get My Free Audit"}
-      </button>
-      <p className="text-[11px] text-center text-[#0A2A7A]/50">We work with stores doing $5k+/mo</p>
-    </form>
-  );
-}
+      {/* REVENUE - REQUIRED - $5k+ only */}
+      <select value={revenue} onChange={e=>setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`} required>
+        <option value="">Monthly Revenue *</option>
+        <option>$5
