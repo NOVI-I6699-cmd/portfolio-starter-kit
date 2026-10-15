@@ -157,7 +157,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [{ "@type": "Organization", "@id": "https://novi-llc.com/#organization", "name": "Novi LLC", "url": "https://novi-llc.com", "logo": "https://novi-llc.com/novi-logo.jpg", "founder": { "@id": "https://novi-llc.com/#person" } }, { "@type": "Person", "@id": "https://novi-llc.com/#person", "name": "Floran Dieudonnie", "jobTitle": "Founder", "image": "https://novi-llc.com/founder-floran-dieudonnie-novi-llc.jpg", "worksFor": { "@id": "https://novi-llc.com/#organization" }, "sameAs": ["https://www.linkedin.com/in/floran-novi-llc/", "https://x.com/novi_llc"] }] }) }} />
       <WhatsAppButton />
     </div>
   )
