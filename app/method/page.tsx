@@ -30,15 +30,15 @@ export default function Page(){
           </div>
         </div>
 
-        <div>
-          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">What We Get In Return</h2>
-          <ul className="mt-3 space-y-3 list-disc pl-5 text-[#0A2A7A]">
-            <li><span className="font-bold">Clients argue about the design, not the invoice.</span></li>
-            <li><span className="font-bold">Scope becomes obvious</span> because they can see what they're asking for.</li>
-            <li><span className="font-bold">Trust is built by the work, not by deck.</span></li>
-          </ul>
-          <p className="mt-4 text-[#0A2A7A]">Yes, some people take the mockup and walk away. That's fine. A founder who's been burned by an agency before doesn't want another promise. They want proof.</p>
-        </div>
+       <div>
+  <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">What We Get In Return</h2>
+  <ul className="mt-3 space-y-3 list-disc pl-5 text-[#0A2A7A]">
+    <li className="font-bold text-[#0A2A7A]">Clients argue about the design, not the invoice.</li>
+    <li className="font-bold text-[#0A2A7A]">Scope becomes obvious because they can see what they're asking for.</li>
+    <li className="font-bold text-[#0A2A7A]">Trust is built by the work, not by deck.</li>
+  </ul>
+  <p className="mt-4 text-[#0A2A7A] font-medium">Yes, some people take the mockup and walk away. That's fine. A founder who's been burned by an agency before doesn't want another promise. They want proof.</p>
+</div>
 
         <div className="border border-[#0A2A7A]/10 rounded-2xl p-6 bg-white">
           <p className="text-sm font-bold text-[#0A2A7A]">The Design Does The Selling</p>
