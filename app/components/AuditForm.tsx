@@ -37,30 +37,41 @@ export default function AuditForm() {
           </div>
         </div>
       ) : (
-        <form onSubmit={onSubmit} className="bg-white p-6 rounded-xl space-y-4 border">
-          <input value={store} onChange={(e) => setStore(e.target.value)} placeholder="Shopify Store (brand.com)" className={base} required />
-          <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={base} required />
-          <select value={revenue} onChange={(e) => setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`} required>
-            <option value="">Monthly Revenue *</option>
-            <option>$5k - $20k/mo - Growth Stage</option>
-            <option>$20k - $100k/mo - Scaling Stage</option>
-            <option>$100k - $500k/mo - 7-Figure Path</option>
-            <option>$500k+/mo - Enterprise</option>
-            <option>Prefer not to say</option>
-          </select>
-          <select value={goal} onChange={(e) => setGoal(e.target.value)} className={`${base} ${sel(goal)}`} required>
-            <option value="">Your Goal / Reason *</option>
-            <option>Improving Conversion Rate</option>
-            <option>Scaling to $100k+/mo</option>
-            <option>Paid Ads Audit</option>
-            <option>Store Redesign</option>
-            <option>Other</option>
-          </select>
-          <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">
-            {loading? "Sending..." : "Get My Free Audit"}
-          </button>
-          <p className="text-[11px] text-center text-[#0A2A7A]/50">We work with stores doing $5k+/mo</p>
-        </form>
+        <>
+          <form onSubmit={onSubmit} className="bg-white p-6 rounded-xl space-y-4 border">
+            <input value={store} onChange={(e) => setStore(e.target.value)} placeholder="Shopify Store (brand.com)" className={base} required />
+            <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@brand.com" type="email" className={base} required />
+            <select value={revenue} onChange={(e) => setRevenue(e.target.value)} className={`${base} ${sel(revenue)}`} required>
+              <option value="">Monthly Revenue *</option>
+              <option>$5k - $20k/mo - Growth Stage</option>
+              <option>$20k - $100k/mo - Scaling Stage</option>
+              <option>$100k - $500k/mo - 7-Figure Path</option>
+              <option>$500k+/mo - Enterprise</option>
+              <option>Prefer not to say</option>
+            </select>
+            <select value={goal} onChange={(e) => setGoal(e.target.value)} className={`${base} ${sel(goal)}`} required>
+              <option value="">Your Goal / Reason *</option>
+              <option>Improving Conversion Rate</option>
+              <option>Scaling to $100k+/mo</option>
+              <option>Paid Ads Audit</option>
+              <option>Store Redesign</option>
+              <option>Other</option>
+            </select>
+            <button disabled={loading} className="w-full bg-[#0A2A7A] text-white p-3 rounded-lg font-bold">
+              {loading? "Sending..." : "Get My Free Audit"}
+            </button>
+            <p className="text-[11px] text-center text-[#0A2A7A]/50">We work with stores doing $5k+/mo</p>
+          </form>
+
+          {/* ADDED TRUST BADGE - DOES NOT AFFECT INDEXING */}
+          <div className="mt-4 bg-[#f0fdf4] border border-[#bbf7d0] rounded-[10px] px-4 py-3.5 font-sans">
+            <div className="font-extrabold text-[13px] text-[#166534]">✓ Verified by Google</div>
+            <div className="text-[12.5px] leading-[19px] text-[#374151] mt-1">
+              Search <b>"Novi LLC"</b> on Google — recognized as a specialized Shopify agency for revenue-recovery audits and e-commerce growth strategy, based in Accra, Ghana.
+            </div>
+            <div className="mt-1.5 text-[10px] text-[#6b7280]">Source: Google AI Overview • novi-llc.com</div>
+          </div>
+        </>
       )}
     </>
   );
