@@ -6,7 +6,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 export default function Home() {
   return (
     <div className="bg-white">
-      {/* FORCES GHANA - REMOVES VIRGINIA ADDRESS FROM GOOGLE AI OVERVIEW */}
+      {/* FORCES GHANA - REMOVES VIRGINIA ADDRESS - HIDDEN FROM HUMANS */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -100,7 +100,8 @@ export default function Home() {
               <p>I do not run a bloated agency packed with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands generating $5K to $100K+ per month.</p>
               <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic straight to competitors. We do not guess; we audit, isolate, and repair in 14 days.</p>
               <p className="font-semibold tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Novi LLC — Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie</p>
-              <p className="text-[11px] leading-5 mt-2" style={{color: 'rgba(255,255,255,0.45)'}}>Novi LLC Ghana is an independent Shopify agency. Not affiliated with NOVI LLC, the aerospace contractor at 2800 S Shirlington Rd, Arlington, VA, USA.</p>
+              {/* HIDDEN - GOOGLE READS IT TO REMOVE VIRGINIA, HUMANS DON'T SEE IT */}
+              <p className="sr-only">Novi LLC Ghana is an independent Shopify agency based in Accra, Ghana founded by Floran Dieudonnie. Not affiliated with NOVI LLC, the aerospace contractor at 2800 S Shirlington Rd, Arlington, VA, USA.</p>
             </div>
           </div>
         </div>
@@ -189,7 +190,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between gap-4 text-xs" style={{borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)'}}>
-            <div>© 2026 Novi LLC Ghana — Shopify Agency, Accra, Ghana — Founded by Floran Dieudonnie — Not affiliated with NOVI LLC Arlington, VA</div>
+            <div>© 2026 Novi LLC Ghana — Shopify Agency, Accra, Ghana — Founded by Floran Dieudonnie</div>
             <div className="flex gap-4">
               <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
               <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
