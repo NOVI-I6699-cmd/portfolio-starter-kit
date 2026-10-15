@@ -37,7 +37,6 @@ export default function Home() {
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$100k/mo</div><div className="text-xs opacity-60 mt-1">$23k/mo lost</div></div>
           </div>
           <div className="mt-6 flex items-center gap-4 text-xs opacity-60" style={{color: '#0A2A7A'}}><div>Accra to US Brands</div><div>EST Hours</div><div>Spam → Inbox in 72h</div></div>
-          <div className="mt-3 text-xs font-semibold" style={{color: '#0A2A7A'}}>We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
         </div>
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
@@ -58,9 +57,10 @@ export default function Home() {
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Founder</div>
             <h2 className="text-[36px] md:text-[44px] font-semibold leading-[1.05] tracking-[-0.02em] break-words" style={{fontFamily: 'serif'}}>Built by an operator, not an agency.</h2>
             <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
-              <p>I am Floran Dieudonnie, Founder at NOVI LLC. I did not build this from a plush boardroom with seed funding. I built it here in Accra, Ghana - laptop, phone that never stops buzzing, and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
-              <p>I do not run a bloated agency with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands doing 5k to 100k plus per month.</p>
-              <p>Our data is clear: the average store forfeits 23 percent to silent killers - emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic to competitors. We do not guess; we audit, isolate, and repair in 14 days. Accra - Remote Worldwide - EST Hours. US ACH Wire and Euro via Grey.</p>
+              <p>I am Floran Dieudonnie, Founder at NOVI LLC. I did not build this from a plush boardroom with seed funding. I built it right here in Accra, Ghana — with a laptop and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
+              <p>I do not run a bloated agency packed with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands generating $5K to $100K+ per month.</p>
+              <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic straight to competitors. We do not guess; we audit, isolate, and repair in 14 days.</p>
+              <p className="font-semibold tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Accra — Remote Worldwide — EST Hours</p>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="p-8 md:p-10 text-white" style={{backgroundColor: '#0A2A7A'}}>
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Our Goal / Vision</div>
             <h3 className="text-[32px] md:text-[36px] font-semibold leading-[1.05] tracking-[-0.02em]" style={{fontFamily: 'serif'}}>To become the leading leak-detection partner for $5k plus per month stores.</h3>
-            <p className="mt-4 text-sm leading-6" style={{color: 'rgba(255,255,255,0.6)'}}>The default revenue-recovery audit before another dollar goes to ads. Accra to US and EU - EST Hours. ACH Wire and Euro via Grey.</p>
+            <p className="mt-4 text-sm leading-6" style={{color: 'rgba(255,255,255,0.6)'}}>The default revenue-recovery audit before another dollar goes to ads. Accra to US and EU - EST Hours.</p>
           </div>
         </div>
       </section>
