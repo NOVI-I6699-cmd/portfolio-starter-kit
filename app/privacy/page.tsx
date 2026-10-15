@@ -29,7 +29,7 @@ export default function Privacy() {
         <div className="mt-8 space-y-4 text-[15.5px] leading-7 break-words" style={{color: '#0A2A7A'}}>
           <p>NOVI LLC respects your privacy. We collect only store URL, email, and audit data needed to run Inbox Radar leak detection for Shopify stores.</p>
           <p>We do not sell your data. We use Klaviyo, Shopify, and Google APIs only to detect deliverability and SEO leaks. We do not share data with third parties for marketing.</p>
-          <p>Data is stored securely. You can request deletion anytime by contacting info@novi-llc.com.</p>
+          <p>Data is stored securely. You can request deletion anytime by contacting info@novi-llc.com</p>
           <p>Company: NOVI LLC - Accra, Ghana - Remote Worldwide - EST Hours - Contact: info@novi-llc.com - Phones: (+233) 243 87 6362, (+233) 536 20 7353, (+233) 268 47 9954</p>
           <p className="font-semibold">We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</p>
         </div>
