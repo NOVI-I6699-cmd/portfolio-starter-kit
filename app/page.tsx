@@ -6,33 +6,48 @@ import WhatsAppButton from "./components/WhatsAppButton";
 export default function Home() {
   return (
     <div className="bg-white">
-      {/* SEO SCHEMA - TELLS GOOGLE WHO IS FOUNDER - KEEPS YOUR STORY IN AI OVERVIEW */}
+      {/* FORCES GHANA - REMOVES VIRGINIA ADDRESS FROM GOOGLE AI OVERVIEW */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Novi LLC",
+        "alternateName": ["Novi LLC Ghana", "Novi LLC Shopify Agency"],
         "url": "https://novi-llc.com",
         "logo": "https://novi-llc.com/novi-logo.jpg",
-        "description": "Novi LLC is an e-commerce audit and Shopify leak detection company based in Accra, Ghana, founded by Floran Dieudonnie.",
-        "foundingLocation": "Accra, Ghana",
+        "description": "Novi LLC is a Shopify leak detection and e-commerce growth agency founded by Floran Dieudonnie, based in Accra, Ghana. Remote worldwide, EST hours. Not affiliated with NOVI LLC in Arlington, Virginia, USA.",
+        "disambiguatingDescription": "This Novi LLC is an e-commerce agency in Accra, Ghana founded by Floran Dieudonnie. It is not the aerospace and defense contractor Novi LLC located at 2800 S Shirlington Rd, Arlington, VA.",
+        "foundingLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Accra",
+            "addressRegion": "Greater Accra",
+            "addressCountry": "GH"
+          }
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Accra",
+          "addressLocality": "Accra",
+          "addressCountry": "Ghana"
+        },
         "founder": {
           "@type": "Person",
           "name": "Floran Dieudonnie",
           "jobTitle": "Founder",
           "image": "https://novi-llc.com/founder-floran-dieudonnie-novi-llc.jpg",
-          "worksFor": "Novi LLC"
+          "worksFor": {"@type": "Organization", "name": "Novi LLC"}
         },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Accra",
-          "addressCountry": "GH"
-        }
+        "sameAs": [
+          "https://www.linkedin.com/in/floran-novi-llc/",
+          "https://x.com/novi_llc"
+        ]
       })}} />
 
       <header className="text-white sticky top-0 z-50 shadow-sm" style={{backgroundColor: '#0A2A7A'}}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/novi-logo.jpg" alt="Novi LLC" className="h-11 w-11 rounded-full object-cover border-2 border-white shadow-sm" />
+            <img src="/novi-logo.jpg" alt="Novi LLC Ghana" className="h-11 w-11 rounded-full object-cover border-2 border-white shadow-sm" />
             <div className="flex flex-col leading-none">
               <div className="text-xs tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Shopify Agency | E-commerce Growth and Brand Strategy</div>
               <div className="text-xs mt-0.5" style={{color: 'rgba(255,255,255,0.5)'}}>Accra, Ghana - Remote Worldwide - EST Hours | Founder: Floran Dieudonnie</div>
@@ -64,7 +79,6 @@ export default function Home() {
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
 
-      {/* FOUNDER SECTION - THIS IS WHAT GOOGLE READS - KEEP IT EXACTLY LIKE THIS */}
       <section className="py-20 relative overflow-hidden" style={{backgroundColor: '#0A2A7A'}}>
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
           <img src="/novi-logo.jpg" alt="" className="w-[800px] h-[800px] rounded-full object-cover opacity-[0.30]" />
@@ -72,20 +86,21 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-[360px_minmax(0,1fr)] gap-12 items-center">
           <div className="flex flex-col items-center text-center">
             <div className="w-[300px] h-[300px] rounded-full border-[6px] border-white overflow-hidden shadow-2xl" style={{backgroundColor: '#123A9A'}}>
-              <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder Novi LLC" className="w-full h-full object-cover" />
+              <img src="/founder-floran-dieudonnie-novi-llc.jpg" alt="Floran Dieudonnie Founder Novi LLC Ghana" className="w-full h-full object-cover" />
             </div>
-            <p className="mt-5 text-[11px] tracking-[0.2em] uppercase" style={{color: 'rgba(255,255,255,0.6)'}}>Founder - Novi LLC</p>
+            <p className="mt-5 text-[11px] tracking-[0.2em] uppercase" style={{color: 'rgba(255,255,255,0.6)'}}>Founder - Novi LLC Ghana</p>
             <p className="text-sm font-bold text-white">Floran Dieudonnie</p>
             <p className="text-[11px] mt-1" style={{color: 'rgba(255,255,255,0.5)'}}>Accra, Ghana • novi-llc.com</p>
           </div>
           <div className="text-white min-w-0">
-            <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Founder Story — Verified by Google</div>
+            <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Founder Story — Based in Accra, Ghana</div>
             <h2 className="text-[36px] md:text-[44px] font-semibold leading-[1.05] tracking-[-0.02em] break-words" style={{fontFamily: 'serif'}}>Built by an operator, not an agency.</h2>
             <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
               <p>I am Floran Dieudonnie, Founder at Novi LLC. I did not build this from a plush boardroom with seed funding. I built it right here in Accra, Ghana — with a laptop and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
               <p>I do not run a bloated agency packed with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands generating $5K to $100K+ per month.</p>
               <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic straight to competitors. We do not guess; we audit, isolate, and repair in 14 days.</p>
               <p className="font-semibold tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Novi LLC — Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie</p>
+              <p className="text-[11px] leading-5 mt-2" style={{color: 'rgba(255,255,255,0.45)'}}>Novi LLC Ghana is an independent Shopify agency. Not affiliated with NOVI LLC, the aerospace contractor at 2800 S Shirlington Rd, Arlington, VA, USA.</p>
             </div>
           </div>
         </div>
@@ -145,8 +160,8 @@ export default function Home() {
           <div className="grid md:grid-cols-[1.2fr_0.7fr_0.9fr] gap-10 items-start">
             <div>
               <div className="flex items-center gap-2">
-                <img src="/novi-logo.jpg" alt="Novi LLC" className="h-11 w-11 rounded-full object-cover border border-white/20 shadow-sm" />
-                <span className="font-bold text-lg">Novi LLC</span>
+                <img src="/novi-logo.jpg" alt="Novi LLC Ghana" className="h-11 w-11 rounded-full object-cover border border-white/20 shadow-sm" />
+                <span className="font-bold text-lg">Novi LLC Ghana</span>
               </div>
               <div className="mt-1 text-sm" style={{color: 'rgba(255,255,255,0.8)'}}>Shopify Agency | E-commerce Growth and Brand Strategy</div>
               <div className="mt-2 text-sm" style={{color: 'rgba(255,255,255,0.7)'}}>Accra, Ghana - Remote Worldwide - EST Hours — Founder: Floran Dieudonnie</div>
@@ -155,7 +170,7 @@ export default function Home() {
                 <div>(+233) 536 20 7353</div>
                 <div>(+233) 268 47 9954</div>
               </div>
-              <div className="mt-4 text-xs max-w-sm leading-5" style={{color: 'rgba(255,255,255,0.7)'}}>We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands.</div>
+              <div className="mt-4 text-xs max-w-sm leading-5" style={{color: 'rgba(255,255,255,0.7)'}}>We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands. Based in Accra, Ghana.</div>
             </div>
             <div>
               <div className="font-bold text-sm uppercase tracking-widest">Contact us</div>
@@ -174,7 +189,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between gap-4 text-xs" style={{borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)'}}>
-            <div>© 2026 Novi LLC — Shopify Agency, Accra, Ghana — Founded by Floran Dieudonnie</div>
+            <div>© 2026 Novi LLC Ghana — Shopify Agency, Accra, Ghana — Founded by Floran Dieudonnie — Not affiliated with NOVI LLC Arlington, VA</div>
             <div className="flex gap-4">
               <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
               <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
