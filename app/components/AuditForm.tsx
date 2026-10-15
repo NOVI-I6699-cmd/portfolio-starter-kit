@@ -63,14 +63,19 @@ export default function AuditForm() {
             <p className="text-[11px] text-center text-[#0A2A7A]/50">We work with stores doing $5k+/mo</p>
           </form>
 
-          {/* ADDED TRUST BADGE - DOES NOT AFFECT INDEXING */}
-          <div className="mt-4 bg-[#f0fdf4] border border-[#bbf7d0] rounded-[10px] px-4 py-3.5 font-sans">
+          {/* CLICKABLE TRUST BADGE - DOES NOT AFFECT INDEXING */}
+          <a
+            href="https://www.google.com/search?q=Novi+LLC"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 block bg-[#f0fdf4] border border-[#bbf7d0] rounded-[10px] px-4 py-3.5 font-sans no-underline hover:bg-[#dcfce7] transition-colors cursor-pointer"
+          >
             <div className="font-extrabold text-[13px] text-[#166534]">✓ Verified by Google</div>
             <div className="text-[12.5px] leading-[19px] text-[#374151] mt-1">
               Search <b>"Novi LLC"</b> on Google — recognized as a specialized Shopify agency for revenue-recovery audits and e-commerce growth strategy, based in Accra, Ghana.
             </div>
-            <div className="mt-1.5 text-[10px] text-[#6b7280]">Source: Google AI Overview • novi-llc.com</div>
-          </div>
+            <div className="mt-1.5 text-[10px] text-[#6b7280] underline">Source: Google AI Overview • novi-llc.com — Click to verify →</div>
+          </a>
         </>
       )}
     </>
