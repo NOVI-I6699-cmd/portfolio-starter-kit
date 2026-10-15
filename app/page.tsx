@@ -102,7 +102,7 @@ export default function Home() {
               <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>The Back Button That Was Killing Warm Leads</div>
               <div className="mt-1 text-sm opacity-60">The $0 anchor fix that stops losing 60% of binge readers + video proof</div>
             </Link>
-            <Link href="/method" className="block bg-[#0A2A7A] rounded-2xl border border-[#0A2A7A] p-6 hover:shadow-lg transition text-white">
+            <Link id="our-method" href="/method" className="block bg-[#0A2A7A] rounded-2xl border border-[#0A2A7A] p-6 hover:shadow-lg transition text-white scroll-mt-24">
               <div className="text-xs uppercase tracking-widest font-semibold text-white/60">OUR METHOD - CLICK TO READ</div>
               <div className="mt-2 text-xl font-bold text-white">Mockup First. Then We Talk About Price.</div>
               <div className="mt-1 text-sm text-white/70">How we flip the agency model — show work before invoice + why it wins</div>
