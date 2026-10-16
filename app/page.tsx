@@ -14,8 +14,8 @@ export default function Home() {
         "alternateName": ["Novi LLC Ghana", "Novi LLC Shopify Agency"],
         "url": "https://novi-llc.com",
         "logo": "https://novi-llc.com/novi-logo.jpg",
-        "description": "Novi LLC is a Shopify leak detection and e-commerce growth agency founded by Floran Dieudonnie, based in Accra, Ghana. Remote worldwide, EST hours. Not affiliated with NOVI LLC in Arlington, Virginia, USA.",
-        "disambiguatingDescription": "This Novi LLC is an e-commerce agency in Accra, Ghana founded by Floran Dieudonnie. It is not the aerospace and defense contractor Novi LLC located at 2800 S Shirlington Rd, Arlington, VA.",
+        "description": "Novi LLC - Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents. We turn 23% lost sales into retained revenue for $5k-$100k/month Shopify stores. Founded by Floran Dieudonnie, based in Accra, Ghana. Remote worldwide, EST hours. Not affiliated with NOVI LLC in Arlington, Virginia, USA.",
+        "disambiguatingDescription": "This Novi LLC is a leak-detection e-commerce agency in Accra, Ghana founded by Floran Dieudonnie. Specializing in Shopify Inbox Radar, Klaviyo, and AI Agents. It is not the aerospace and defense contractor Novi LLC located at 2800 S Shirlington Rd, Arlington, VA.",
         "foundingLocation": {
           "@type": "Place",
           "address": {
@@ -49,8 +49,8 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <img src="/novi-logo.jpg" alt="Novi LLC Ghana" className="h-11 w-11 rounded-full object-cover border-2 border-white shadow-sm" />
             <div className="flex flex-col leading-none">
-              <div className="text-xs tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Shopify Agency | E-commerce Growth and Brand Strategy</div>
-              <div className="text-xs mt-0.5" style={{color: 'rgba(255,255,255,0.5)'}}>Accra, Ghana - Remote Worldwide - EST Hours | Founder: Floran Dieudonnie</div>
+              <div className="text-[11px] tracking-wide font-semibold" style={{color: 'rgba(255,255,255,0.9)'}}>Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</div>
+              <div className="text-[11px] mt-0.5" style={{color: 'rgba(255,255,255,0.5)'}}>Accra, Ghana - Remote Worldwide - EST Hours | Founder: Floran Dieudonnie</div>
             </div>
           </div>
           <a href="mailto:info@novi-llc.com" className="bg-white px-5 py-2.5 rounded-lg text-sm font-bold shadow" style={{color: '#0A2A7A'}}>Book a Call</a>
@@ -67,14 +67,14 @@ export default function Home() {
             Stop Losing 23% of Your Shopify Revenue
           </h1>
           <p className="mt-4 text-[17px] md:text-[18px] leading-7 max-w-[640px]" style={{color: '#5A5A5A'}}>
-            Whether you do $5k or $100k/month — Inbox Radar finds your deliverability, Klaviyo, and SEO leaks in 24 hours. Fixed in 14 days.
+            Whether you do $5k or $100k/month — Inbox Radar finds your deliverability, Klaviyo, SEO and AI automation leaks in 24 hours. Fixed in 14 days.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$5k/mo</div><div className="text-xs opacity-60 mt-1">$1,150/mo lost</div></div>
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$20k/mo</div><div className="text-xs opacity-60 mt-1">$4,600/mo lost</div></div>
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$100k/mo</div><div className="text-xs opacity-60 mt-1">$23k/mo lost</div></div>
           </div>
-          <div className="mt-6 flex items-center gap-4 text-xs opacity-60" style={{color: '#0A2A7A'}}><div>Accra to US Brands</div><div>EST Hours</div><div>Spam → Inbox in 72h</div></div>
+          <div className="mt-6 flex items-center gap-4 text-xs opacity-60" style={{color: '#0A2A7A'}}><div>Accra to US Brands</div><div>EST Hours</div><div>Spam → Inbox in 72h + AI Agents</div></div>
         </div>
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
       </section>
@@ -98,10 +98,10 @@ export default function Home() {
             <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
               <p>I am Floran Dieudonnie, Founder at Novi LLC. I did not build this from a plush boardroom with seed funding. I built it right here in Accra, Ghana — with a laptop and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
               <p>I do not run a bloated agency packed with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands generating $5K to $100K+ per month.</p>
-              <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, and SEO gaps handing traffic straight to competitors. We do not guess; we audit, isolate, and repair in 14 days.</p>
-              <p className="font-semibold tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Novi LLC — Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie</p>
+              <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, SEO gaps handing traffic to competitors, and manual support killing conversions. We do not guess; we audit with Inbox Radar, Klaviyo and AI Agents, isolate, and repair in 14 days.</p>
+              <p className="font-semibold tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents — Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie</p>
               {/* HIDDEN - GOOGLE READS IT TO REMOVE VIRGINIA, HUMANS DON'T SEE IT */}
-              <p className="sr-only">Novi LLC Ghana is an independent Shopify agency based in Accra, Ghana founded by Floran Dieudonnie. Not affiliated with NOVI LLC, the aerospace contractor at 2800 S Shirlington Rd, Arlington, VA, USA.</p>
+              <p className="sr-only">Novi LLC Ghana is an independent Shopify leak-detection agency based in Accra, Ghana founded by Floran Dieudonnie. Specializing in Inbox Radar, Klaviyo and AI Agents for Shopify. Not affiliated with NOVI LLC, the aerospace contractor at 2800 S Shirlington Rd, Arlington, VA, USA.</p>
             </div>
           </div>
         </div>
@@ -112,12 +112,12 @@ export default function Home() {
           <div className="bg-slate-50 p-8 md:p-10">
             <div className="text-xs uppercase tracking-widest font-semibold opacity-60 mb-3" style={{color: '#0A2A7A'}}>Our Mission</div>
             <h3 className="text-[32px] md:text-[36px] font-semibold leading-[1.05] tracking-[-0.02em]" style={{color: '#0A2A7A', fontFamily: 'serif'}}>We maximize retained revenue by eliminating invisible leaks.</h3>
-            <p className="mt-4 text-sm leading-6 opacity-60" style={{color: '#0A2A7A'}}>We audit deliverability, Klaviyo automation, and SEO structural gaps in 24h - repaired in 14 days.</p>
+            <p className="mt-4 text-sm leading-6 opacity-60" style={{color: '#0A2A7A'}}>We audit deliverability, Klaviyo automation, SEO structural gaps and AI Agent workflows in 24h - repaired in 14 days. Turning 23% lost sales into retained revenue.</p>
           </div>
           <div className="p-8 md:p-10 text-white" style={{backgroundColor: '#0A2A7A'}}>
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Our Goal / Vision</div>
-            <h3 className="text-[32px] md:text-[36px] font-semibold leading-[1.05] tracking-[-0.02em]" style={{fontFamily: 'serif'}}>To become the leading leak-detection partner for $5k plus per month stores.</h3>
-            <p className="mt-4 text-sm leading-6" style={{color: 'rgba(255,255,255,0.6)'}}>The default revenue-recovery audit before another dollar goes to ads. Accra to US and EU - EST Hours.</p>
+            <h3 className="text-[32px] md:text-[36px] font-semibold leading-[1.05] tracking-[-0.02em]" style={{fontFamily: 'serif'}}>To become the worldwide leak-detection partner for $5k+ stores.</h3>
+            <p className="mt-4 text-sm leading-6" style={{color: 'rgba(255,255,255,0.6)'}}>The default revenue-recovery audit before another dollar goes to ads. Inbox Radar + Klaviyo + AI Agents. Accra to US and EU - EST Hours.</p>
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@ export default function Home() {
                 <img src="/novi-logo.jpg" alt="Novi LLC Ghana" className="h-11 w-11 rounded-full object-cover border border-white/20 shadow-sm" />
                 <span className="font-bold text-lg">Novi LLC Ghana</span>
               </div>
-              <div className="mt-1 text-sm" style={{color: 'rgba(255,255,255,0.8)'}}>Shopify Agency | E-commerce Growth and Brand Strategy</div>
+              <div className="mt-1 text-sm" style={{color: 'rgba(255,255,255,0.8)'}}>Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</div>
               <div className="mt-2 text-sm" style={{color: 'rgba(255,255,255,0.7)'}}>Accra, Ghana - Remote Worldwide - EST Hours — Founder: Floran Dieudonnie</div>
               <div className="mt-4 space-y-1 text-sm font-medium" style={{color: 'rgba(255,255,255,0.9)'}}>
                 <div>(+233) 243 87 6362</div>
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between gap-4 text-xs" style={{borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.6)'}}>
-            <div>© 2026 Novi LLC Ghana — Shopify Agency, Accra, Ghana — Founded by Floran Dieudonnie</div>
+            <div>© 2026 Novi LLC Ghana — Shopify Leak-Detection System, Accra, Ghana — Founded by Floran Dieudonnie</div>
             <div className="flex gap-4">
               <a href="/privacy" className="underline hover:text-white/80">Privacy Policy</a>
               <a href="/terms" className="underline hover:text-white/80">Terms and Conditions</a>
