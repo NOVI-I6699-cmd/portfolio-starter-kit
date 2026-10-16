@@ -3,23 +3,24 @@ export default function Page(){
   return (
     <main className="max-w-3xl mx-auto px-6 py-20 bg-white">
       <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A]">← Back to Case Studies</Link>
-      <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">STRATEGY - 03</p>
+      <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">STRATEGY - 03 — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</p>
 
       {/* FINAL UNIFIED - matches Case 01 $40k/mo fix */}
       <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">Shopify SEO in 2026 - EEAT, Schema, and Speed</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
-      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 9 min read</p>
-      <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">EEAT plus Core Web Vitals is everything in 2026. Shopify brands that win organic are not doing more blogs. They are doing better trust and faster sites. Here is the full playbook we use for 7-figure Shopify brands.</p>
+      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 9 min read</p>
+      <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">EEAT plus Core Web Vitals is everything in 2026. Shopify brands that win organic are not doing more blogs. They are doing better trust and faster sites. Here is the full playbook we use for 7-figure Shopify brands inside our Leak-Detection System.</p>
 
       <div className="mt-10 space-y-10 text-[15.5px] leading-7 text-[#0A2A7A]/90">
         <div className="border border-[#0A2A7A]/10 rounded-2xl p-6 bg-[#0A2A7A]/5">
-          <p className="text-sm font-bold text-[#0A2A7A]">2026 Shopify SEO Stack - TLDR</p>
+          <p className="text-sm font-bold text-[#0A2A7A]">2026 Shopify SEO Stack - TLDR — Part of Leak-Detection</p>
           <div className="mt-3 space-y-1 text-sm opacity-80">
             <p>EEAT signals on every money page</p>
             <p>Product + Collection + FAQ Schema</p>
             <p>LCP under 2.5s on mobile</p>
             <p>Internal linking for collections</p>
+            <p>Inbox Radar + Klaviyo + AI Agents to retain SEO traffic</p>
           </div>
         </div>
 
@@ -56,8 +57,8 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">4. Internal Linking - Free 20% Lift</h2>
-          <p className="mt-3 opacity-80">Add 3 collection links inside every collection description, link blog to collections, and add footer sitemap with top collections.</p>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">4. Internal Linking - Free 20% Lift + AI Agent Retention</h2>
+          <p className="mt-3 opacity-80">Add 3 collection links inside every collection description, link blog to collections, and add footer sitemap with top collections. Then retain that SEO traffic with Klaviyo flows + AI Agents for WhatsApp — don't let SEO traffic leak after you paid to get it.</p>
         </div>
       </div>
 
