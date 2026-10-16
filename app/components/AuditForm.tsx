@@ -63,7 +63,7 @@ export default function AuditForm() {
             <p className="text-[11px] text-center text-[#0A2A7A]/50">We work with stores doing $5k+/mo</p>
           </form>
 
-          {/* VERIFIED BADGE - WITH YOUR NAME EXACT */}
+          {/* VERIFIED BADGE - WITH YOUR NAME EXACT - UPDATED TO LEAK-DETECTION */}
           <a
             href="https://www.google.com/search?q=Novi+LLC+Floran+Dieudonnie"
             target="_blank"
@@ -72,7 +72,7 @@ export default function AuditForm() {
           >
             <div className="font-extrabold text-[13px] text-[#166534]">✓ Verified: Novi LLC on Google</div>
             <div className="text-[12.5px] leading-[19px] text-[#374151] mt-1">
-              <b>Novi LLC</b> — Shopify Agency founded by <b>Floran Dieudonnie</b> in Accra, Ghana. E-commerce audit & Shopify leak detection company operating worldwide.
+              <b>Novi LLC</b> — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents founded by <b>Floran Dieudonnie</b> in Accra, Ghana. E-commerce audit & Shopify leak detection company operating worldwide.
             </div>
             <div className="mt-1.5 text-[10px] text-[#6b7280] underline">Source: Google AI Overview • novi-llc.com — Click to verify founder →</div>
           </a>
