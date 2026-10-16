@@ -8,7 +8,7 @@ export default function Page(){
       <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">Mockup First. Then We Talk About Price.</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC — Shopify Leak-Detection System</p>
-      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | Inbox Radar + Klaviyo + AI Agents | E-commerce Growth and Brand Strategy - 3 min read</p>
+      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 3 min read</p>
       <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]">We show a mockup of your leak fixes before we send a quote. Most agencies think that's a mistake.</p>
 
       <div className="mt-10 space-y-10 text-[15.5px] leading-7">
