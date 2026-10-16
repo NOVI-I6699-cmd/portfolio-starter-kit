@@ -3,18 +3,18 @@ export default function Page(){
   return (
     <main className="max-w-3xl mx-auto px-6 py-20 bg-white">
       <Link href="/#case-studies" className="text-sm text-[#0A2A7A]/60 hover:text-[#0A2A7A]">← Back to Case Studies</Link>
-      <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">CASE STUDY - 02</p>
+      <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">CASE STUDY - 02 — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</p>
 
       {/* UNIFIED SERIF H1 - same as Case 01, 03, 04, Terms, Privacy */}
       <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] text-[#0A2A7A]">From Spam to Inbox in 72h - Full Recovery in 14 Days</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
-      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Agency | E-commerce Growth and Brand Strategy - 9 min read</p>
-      <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">How we took a Shopify brand from 40 percent spam to 92 percent inbox in 3 days, and full revenue recovery in 14 days.</p>
+      <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 9 min read</p>
+      <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">How we took a Shopify brand from 40 percent spam to 92 percent inbox in 3 days, and full revenue recovery in 14 days with Inbox Radar + Klaviyo flows.</p>
 
       <div className="mt-10 space-y-10 text-[15.5px] leading-7 text-[#0A2A7A]/90">
         <div className="border border-[#0A2A7A]/10 rounded-2xl p-6 bg-[#0A2A7A]/5">
-          <p className="text-sm font-bold text-[#0A2A7A]">Result</p>
+          <p className="text-sm font-bold text-[#0A2A7A]">Result — Leak-Detection System</p>
           <p className="mt-2 text-sm"><span className="opacity-60">Day 0:</span> 40% spam, Gmail Promotions + Spam</p>
           <p className="text-sm"><span className="opacity-60">Day 3:</span> 92% inbox, Gmail Primary tab</p>
           <p className="text-sm"><span className="opacity-60">Day 14:</span> Open rate 61%, +$11.4k recovered revenue</p>
@@ -46,8 +46,8 @@ export default function Page(){
         </div>
 
         <div>
-          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">14 Day Full Recovery</h2>
-          <p className="mt-3 opacity-80">After Primary tab win, we scaled to engaged 30d, then 60d. Day 14 email was 31% of total revenue that day.</p>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">14 Day Full Recovery — Inbox Radar + Klaviyo + AI Agents</h2>
+          <p className="mt-3 opacity-80">After Primary tab win, we scaled to engaged 30d, then 60d. Day 14 email was 31% of total revenue that day. Next phase: AI Agents to capture WhatsApp recoveries that email missed.</p>
         </div>
       </div>
 
