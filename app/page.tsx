@@ -24,7 +24,6 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="bg-white">
-      {/* FORCES GHANA - REMOVES VIRGINIA ADDRESS - HIDDEN FROM HUMANS */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -151,9 +150,9 @@ export default function Home() {
               <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>CASE STUDY - 02 - CLICK TO READ</div>
               <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>From Spam to Inbox in 72h - Full in 14 Days</div>
             </Link>
-            <Link href="/insights/shopify-seo-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
+            <Link href="/insights/shopify-leak-detection-2026" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition">
               <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>STRATEGY - 03 - CLICK TO READ</div>
-              <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>Shopify SEO in 2026</div>
+              <div className="mt-2 text-xl font-bold" style={{color: '#0A2A7A'}}>Shopify Leak-Detection in 2026</div>
             </Link>
             <Link href="/insights/case-study-04" className="block bg-white rounded-2xl border p-6 hover:shadow-md transition ring-1 ring-blue-100">
               <div className="text-xs uppercase tracking-widest font-semibold" style={{color: '#0A2A7A'}}>CRO / UX - 04 - NEW - CLICK TO READ</div>
