@@ -4,7 +4,7 @@ import WhatsAppButton from "./components/WhatsAppButton";
 
 export const metadata = {
   title: "Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents — Accra, Ghana",
-  description: "Stop losing 23% of Shopify revenue. Inbox Radar finds deliverability, Klaviyo, and AI automation leaks in 24h. Fixed in 14 days. Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie.",
+  description: "Stop losing 23% of Shopify revenue. Inbox Radar finds deliverability, Klaviyo,and AI automation leaks in 24h. Fixed in 14 days. Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie.",
   keywords: ["Shopify leak detection", "Inbox Radar", "Klaviyo", "Shopify agency Ghana", "Novi LLC Ghana", "Floran Dieudonnie"],
   openGraph: {
     title: "Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents",
