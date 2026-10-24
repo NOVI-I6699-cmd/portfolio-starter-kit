@@ -85,7 +85,7 @@ export default function Home() {
             Stop Losing 23% of Your Shopify Revenue
           </h1>
           <p className="mt-4 text-[17px] md:text-[18px] leading-7 max-w-[640px]" style={{color: '#5A5A5A'}}>
-            Whether you do $5k or $100k/month — Inbox Radar finds your deliverability, Klaviyo, SEO and AI automation leaks in 24 hours. Fixed in 14 days.
+            Whether you do $5k or $100k/month — Inbox Radar finds your deliverability, Klaviyo,  and AI automation leaks in 24 hours. Fixed in 14 days.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$5k/mo</div><div className="text-xs opacity-60 mt-1">$1,150/mo lost</div></div>
@@ -116,7 +116,7 @@ export default function Home() {
             <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
               <p>I am Floran Dieudonnie, Founder at Novi LLC. I did not build this from a plush boardroom with seed funding. I built it right here in Accra, Ghana — with a laptop and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
               <p>I do not run a bloated agency packed with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands generating $5K to $100K+ per month.</p>
-              <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers, SEO gaps handing traffic to competitors, and manual support killing conversions. We do not guess; we audit with Inbox Radar, Klaviyo and AI Agents, isolate, and repair in 14 days.</p>
+              <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers,  gaps handing traffic to competitors, and manual support killing conversions. We do not guess; we audit with Inbox Radar, Klaviyo and AI Agents, isolate, and repair in 14 days.</p>
               <p className="font-semibold tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents — Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie</p>
               <p className="sr-only">Novi LLC Ghana is an independent Shopify leak-detection agency based in Accra, Ghana founded by Floran Dieudonnie. Specializing in Inbox Radar, Klaviyo and AI Agents for Shopify. Not affiliated with NOVI LLC, the aerospace contractor at 2800 S Shirlington Rd, Arlington, VA, USA.</p>
             </div>
@@ -129,7 +129,7 @@ export default function Home() {
           <div className="bg-slate-50 p-8 md:p-10">
             <div className="text-xs uppercase tracking-widest font-semibold opacity-60 mb-3" style={{color: '#0A2A7A'}}>Our Mission</div>
             <h3 className="text-[32px] md:text-[36px] font-semibold leading-[1.05] tracking-[-0.02em]" style={{color: '#0A2A7A', fontFamily: 'serif'}}>We maximize retained revenue by eliminating invisible leaks.</h3>
-            <p className="mt-4 text-sm leading-6 opacity-60" style={{color: '#0A2A7A'}}>We audit deliverability, Klaviyo automation, SEO structural gaps and AI Agent workflows in 24h - repaired in 14 days. Turning 23% lost sales into retained revenue.</p>
+            <p className="mt-4 text-sm leading-6 opacity-60" style={{color: '#0A2A7A'}}>We audit deliverability, Klaviyo automation,  structural gaps and AI Agent workflows in 24h - repaired in 14 days. Turning 23% lost sales into retained revenue.</p>
           </div>
           <div className="p-8 md:p-10 text-white" style={{backgroundColor: '#0A2A7A'}}>
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Our Goal / Vision</div>
