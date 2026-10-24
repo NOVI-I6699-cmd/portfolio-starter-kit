@@ -75,7 +75,7 @@ export default function CaseStudy04() {
               You spend $$$ to bring someone to your site. They view 2-3 products. If Back = Top, you force them to re-find what they were comparing. Most won't. You just paid to leak your own traffic.
             </p>
             <p className="mt-3 leading-7 text-[15px] opacity-80 font-semibold" style={{color: '#0A2A7A'}}>
-              At Novi LLC, we audit this as part of our Leak-Detection System — Inbox Radar, Klaviyo flows, and AI Agents for support/WhatsApp + SEO + CRO leaks in 24h. Fixed in 14 days. Turning 23% lost sales into retained revenue.
+              At Novi LLC, we audit this as part of our Leak-Detection System — Inbox Radar, Klaviyo flows, and AI Agents for support/WhatsApp + CRO leaks in 24h. Fixed in 14 days. Turning 23% lost sales into retained revenue.
             </p>
           </div>
         </div>
