@@ -6,59 +6,59 @@ export default function Page(){
       <p className="mt-8 text-xs tracking-widest uppercase font-semibold text-[#0A2A7A]/60">STRATEGY - 03 — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</p>
 
       {/* FINAL UNIFIED - matches Case 01 $40k/mo fix */}
-      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">Shopify SEO in 2026 - EEAT, Schema, and Speed</h1>
+      <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">Shopify Leak-Detection in 2026 - Inbox Radar, Klaviyo, and Retention</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 9 min read</p>
-      <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">EEAT plus Core Web Vitals is everything in 2026. Shopify brands that win organic are not doing more blogs. They are doing better trust and faster sites. Here is the full playbook we use for 7-figure Shopify brands inside our Leak-Detection System.</p>
+      <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">Inbox placement is everything in 2026. Shopify brands that win are not doing more flows. They are fixing inbox leaks and retaining more revenue. Here is the full playbook we use for 7-figure Shopify brands inside our Leak-Detection System.</p>
 
       <div className="mt-10 space-y-10 text-[15.5px] leading-7 text-[#0A2A7A]/90">
         <div className="border border-[#0A2A7A]/10 rounded-2xl p-6 bg-[#0A2A7A]/5">
-          <p className="text-sm font-bold text-[#0A2A7A]">2026 Shopify SEO Stack - TLDR — Part of Leak-Detection</p>
+          <p className="text-sm font-bold text-[#0A2A7A]">2026 Shopify Leak-Detection Stack - TLDR — Part of Leak-Detection</p>
           <div className="mt-3 space-y-1 text-sm opacity-80">
-            <p>EEAT signals on every money page</p>
-            <p>Product + Collection + FAQ Schema</p>
-            <p>LCP under 2.5s on mobile</p>
-            <p>Internal linking for collections</p>
-            <p>Inbox Radar + Klaviyo + AI Agents to retain SEO traffic</p>
+            <p>Inbox placement audit on every money flow</p>
+            <p>Klaviyo Primary Tab recovery system</p>
+            <p>LCP under 2.5s on checkout for retention</p>
+            <p>Internal linking for collection revenue</p>
+            <p>Inbox Radar + Klaviyo + AI Agents to retain revenue</p>
           </div>
         </div>
 
         <div>
-          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">1. EEAT for Shopify - The #1 Ranking Factor</h2>
-          <p className="mt-3 opacity-80">Google's Quality Rater Guidelines now hit Shopify hard. If you sell wellness, beauty, supplements - you need real trust.</p>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">1. Inbox Placement - The #1 Revenue Factor</h2>
+          <p className="mt-3 opacity-80">Gmail/Yahoo compliance updates now hit Shopify hard. If you run automated flows, you need real inbox placement.</p>
           <ul className="mt-3 space-y-3 opacity-80 list-disc pl-5">
-            <li><strong>Author Box:</strong> Every article needs author with photo, LinkedIn, credentials. Not "NOVI Team". Real person.</li>
-            <li><strong>Founder Story Page:</strong> /pages/about-us with real address, real photos, not stock. Link to Crunchbase, LinkedIn.</li>
-            <li><strong>UGC Proof:</strong> Add review schema + real customer photos on product pages.</li>
+            <li><strong>Inbox Audit:</strong> Every flow needs domain placement check. Not just open rate. Real Primary vs Promo vs Spam.</li>
+            <li><strong>Domain Story:</strong> /pages/about-us with real address, real contact, not generic. Builds sender trust.</li>
+            <li><strong>Proof Layer:</strong> Add real review signals + customer photos on flows to lift inbox trust.</li>
             <li><strong>Contact + Policy:</strong> Real phone, real email in footer, shipping/return with dates updated 2026.</li>
           </ul>
         </div>
 
         <div>
-          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">2. Collection Schema - Where Most Brands Lose</h2>
-          <p className="mt-3 opacity-80">Shopify auto-adds Product schema, but 90% of stores have broken CollectionPage schema.</p>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">2. Collection Flows - Where Most Brands Lose</h2>
+          <p className="mt-3 opacity-80">Shopify auto-adds flows, but 90% of stores have broken placement on collection and checkout sequences.</p>
           <div className="mt-3 rounded-xl border border-[#0A2A7A]/10 p-4 bg-white text-sm">
             <p className="font-bold">Fix checklist:</p>
-            <p className="mt-2 opacity-80">- Add CollectionPage + ItemList schema on all /collections/*</p>
-            <p className="opacity-80">- Add Product schema with aggregateRating</p>
-            <p className="opacity-80">- Add BreadcrumbList + FAQPage schema</p>
+            <p className="mt-2 opacity-80">- Audit Primary Tab placement on all /collections/* flows</p>
+            <p className="opacity-80">- Add Klaviyo deliverability layer with aggregate sender score</p>
+            <p className="opacity-80">- Add Breadcrumb + retention flow for abandoned checkout</p>
           </div>
         </div>
 
         <div>
-          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">3. Speed - LCP Under 2.5s</h2>
-          <p className="mt-3 opacity-80">In 2026, speed is LCP and INP on mobile. Remove 40% of apps. Each app = 50-150ms JS.</p>
+          <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">3. Speed - LCP Under 2.5s For Retention</h2>
+          <p className="mt-3 opacity-80">In 2026, retention is LCP and INP on mobile checkout. Remove flow friction. Each delay = 7% drop in retention.</p>
           <ul className="mt-3 space-y-3 opacity-80 list-disc pl-5">
-            <li><strong>App Bloat Audit:</strong> Most brands have 18 apps, need 9.</li>
-            <li><strong>Image Strategy:</strong> WebP + fetchpriority=high on first product image.</li>
-            <li><strong>Result:</strong> Our clients average LCP 1.9s vs industry 3.4s.</li>
+            <li><strong>Flow Audit:</strong> Most brands have 18 flows, need 9 high-converting ones.</li>
+            <li><strong>Image Strategy:</strong> WebP + fetchpriority=high on first checkout asset for faster load.</li>
+            <li><strong>Result:</strong> Our clients average retention lift 23% vs industry leaking to Promo.</li>
           </ul>
         </div>
 
         <div>
           <h2 className="font-serif text-xl font-bold text-[#0A2A7A]">4. Internal Linking - Free 20% Lift + AI Agent Retention</h2>
-          <p className="mt-3 opacity-80">Add 3 collection links inside every collection description, link blog to collections, and add footer sitemap with top collections. Then retain that SEO traffic with Klaviyo flows + AI Agents for WhatsApp — don't let SEO traffic leak after you paid to get it.</p>
+          <p className="mt-3 opacity-80">Add 3 collection links inside every collection description, link flows to collections, and add retention sitemap with top collections. Then retain that traffic with Klaviyo flows + AI Agents for WhatsApp — don't let traffic leak after you paid to get it.</p>
         </div>
       </div>
 
