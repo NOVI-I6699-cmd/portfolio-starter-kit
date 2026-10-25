@@ -113,9 +113,11 @@ export default function Home() {
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Founder Story — Based in Accra, Ghana</div>
             <h2 className="text-[36px] md:text-[44px] font-semibold leading-[1.05] tracking-[-0.02em] break-words" style={{fontFamily: 'serif'}}>Built by an operator, not an agency.</h2>
             <div className="mt-6 space-y-4 text-[16px] leading-8 break-words" style={{color: '#FFFFFF'}}>
-              <p>I am Floran Dieudonnie, Founder at Novi LLC. I did not build this from a plush boardroom with seed funding. I built it right here in Accra, Ghana — with a laptop and an obsession for finding hidden revenue Shopify owners leave on the table.</p>
-              <p>I do not run a bloated agency packed with Account Executives and vanity metrics. I run a lean leak-detection lab for Shopify brands generating $5K to $100K+ per month.</p>
-              <p>Our data is clear: the average store forfeits 23% to silent killers — emails trapped in spam, broken Klaviyo flows abandoning high-intent buyers,  gaps handing traffic to competitors, and manual support killing conversions. We do not guess; we audit with Inbox Radar, Klaviyo and AI Agents, isolate, and repair in 14 days.</p>
+              <p>I'm Floran Dieudonnie, Founder at Novi LLC.</p>
+              <p>I operate from Accra, Ghana on full EST hours — fixing hidden revenue leaks for Shopify brands doing $5K to $100K+/mo.</p>
+              <p>After auditing 40+ stores, the pattern is clear: the average brand silently forfeits 23% of top-line revenue to invisible killers — broken Klaviyo flows, checkout sequences trapped in spam, and missing tracking that hands warm traffic to competitors.</p>
+              <p>At Novi, I deploy our Inbox Radar system to isolate the exact gaps and patch them within 14 days.</p>
+              <p className="font-bold text-white">I guard your retention while you sleep. I will map your leaks in 24 hours.</p>
               <p className="font-semibold tracking-wide" style={{color: 'rgba(255,255,255,0.7)'}}>Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents — Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie</p>
               <p className="sr-only">Novi LLC Ghana is an independent Shopify leak-detection agency based in Accra, Ghana founded by Floran Dieudonnie. Specializing in Inbox Radar, Klaviyo and AI Agents for Shopify. Not affiliated with NOVI LLC, the aerospace contractor at 2800 S Shirlington Rd, Arlington, VA, USA.</p>
             </div>
