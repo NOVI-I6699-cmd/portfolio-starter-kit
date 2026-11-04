@@ -10,6 +10,7 @@ export default function Page(){
       <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">How I Fixed a 23% Revenue Leak for a Shopify Brand Doing $40k/mo</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
+      <p className="mt-1 text-xs font-semibold text-[#0A2A7A]">Shopify Partner + Klaviyo Partner</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 8 min read</p>
 
       <p className="mt-8 text-lg leading-relaxed text-[#0A2A7A]/70">For most Shopify brands doing $10k to $100k/mo, the biggest loss is not ads. It is email deliverability + Klaviyo + missed WhatsApp recovery. This brand was leaving $9,200 per month on the table.</p>
