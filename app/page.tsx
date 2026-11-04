@@ -3,11 +3,11 @@ import AuditForm from "./components/AuditForm";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 export const metadata = {
-  title: "Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents — Accra, Ghana",
-  description: "Stop losing 23% of Shopify revenue. Inbox Radar finds deliverability, Klaviyo and AI automation leaks in 24h. Fixed in 14 days. Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie.",
-  keywords: ["Shopify leak detection", "Inbox Radar", "Klaviyo", "Shopify agency Ghana", "Novi LLC Ghana", "Floran Dieudonnie"],
+  title: "Novi LLC — Shopify Partner + Klaviyo Partner Agency | Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents — Accra, Ghana",
+  description: "NOVI LLC — Official Shopify Partner & Klaviyo Partner Agency. Stop losing 23% of Shopify revenue. Inbox Radar finds deliverability, Klaviyo and AI automation leaks in 24h. Fixed in 14 days. Accra, Ghana — Remote Worldwide — EST Hours — Founder: Floran Dieudonnie.",
+  keywords: ["Shopify Partner Agency", "Klaviyo Partner Agency", "Shopify leak detection", "Inbox Radar", "Klaviyo", "Shopify agency Ghana", "Novi LLC Ghana", "Floran Dieudonnie"],
   openGraph: {
-    title: "Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents",
+    title: "Novi LLC — Shopify Partner + Klaviyo Partner Agency | Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents",
     description: "We turn 23% lost sales into retained revenue for $5k-$100k/mo Shopify stores. Accra, Ghana — Founder Floran Dieudonnie.",
     url: "https://novi-llc.com",
     siteName: "Novi LLC Ghana",
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Novi LLC — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents",
+    title: "Novi LLC — Shopify Partner + Klaviyo Partner Agency | Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents",
     images: ["https://novi-llc.com/novi-logo.jpg"],
   },
 };
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <img src="/novi-logo.jpg" alt="Novi LLC Ghana" className="h-11 w-11 rounded-full object-cover border-2 border-white shadow-sm" />
             <div className="flex flex-col leading-none">
-              <div className="text-[11px] tracking-wide font-semibold" style={{color: 'rgba(255,255,255,0.9)'}}>Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</div>
+              <div className="text-[11px] tracking-wide font-semibold" style={{color: 'rgba(255,255,255,0.9)'}}>Shopify Partner + Klaviyo Partner Agency | Inbox Radar + Klaviyo + AI Agents</div>
               <div className="text-[11px] mt-0.5" style={{color: 'rgba(255,255,255,0.5)'}}>Accra, Ghana - Remote Worldwide - EST Hours | Founder: Floran Dieudonnie</div>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function Home() {
             Stop Losing 23% of Your Shopify Revenue
           </h1>
           <p className="mt-4 text-[17px] md:text-[18px] leading-7 max-w-[640px]" style={{color: '#5A5A5A'}}>
-            Whether you do $5k or $100k/month — Inbox Radar finds your deliverability, Klaviyo,  and AI automation leaks in 24 hours. Fixed in 14 days.
+            Whether you do $5k or $100k/month — Inbox Radar finds your deliverability, Klaviyo,  and AI automation leaks in 24 hours. Fixed in 14 days. Built by NOVI LLC — Official Shopify Partner & Klaviyo Partner.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
             <div className="border rounded-xl p-3 bg-slate-50"><div className="text-sm font-bold" style={{color: '#0A2A7A'}}>$5k/mo</div><div className="text-xs opacity-60 mt-1">$1,150/mo lost</div></div>
