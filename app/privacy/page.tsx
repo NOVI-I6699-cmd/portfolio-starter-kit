@@ -26,6 +26,7 @@ export default function Privacy() {
       <main className="max-w-4xl mx-auto px-6 py-12">
         <h1 className="font-serif text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch]" style={{color: '#0A2A7A'}}>Privacy Policy</h1>
         <p className="mt-3 text-sm opacity-60">Last updated: May 12, 2026 - NOVI LLC</p>
+        <p className="mt-1 text-xs font-semibold" style={{color: '#0A2A7A'}}>Shopify Partner + Klaviyo Partner</p>
         <div className="mt-8 space-y-4 text-[15.5px] leading-7 break-words" style={{color: '#0A2A7A'}}>
           <p>NOVI LLC respects your privacy. We collect only store URL, email, and audit data needed to run Inbox Radar leak detection for Shopify stores.</p>
           <p>We do not sell your data. We use Klaviyo, Shopify, and Google APIs only to detect deliverability and SEO leaks. We do not share data with third parties for marketing.</p>
