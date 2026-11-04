@@ -15,8 +15,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://novi-llc.com'),
-  title: 'Novi LLC — Shopify Agency | E-commerce Growth & Brand Strategy | Accra Ghana',
-  description: 'Novi LLC is a Shopify Growth Agency based in Accra, Ghana - Remote Worldwide - EST Hours. We help Shopify stores doing $5k to $100k+ per month recover 23% revenue. Not affiliated with NOVI Space Inc aerospace company.',
+  title: 'Novi LLC — Shopify Partner + Klaviyo Partner | E-commerce Growth & Brand Strategy | Accra Ghana',
+  description: 'Novi LLC is a Shopify Partner + Klaviyo Partner based in Accra, Ghana - Remote Worldwide - EST Hours. We help Shopify stores doing $5k to $100k+ per month recover 23% revenue. Not affiliated with NOVI Space Inc aerospace company.',
   alternates: {
     canonical: '/',
   },
@@ -33,21 +33,21 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://novi-llc.com',
     siteName: 'Novi LLC',
-    title: 'Novi LLC — Shopify Agency | E-commerce Growth & Brand Strategy',
-    description: 'Shopify Growth Agency based in Accra, Ghana - Remote Worldwide. We help Shopify stores $5k to $100k+ per month recover 23% revenue.',
+    title: 'Novi LLC — Shopify Partner + Klaviyo Partner | E-commerce Growth & Brand Strategy',
+    description: 'Shopify Partner + Klaviyo Partner based in Accra, Ghana - Remote Worldwide. We help Shopify stores $5k to $100k+ per month recover 23% revenue.',
     images: [
       {
         url: '/novi-logo.jpg',
         width: 1024,
         height: 1024,
-        alt: 'Novi LLC - Shopify Agency',
+        alt: 'Novi LLC - Shopify Partner + Klaviyo Partner',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Novi LLC — Shopify Agency',
-    description: 'Shopify Growth Agency - Accra Ghana - Remote Worldwide - EST Hours',
+    title: 'Novi LLC — Shopify Partner + Klaviyo Partner',
+    description: 'Shopify Partner + Klaviyo Partner - Accra Ghana - Remote Worldwide - EST Hours',
     images: ['/novi-logo.jpg'],
   },
   verification: {
@@ -62,10 +62,10 @@ const orgSchema = {
   "@type": "Organization",
   "@id": "https://novi-llc.com/#organization",
   "name": "Novi LLC",
-  "alternateName": "NOVI - Shopify Growth Agency",
+  "alternateName": "NOVI - Shopify Partner + Klaviyo Partner",
   "url": "https://novi-llc.com",
   "logo": "https://novi-llc.com/novi-logo.jpg",
-  "description": "Shopify Agency | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours.",
+  "description": "Shopify Partner + Klaviyo Partner | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours.",
   "founder": {
     "@type": "Person",
     "name": "Floran Dieudonnie",
