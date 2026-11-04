@@ -9,6 +9,7 @@ export default function Page(){
       <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] md:max-w-[28ch] text-[#0A2A7A]">Shopify Leak-Detection in 2026 - Inbox Radar, Klaviyo, and Retention</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
+      <p className="mt-1 text-xs font-semibold text-[#0A2A7A]">Shopify Partner + Klaviyo Partner</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 9 min read</p>
       <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">Inbox placement is everything in 2026. Shopify brands that win are not doing more flows. They are fixing inbox leaks and retaining more revenue. Here is the full playbook we use for 7-figure Shopify brands inside our Leak-Detection System.</p>
 
