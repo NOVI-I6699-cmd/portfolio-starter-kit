@@ -9,7 +9,7 @@ export default function CaseStudy04() {
         </Link>
 
         <div className="mt-10">
-          <p className="text-xs tracking-[0.2em] font-bold opacity-50" style={{color: '#0A2A7A'}}>CRO / UX — CASE STUDY 04 — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</p>
+          <p className="text-xs tracking-[0.2em] font-bold opacity-50" style={{color: '#0A2A7A'}}>CRO / UX — CASE STUDY 04 — Shopify Partner + Klaviyo Partner Agency | Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents</p>
 
           {/* FINAL UNIFIED SERIF H1 - matches Case 01 $40k/mo fix */}
           <h1 className="font-serif text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold mt-3 [text-wrap:balance] max-w-[20ch] md:max-w-[28ch]" style={{color: '#0A2A7A'}}>
@@ -17,7 +17,7 @@ export default function CaseStudy04() {
           </h1>
 
           <p className="mt-4 text-sm font-bold" style={{color: '#0A2A7A'}}>
-            By Floran Dieudonnie - NOVI LLC
+            By Floran Dieudonnie - NOVI LLC | Shopify Partner + Klaviyo Partner Agency
           </p>
           <p className="mt-1 text-xs opacity-60" style={{color: '#0A2A7A'}}>
             Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 5 min read
@@ -75,7 +75,7 @@ export default function CaseStudy04() {
               You spend $$$ to bring someone to your site. They view 2-3 products. If Back = Top, you force them to re-find what they were comparing. Most won't. You just paid to leak your own traffic.
             </p>
             <p className="mt-3 leading-7 text-[15px] opacity-80 font-semibold" style={{color: '#0A2A7A'}}>
-              At Novi LLC, we audit this as part of our Leak-Detection System — Inbox Radar, Klaviyo flows, and AI Agents for support/WhatsApp + CRO leaks in 24h. Fixed in 14 days. Turning 23% lost sales into retained revenue.
+              At Novi LLC, Shopify Partner + Klaviyo Partner Agency, we audit this as part of our Leak-Detection System — Inbox Radar, Klaviyo flows, and AI Agents for support/WhatsApp + CRO leaks in 24h. Fixed in 14 days. Turning 23% lost sales into retained revenue.
             </p>
           </div>
         </div>
