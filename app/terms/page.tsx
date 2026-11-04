@@ -24,8 +24,9 @@ export default function Terms() {
         </div>
       </header>
       <main className="max-w-4xl mx-auto px-6 py-12">
-        <h1 className="text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch]" style={{color: '#0A2A7A'}}>Terms and Conditions</h1>
+        <h1 className="font-serif text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch]" style={{color: '#0A2A7A'}}>Terms and Conditions</h1>
         <p className="mt-3 text-sm opacity-60">Last updated: May 12, 2026 - NOVI LLC</p>
+        <p className="mt-1 text-xs font-semibold" style={{color: '#0A2A7A'}}>Shopify Partner + Klaviyo Partner</p>
         <div className="mt-8 space-y-4 text-[15.5px] leading-7 break-words" style={{color: '#0A2A7A'}}>
           <p>By using novi-llc.com you agree to our services for Shopify leak detection for stores doing 5k per month to 100k plus per month.</p>
           <p>Our audit service Inbox Radar finds deliverability, Klaviyo, and SEO leaks in 24 hours. Fixes delivered in 14 days. We do not guarantee specific revenue amounts. Results depend on store condition and client implementation.</p>
