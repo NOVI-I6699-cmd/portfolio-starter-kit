@@ -72,7 +72,7 @@ export default function AuditForm() {
           >
             <div className="font-extrabold text-[13px] text-[#166534]">✓ Verified: Novi LLC on Google</div>
             <div className="text-[12.5px] leading-[19px] text-[#374151] mt-1">
-              <b>Novi LLC</b> — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents founded by <b>Floran Dieudonnie</b> in Accra, Ghana. E-commerce audit & Shopify leak detection company operating worldwide.
+              <b>Novi LLC</b> — Shopify Partner + Klaviyo Partner — Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents founded by <b>Floran Dieudonnie</b> in Accra, Ghana. E-commerce audit & Shopify leak detection company operating worldwide.
             </div>
             <div className="mt-1.5 text-[10px] text-[#6b7280] underline">Source: Google AI Overview • novi-llc.com — Click to verify founder →</div>
           </a>
