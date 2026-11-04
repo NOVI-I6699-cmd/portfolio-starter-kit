@@ -9,6 +9,7 @@ export default function Page(){
       <h1 className="font-serif mt-3 text-[26px] leading-[1.15] tracking-[-0.02em] md:text-[36px] md:leading-[1.1] font-bold [text-wrap:balance] max-w-[20ch] text-[#0A2A7A]">From Spam to Inbox in 72h - Full Recovery in 14 Days</h1>
 
       <p className="mt-4 text-sm font-bold text-[#0A2A7A]">By Floran Dieudonnie - NOVI LLC</p>
+      <p className="mt-1 text-xs font-semibold text-[#0A2A7A]">Shopify Partner + Klaviyo Partner</p>
       <p className="mt-1 text-xs text-[#0A2A7A]/60">Shopify Leak-Detection System: Inbox Radar + Klaviyo + AI Agents - 9 min read</p>
       <p className="mt-6 text-lg leading-relaxed text-[#0A2A7A]/70">How we took a Shopify brand from 40 percent spam to 92 percent inbox in 3 days, and full revenue recovery in 14 days with Inbox Radar + Klaviyo flows.</p>
 
