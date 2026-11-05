@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import AuditForm from "./components/AuditForm";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -94,6 +95,32 @@ export default function Home() {
           <div className="mt-6 flex items-center gap-4 text-xs opacity-60" style={{color: '#0A2A7A'}}><div>Accra to US Brands</div><div>EST Hours</div><div>Spam → Inbox in 72h + AI Agents</div></div>
         </div>
         <div className="bg-slate-50 p-2 rounded-2xl border shadow-sm"><AuditForm /></div>
+      </section>
+
+      {/* PARTNER BADGES SECTION - NEW */}
+      <section className="bg-slate-50 border-y py-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-center text-xs uppercase tracking-widest font-semibold mb-6" style={{color: '#0A2A7A'}}>Trusted Official Partners</p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            {/* Shopify Partner - Text pill for Registered tier */}
+            <div className="flex items-center gap-3 bg-white border-2 border-[#96bf48] rounded-xl px-6 py-4 shadow-sm">
+              <span className="text-2xl font-black text-[#96bf48]">S</span>
+              <div className="text-left">
+                <div className="text-sm font-bold leading-none" style={{color: '#0A2A7A'}}>Shopify Partner</div>
+                <div className="text-xs text-gray-500 mt-1">Registered • ID: 5205783</div>
+              </div>
+            </div>
+            
+            {/* Klaviyo Partner - Image badge */}
+            <Image 
+              src="/KPartner-BadgeTier-Cotton-Bronze.png" 
+              alt="Klaviyo Partner - Bronze" 
+              width={180} 
+              height={90} 
+              className="h-auto"
+            />
+          </div>
+        </div>
       </section>
 
       <section className="py-20 relative overflow-hidden" style={{backgroundColor: '#0A2A7A'}}>
@@ -193,6 +220,15 @@ export default function Home() {
                 <div>(+233) 268 47 9954</div>
               </div>
               <div className="mt-4 text-xs max-w-sm leading-5" style={{color: 'rgba(255,255,255,0.7)'}}>We accept US ACH Wire and Euro payments via Grey - easy payment for US and EU brands. Based in Accra, Ghana.</div>
+              
+              {/* FOOTER PARTNER BADGES */}
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-3 py-2">
+                  <span className="text-[#96bf48] font-black text-lg leading-none">S</span>
+                  <span className="text-xs font-bold">Shopify Partner<br/><span className="font-normal text-white/70">ID: 5205783</span></span>
+                </div>
+                <Image src="/KPartner-BadgeTier-Cotton-Bronze.png" alt="Klaviyo Partner Bronze" width={120} height={60} className="h-auto bg-white rounded-lg p-1" />
+              </div>
             </div>
             <div>
               <div className="font-bold text-sm uppercase tracking-widest">Contact us</div>
