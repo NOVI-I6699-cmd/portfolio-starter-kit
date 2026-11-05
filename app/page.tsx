@@ -119,6 +119,18 @@ export default function Home() {
               height={90} 
               className="h-auto"
             />
+
+            {/* Klaviyo Practitioner Certificate - Clickable */}
+            <a href="https://credential.klaviyo.com/8c6d8bf6-e595-4155-80bc-cf52cc47a5af" target="_blank" rel="noopener noreferrer" className="block bg-white border rounded-xl p-2 shadow-sm hover:shadow-md transition cursor-pointer">
+              <Image 
+                src="/Klaviyo Practitioner Certificate.png" 
+                alt="Klaviyo Practitioner Certificate - Nov 2026" 
+                width={200} 
+                height={140} 
+                className="h-auto object-contain"
+              />
+              <p className="text-[10px] text-center mt-2 font-semibold" style={{color: '#0A2A7A'}}>Klaviyo Practitioner Certificate • Click to verify</p>
+            </a>
           </div>
         </div>
       </section>
@@ -228,6 +240,9 @@ export default function Home() {
                   <span className="text-xs font-bold">Shopify Partner<br/><span className="font-normal text-white/70">ID: 5205783</span></span>
                 </div>
                 <Image src="/KPartner-BadgeTier-Cotton-Bronze.png" alt="Klaviyo Partner Bronze" width={120} height={60} className="h-auto bg-white rounded-lg p-1" />
+                <a href="https://credential.klaviyo.com/8c6d8bf6-e595-4155-80bc-cf52cc47a5af" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-1 hover:opacity-90 transition">
+                  <Image src="/Klaviyo Practitioner Certificate.png" alt="Klaviyo Practitioner Certificate" width={120} height={80} className="h-auto object-contain" />
+                </a>
               </div>
             </div>
             <div>
