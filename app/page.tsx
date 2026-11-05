@@ -148,6 +148,19 @@ export default function Home() {
             <p className="text-sm font-bold text-white">Floran Dieudonnie</p>
             <p className="text-[11px] mt-1" style={{color: 'rgba(255,255,255,0.5)'}}>Accra, Ghana • novi-llc.com</p>
             <p className="text-[11px] mt-1 font-semibold" style={{color: 'rgba(255,255,255,0.9)'}}>Shopify Partner + Klaviyo Partner</p>
+            
+            {/* Partner Badges under founder photo */}
+            <div className="mt-5 flex flex-col items-center gap-3">
+              <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-3 py-2">
+                <span className="text-[#96bf48] font-black text-lg leading-none">S</span>
+                <span className="text-xs font-bold text-white">Shopify Partner<br/><span className="font-normal text-white/70">ID: 5205783</span></span>
+              </div>
+              <Image src="/KPartner-BadgeTier-Cotton-Bronze.png" alt="Klaviyo Partner Bronze" width={140} height={70} className="h-auto bg-white rounded-lg p-1" />
+              <a href="https://credential.klaviyo.com/8c6d8bf6-e595-4155-80bc-cf52cc47a5af" target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg p-1 hover:opacity-90 transition">
+                <Image src="/Klaviyo Practitioner Certificate.png" alt="Klaviyo Practitioner Certificate" width={140} height={90} className="h-auto object-contain" />
+              </a>
+              <p className="text-[10px]" style={{color: 'rgba(255,255,255,0.5)'}}>Click certificate to verify</p>
+            </div>
           </div>
           <div className="text-white min-w-0">
             <div className="text-xs uppercase tracking-widest font-semibold mb-3" style={{color: 'rgba(255,255,255,0.5)'}}>Founder Story — Based in Accra, Ghana</div>
