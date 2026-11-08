@@ -15,8 +15,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://novi-llc.com'),
-  title: 'Novi LLC — Shopify Partner + Klaviyo Partner | E-commerce Growth & Brand Strategy | Accra Ghana',
-  description: 'Novi LLC is a Shopify Partner + Klaviyo Partner based in Accra, Ghana - Remote Worldwide - EST Hours. We help Shopify stores doing $5k to $100k+ per month recover 23% revenue. Not affiliated with NOVI Space Inc aerospace company.',
+  title: 'Novi LLC Ghana — Shopify Partner + Klaviyo Partner | E-commerce Growth & Brand Strategy | Accra Ghana',
+  description: 'Novi LLC Ghana is an independent e-commerce agency based in Accra, Ghana. Shopify Partner + Klaviyo Partner - Remote Worldwide - EST Hours. We help Shopify stores doing $5k to $100k+ per month recover 23% revenue. Independent company registered in Ghana.',
   alternates: {
     canonical: '/',
   },
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://novi-llc.com',
-    siteName: 'Novi LLC',
-    title: 'Novi LLC — Shopify Partner + Klaviyo Partner | E-commerce Growth & Brand Strategy',
-    description: 'Shopify Partner + Klaviyo Partner based in Accra, Ghana - Remote Worldwide. We help Shopify stores $5k to $100k+ per month recover 23% revenue.',
+    siteName: 'Novi LLC Ghana',
+    title: 'Novi LLC Ghana — Shopify Partner + Klaviyo Partner | E-commerce Growth & Brand Strategy',
+    description: 'An independent e-commerce agency based in Accra, Ghana. Shopify Partner + Klaviyo Partner - Remote Worldwide. We help Shopify stores $5k to $100k+ per month recover 23% revenue.',
     images: [
       {
         url: '/novi-logo.jpg',
         width: 1024,
         height: 1024,
-        alt: 'Novi LLC - Shopify Partner + Klaviyo Partner',
+        alt: 'Novi LLC Ghana - Shopify Partner + Klaviyo Partner',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Novi LLC — Shopify Partner + Klaviyo Partner',
-    description: 'Shopify Partner + Klaviyo Partner - Accra Ghana - Remote Worldwide - EST Hours',
+    title: 'Novi LLC Ghana — Shopify Partner + Klaviyo Partner',
+    description: 'Novi LLC Ghana - Independent e-commerce agency based in Accra, Ghana - Remote Worldwide - EST Hours',
     images: ['/novi-logo.jpg'],
   },
   verification: {
@@ -61,11 +61,11 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://novi-llc.com/#organization",
-  "name": "Novi LLC",
-  "alternateName": "NOVI - Shopify Partner + Klaviyo Partner",
+  "name": "Novi LLC Ghana",
+  "alternateName": "Novi LLC",
   "url": "https://novi-llc.com",
   "logo": "https://novi-llc.com/novi-logo.jpg",
-  "description": "Shopify Partner + Klaviyo Partner | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours.",
+  "description": "Novi LLC Ghana is an independent e-commerce agency based in Accra, Ghana. Shopify Partner + Klaviyo Partner | E-commerce Growth and Brand Strategy. Serving Shopify stores from $5k+ to $100k+ per month. Accra, Ghana - Remote Worldwide - EST Hours. Independent company registered in Ghana.",
   "founder": {
     "@type": "Person",
     "name": "Floran Dieudonnie",
@@ -81,11 +81,11 @@ const orgSchema = {
   },
   "sameAs": [
     "https://www.linkedin.com/in/floran-novi-llc/",
-    "https://x.com/novi_llc",
+    "https://x.com/novi_llcGhana",
     "https://wa.me/233243876362"
   ],
   "knowsAbout": ["Shopify", "E-commerce Growth", "Shopify CRO", "Klaviyo", "Shopify SEO"],
-  "disambiguatingDescription": "Not affiliated with NOVI Space, Inc. aerospace company in Arlington, Virginia. Novi LLC is a Shopify e-commerce growth agency based in Accra, Ghana."
+  "disambiguatingDescription": "Novi LLC Ghana is an independent Shopify e-commerce agency based in Accra, Ghana. An independent company registered in Ghana."
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
